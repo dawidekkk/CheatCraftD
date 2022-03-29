@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+  padding: 0; margin: 0
+}
+
+html {
+  font-family: 'Ubuntu', sans-serif;
+  scroll-behavior: smooth;
+}
+
+#particles-js canvas{
+  position: absolute;
+  z-index: -5;
+  top: 0;
+  max-width: 67%;
+}
+
+@font-face {
+  font-family: "mc-font";
+  src: url(./minecraft-webfont.woff) format("woff"),
+  url(./minecraft-webfont.woff2) format("woff");
+}
+
+///////////////////// SCSS //////////////////////////
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+$black: hsl(0, 0%, 0%);
+$white: hsla(0, 0%, 100%, 0.6);
+$shadow: hsla(0, 0%, 0%, 0.1);
+$px: 4px;
+$bubble-border: 0 -1*$px $white, 
+		0 -2*$px $black, 
+		$px 0 $white, 
+		$px -1*$px $black, 
+		2*$px 0 $black, 
+		0 $px $white, 
+		0 2*$px $black, 
+		-1*$px 0 $white, 
+		-1*$px  $px $black, 
+		-2*$px 0 $black, 
+		-1*$px -1*$px $black, 
+		$px $px $black;
+
+///////////////////// ANIMATIONS //////////////////////////
+
+@keyframes logoAnim {
+  0% {transform: translateY(0);}
+  100% {transform: translateY(-20px);}
+}
+
+@keyframes greenPulse {
+  0% {
+    background-color: hsl(75, 97%, 31%);
+    -webkit-box-shadow: 0 0 9px hsl(120, 100%, 40%);
+  }
+  50% {
+    background-color: hsl(75, 91%, 39%);
+    -webkit-box-shadow: 0 0 18px hsl(75, 91%, 39%);
+  }
+  100% {
+    background-color: hsl(75, 97%, 31%);
+    -webkit-box-shadow: 0 0 9px hsl(120, 100%, 40%);
+  }
+}
+
+///////////////////// BODY //////////////////////////
+
+.page-wrapper {
+  position: relative;
+  background-image: url("../img/bg-sklep.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  width: 100vw; height: 100vh;
+  padding: .5rem;
+}
+
+.logo-wrapper {
+  @include flex-center();
+  
+  #logo-img {
+    width: 8rem; height: 8rem;
+    margin: 1rem auto 0 auto;
+    animation: 5s linear infinite alternate logoAnim;
+  }
+}
+
+.header-text {
+  text-align: center;
+  color: white;
+  font-size: 26px;
+}
+
+.status {
+  /* COLOR STATUS ONLINE
+  color: rgba(140, 213, 41, 0.7);
+  */
+  /* COLOR STATUS OFFLINE
+  color: rgba(252, 146, 0, 0.7);
+  */
+  text-align: center;
+  margin: 1rem auto;
+
+  &.online {
+    color: hsla(85, 68%, 50%, 0.7);
+    @include flex-center();
+  }
+
+  .pulse {
+    width: 10px; height: 10px;
+    border-radius: 30px;
+
+    &.green-light {
+      animation: 2s linear infinite greenPulse;
+      border: 6px solid hsla(85, 68%, 50%, 0.884);
+    }
+  }
+}
+
+.navigation-wrapper {
+  @include flex-center();
+  flex-wrap: wrap;
+  margin: 1rem auto;
+
+  nav {
+    width: 24rem;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: $bubble-border;
+      background-image: url(../img/nav.png);
+      background-size: contain;
+      padding: .75rem;
+      filter: grayscale(25%);
+
+      li {
+        list-style: none;
+
+        a {
+          color: hsl(0, 0%, 90%);
+          display: flex;
+          text-decoration: none;
+          font-size: 1.25rem;
+
+          &:hover {
+            color: #fff;
+          } 
+          
+          .logo-icon {
+            width: 1.5rem; height: 1.5rem;
+            margin-right: .25rem;
+          } 
+        }
+      }
+    }
+  }
+}
+
+///////////////////// CARDS //////////////////////////
+.behind-cards-bg {
+  background-image: linear-gradient(180deg,#757b81,#a1a5aa);
+  border-radius: 14px;
+  padding: .6rem;
+  margin: 0 auto;
+  width: 22rem;
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-template-columns: 1fr; 
+  grid-template-rows: 1fr 120px auto; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "card-header"
+    "card-desc"
+    "card-buttons"; 
+  width: auto; 
+  border: 4px solid hsl(214, 12%, 12%);
+  border-radius: 14px;
+  padding: 8px;
+}
+
+

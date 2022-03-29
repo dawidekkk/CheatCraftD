@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sklep</title>
+  <link rel="stylesheet" href="./style/scss/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet"> 
+  <script defer src="./js/intersection.js"></script>
+</head>
+<body>
+
+  <div class="page-wrapper">
+    <header class="the-header">
+      <div class="logo-wrapper">
+        <a href="./index.html"><img src="./style/img/logo.png" alt="logo strony cheatcraft.pl" id="logo-img"></a>
+      </div>
+      <div class="header-text">
+        <p>I am text</p>
+      </div>
+      <div class="status online">
+        <div class="pulse green-light"></div>
+        { liczba } aktywnych graczy na serwerze.
+      </div>
+      <div class="navigation-wrapper">
+        <nav>
+          <ul>
+            <li><a href="./index.html"><img src="./style/img/cart-shopping-solid.svg" alt="Ikonka sklepu" class="logo-icon"> Sklep</a></li>
+            <li><a href="./index.html"><img src="./style/img/cart-shopping-solid.svg" alt="Ikonka rankingu" class="logo-icon"> Ranking</a></li>
+            <li><a href="./index.html"><img src="./style/img/cart-shopping-solid.svg" alt="Ikonka regulaminu" class="logo-icon"> Regulamin</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <button type="button" class="btn back-to-top"><img src="./style/img/arrow-up-solid.svg" alt="Ikona strzalki w gore">To top</button>
+  
+    <div class="cards-wrapper">
+      <main id="particles-js">
+        <section>
+          <div class="behind-cards-bg">
+            <article class="card">
+              <div class="card-header">
+                <h1 class="card-title" data-delay=".2s">Miecz Smierci</h1>
+                <span class="card-sub-title" data-delay=".3s">30/30/30/30</span>
+                <span data-delay=".3s">StatTrack</span>
+                <img src="./style/img/miecz-smierci.png" alt="Zdjecie przedmiotu pt. &quot;Miecz Smierci&quot;">
+              </div>
+              <div class="card-desc" data-delay=".5s">
+                <p class="card-desc-info">
+                  Legendarny item powrócił! <br>
+                  Aktualnie - wyposażony
+                  w <em>StatTrack</em>. <br>
+                  <em>StatTrack</em> pozwoli Ci na śledzenie
+                  liczby killi w grze.
+                  <br>
+                  <em class="price">Jedyne 2,20ZŁ!</em>
+                </p>
+              </div>
+              <div class="card-buttons">
+                <button type="button" class="mirror-btn"><span>2,20ZŁ</span><span>SMS</span></button>
+                <button type="button" class="mirror-btn"><span>2,20ZŁ</span><span>PSC</span></button>
+                <button type="button" class="mirror-btn"><span>2,20ZŁ</span><span>PRZELEW</span></button>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  
+
+  <script src="./js/particles/particles.js"></script>
+  <script src="./js/particles/particlesJS.js"></script>
+</body>
+</html>
