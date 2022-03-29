@@ -19,7 +19,7 @@ html {
 
 @font-face {
   font-family: "mc-font";
-  src: url(./minecraft-webfont.woff) format("woff"), url(./minecraft-webfont.woff2) format("woff");
+  src: url(../fonts/minecraft-webfont.woff) format("woff"), url(../fonts/minecraft-webfont.woff2) format("woff");
 }
 
 @-webkit-keyframes logoAnim {
@@ -208,6 +208,10 @@ html {
   margin-right: .25rem;
 }
 
+.back-to-top {
+  display: none;
+}
+
 .behind-cards-bg {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#757b81), to(#a1a5aa));
   background-image: linear-gradient(180deg, #757b81, #a1a5aa);
@@ -215,6 +219,9 @@ html {
   padding: .6rem;
   margin: 0 auto;
   width: 22rem;
+}
+
+.behind-cards-bg .card {
   display: -ms-grid;
   display: grid;
   grid-auto-columns: 1fr;
@@ -224,9 +231,67 @@ html {
       grid-template-rows: 1fr 120px auto;
   gap: 0px 0px;
       grid-template-areas: "card-header" "card-desc" "card-buttons";
-  width: auto;
+  width: 100%;
   border: 4px solid #1b1e22;
   border-radius: 14px;
-  padding: 8px;
+  padding: 1rem;
+}
+
+.behind-cards-bg .card-miecz {
+  background-image: url(../img/miecz-tex.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: card-header;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #f2f2f2;
+  font-family: 'mc-font';
+}
+
+.card-header .card-title {
+  font-size: 2rem;
+}
+
+.card-header span {
+  font-size: 1.25rem;
+}
+
+.card-header img {
+  width: 8rem;
+  height: 8rem;
+  margin: 1rem auto;
+}
+
+.card-desc {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: card-desc;
+  color: #ebebeb;
+  width: 14rem;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.card-buttons {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: card-buttons;
 }
 /*# sourceMappingURL=index.css.map */

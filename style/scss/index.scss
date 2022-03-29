@@ -17,8 +17,8 @@ html {
 
 @font-face {
   font-family: "mc-font";
-  src: url(./minecraft-webfont.woff) format("woff"),
-  url(./minecraft-webfont.woff2) format("woff");
+  src: url(../fonts/minecraft-webfont.woff) format("woff"),
+  url(../fonts/minecraft-webfont.woff2) format("woff");
 }
 
 ///////////////////// SCSS //////////////////////////
@@ -163,6 +163,10 @@ $bubble-border: 0 -1*$px $white,
   }
 }
 
+.back-to-top {
+  display: none;
+}
+
 ///////////////////// CARDS //////////////////////////
 .behind-cards-bg {
   background-image: linear-gradient(180deg,#757b81,#a1a5aa);
@@ -170,19 +174,63 @@ $bubble-border: 0 -1*$px $white,
   padding: .6rem;
   margin: 0 auto;
   width: 22rem;
-  display: grid; 
-  grid-auto-columns: 1fr; 
-  grid-template-columns: 1fr; 
-  grid-template-rows: 1fr 120px auto; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    "card-header"
-    "card-desc"
-    "card-buttons"; 
-  width: auto; 
-  border: 4px solid hsl(214, 12%, 12%);
-  border-radius: 14px;
-  padding: 8px;
+
+  .card {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 120px auto; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "card-header"
+      "card-desc"
+      "card-buttons"; 
+    width: 100%; 
+    border: 4px solid hsl(214, 12%, 12%);
+    border-radius: 14px;
+    padding: 1rem;
+  }
+
+  .card-miecz {
+    background-image: url(../img/miecz-tex.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.card-header {
+  grid-area: card-header;
+  @include flex-center();
+  flex-direction: column;
+  color:hsl(0, 0%, 95%);
+  font-family: 'mc-font'; 
+
+  .card-title {
+    font-size: 2rem;
+  }
+
+  span {
+    font-size: 1.25rem;
+  }
+  
+  img {
+    width: 8rem; height: 8rem;
+    margin: 1rem auto;
+  }
+}
+
+.card-desc {
+  grid-area: card-desc;
+  color: hsl(0, 0%, 92%);
+  // @include flex-center();
+  width: 14rem;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.card-buttons {
+  grid-area: card-buttons;
 }
 
 
