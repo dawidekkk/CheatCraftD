@@ -116,6 +116,10 @@ body {
   font-size: 22px;
 }
 
+.discord-wrapper {
+  margin: 2rem auto;
+}
+
 .server,
 .discord {
   display: -webkit-box;
@@ -175,7 +179,7 @@ body {
 }
 
 .status.online {
-  color: rgba(142, 214, 41, 0.7);
+  color: #8ed629;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

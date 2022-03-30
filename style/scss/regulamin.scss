@@ -78,7 +78,7 @@ $bubble-border: 0 -1*$px $white,
   @include flex-center();
   
   .logo-header {
-    width: 10rem; height: 10rem;
+    width: 12rem; height: 12rem;
     margin: 1rem auto 0 auto;
     animation: 5s linear infinite alternate logoAnim;
   }
@@ -88,6 +88,10 @@ $bubble-border: 0 -1*$px $white,
   text-align: center;
   color: hsl(0, 0%, 95%);
   font-size: 22px;
+}
+
+.discord-wrapper {
+  margin: 2rem auto;
 }
 
 .server,
@@ -138,7 +142,7 @@ $bubble-border: 0 -1*$px $white,
   margin: 1rem auto;
 
   &.online {
-    color: hsla(85, 68%, 50%, 0.7);
+    color: hsla(85, 68%, 50%, 1);
     @include flex-center();
   }
 
