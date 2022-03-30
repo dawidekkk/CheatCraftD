@@ -12,12 +12,12 @@ body {
   width: 100%; height: 100%;
 }
 
-#particles-js canvas{
-  position: absolute;
-  z-index: -5;
-  top: 0;
-  max-width: 67%;
-}
+// #particles-js canvas{
+//   position: absolute;
+//   z-index: -5;
+//   top: 0;
+//   max-width: 67%;
+// }
 
 @font-face {
   font-family: "mc-font";
@@ -186,10 +186,9 @@ $bubble-border: 0 -1*$px $white,
 
   .items-title {
     font-size: 48px;
-    color: white;
+    color: hsl(0, 0%, 95%);
     text-align: center;
     margin: .75rem auto;
-    // font-family: 'mc-font';
   }
 }
 
@@ -204,8 +203,6 @@ $bubble-border: 0 -1*$px $white,
   padding: .6rem;
   margin: 0 auto;
   width: 22rem;
-
-  // card osobny na slidery
 
   .card {
     display: grid; 

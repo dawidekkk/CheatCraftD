@@ -15,13 +15,6 @@ body {
   height: 100%;
 }
 
-#particles-js canvas {
-  position: absolute;
-  z-index: -5;
-  top: 0;
-  max-width: 67%;
-}
-
 @font-face {
   font-family: "mc-font";
   src: url(../fonts/minecraft-webfont.woff) format("woff"), url(../fonts/minecraft-webfont.woff2) format("woff");
@@ -232,7 +225,7 @@ body {
 
 .items-wrapper .items-title {
   font-size: 48px;
-  color: white;
+  color: #f2f2f2;
   text-align: center;
   margin: .75rem auto;
 }
