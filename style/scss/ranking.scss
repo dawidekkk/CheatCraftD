@@ -421,6 +421,20 @@ footer {
     width: 100%;
   }
 
+  .crown-wrapper-grid {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "silver-place gold-place bronze-place"; 
+
+    .silver-place { grid-area: silver-place; }
+    .gold-place { grid-area: gold-place; padding-bottom: 4rem; }
+    .bronze-place { grid-area: bronze-place; }
+  }
+    
+
   .behind-bg {
     width: 30rem;
   }
@@ -540,6 +554,10 @@ footer {
   //   .grid-tenth { grid-area: grid-tenth; }
   //   .grid-eleventh { grid-area: grid-eleventh; }
   //   .grid-twelfth { grid-area: grid-twelfth; }
+
+  .behind-bg {
+    width: 34rem;
+  }
 }
 
 @media screen and (min-width: 1400px) {
