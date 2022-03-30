@@ -179,7 +179,7 @@ $bubble-border: 0 -1*$px $white,
 
 .weapons-wrapper {
   width: 100%;
-  margin: 1rem auto;
+  margin: 2rem auto;
   background-color: rgba(0, 0, 0, 0.8);
   box-shadow: $bubble-border;
   padding: .5rem;
@@ -204,6 +204,8 @@ $bubble-border: 0 -1*$px $white,
   padding: .6rem;
   margin: 0 auto;
   width: 22rem;
+
+  // card osobny na slidery
 
   .card {
     display: grid; 
