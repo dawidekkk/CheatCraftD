@@ -54,7 +54,7 @@ $bubble-border: 0 -1*$px $white,
 
 @keyframes logoAnim {
   0% {transform: translateY(0);}
-  100% {transform: translateY(-20px);}
+  100% {transform: translateY(50px);}
 }
 
 @keyframes greenPulse {
@@ -88,7 +88,7 @@ $bubble-border: 0 -1*$px $white,
   @include flex-center();
   
   #logo-img {
-    width: 8rem; height: 8rem;
+    width: 10rem; height: 10rem;
     margin: 1rem auto 0 auto;
     animation: 5s linear infinite alternate logoAnim;
   }
@@ -96,8 +96,8 @@ $bubble-border: 0 -1*$px $white,
 
 .header-text {
   text-align: center;
-  color: white;
-  font-size: 26px;
+  color: hsl(0, 0%, 95%);
+  font-size: 22px;
 }
 
 .status {
@@ -237,6 +237,47 @@ $bubble-border: 0 -1*$px $white,
     background: no-repeat center url(../img/kilof-tex.png);
     background-size: cover;
   }
+
+  .card-unban {
+    background: no-repeat center url(../img/unban-tex.png);
+    background-size: cover;
+  }
+
+  .card-colorful {
+    background: no-repeat center url(../img/colorful-tex.png);
+    background-size: cover;
+
+    .colorful {
+      background-image: linear-gradient(to right, violet, indigo, rgba(0, 68, 255, 0.979), green, yellow, orange, red);
+      -webkit-background-clip: text;
+      color: transparent;
+      font-weight: bold;
+    }
+  }
+
+  .card-green {
+    background: no-repeat center url(../img/green-tex.png);
+    background-size: cover;
+    
+    .green {
+      background-image: linear-gradient(to left, rgb(0, 255, 0), rgb(61, 230, 61), rgba(0, 224, 30, 0.5), rgb(0, 255, 106));
+      -webkit-background-clip: text;
+      color: transparent;
+      font-weight: bold;
+    }
+  }
+
+  .card-pink {
+    background: no-repeat center url(../img/pink-tex.png);
+    background-size: cover;
+
+    .pink {
+      background-image: linear-gradient(to bottom, #f011b8, #f50f40);
+      -webkit-background-clip: text;
+      color: transparent;
+      font-weight: bold;
+    }
+  }
 }
 
 .behind-cards-bg-slider {
@@ -264,17 +305,27 @@ $bubble-border: 0 -1*$px $white,
   }
 
   .card-sponsor {
-    background: no-repeat center url(../img/miecz-tex.png);
+    background: no-repeat center url(../img/sponsor-tex.png);
     background-size: cover;
   }
 
   .card-super-vip {
-    background: no-repeat center url(../img/miecz-tex.png);
+    background: no-repeat center url(../img/super-tex.png);
     background-size: cover;
   }
 
   .card-vip {
-    background: no-repeat center url(../img/miecz-tex.png);
+    background: no-repeat center url(../img/vip-tex.png);
+    background-size: cover;
+  }
+
+  .card-turbo-drop {
+    background: no-repeat center url(../img/turbo-tex.png);
+    background-size: cover;
+  }
+
+  .card-cheat-case {
+    background: no-repeat center url(../img/cheat-tex.png);
     background-size: cover;
   }
 }
@@ -292,6 +343,10 @@ $bubble-border: 0 -1*$px $white,
     line-height: 1.25;
     letter-spacing: 1.5px;
     font-weight: lighter;
+  }
+
+  .card-title-colorful {
+    font-size: 1.75rem;
   }
 
   span {
@@ -313,11 +368,22 @@ $bubble-border: 0 -1*$px $white,
   margin: 0 auto;
 }
 
+
+
+
 .card-slider {
   grid-area: card-slider;
-  color: white;
+  color: hsl(0, 0%, 95%);
   @include flex-center();
   flex-direction: column;
+
+  .info-slider {
+    margin-bottom: .35rem;
+  }
+
+  .input-slider {
+    width: 100%;
+  }
 }
 
 .card-buttons {
