@@ -525,6 +525,21 @@ footer a {
         grid-template-areas: "footer-navigation social";
     margin: 1rem auto;
   }
+  .crown-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  .behind-bg {
+    width: 30rem;
+  }
   .footer-navigation {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -681,80 +696,6 @@ footer a {
   }
   .status > h3 {
     font-size: 18px;
-  }
-  .grid-wrapper {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-    -ms-grid-rows: auto 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto 1fr 1fr 1fr 1fr;
-    gap: 0px 0px;
-        grid-template-areas: "grid-title grid-title grid-title" "grid-first grid-second grid-third" "grid-fourth grid-fifth grid-sixth" "grid-seventh grid-eighth grid-ninth" "grid-tenth grid-eleventh grid-twelfth";
-  }
-  .grid-title {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-area: grid-title;
-  }
-  .grid-first {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: grid-first;
-  }
-  .grid-second {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    grid-area: grid-second;
-  }
-  .grid-third {
-    -ms-grid-row: 2;
-    -ms-grid-column: 3;
-    grid-area: grid-third;
-  }
-  .grid-fourth {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    grid-area: grid-fourth;
-  }
-  .grid-fifth {
-    -ms-grid-row: 3;
-    -ms-grid-column: 2;
-    grid-area: grid-fifth;
-  }
-  .grif-sixth {
-    grid-area: grif-sixth;
-  }
-  .grid-seventh {
-    -ms-grid-row: 4;
-    -ms-grid-column: 1;
-    grid-area: grid-seventh;
-  }
-  .grid-eighth {
-    -ms-grid-row: 4;
-    -ms-grid-column: 2;
-    grid-area: grid-eighth;
-  }
-  .grid-ninth {
-    -ms-grid-row: 4;
-    -ms-grid-column: 3;
-    grid-area: grid-ninth;
-  }
-  .grid-tenth {
-    -ms-grid-row: 5;
-    -ms-grid-column: 1;
-    grid-area: grid-tenth;
-  }
-  .grid-eleventh {
-    -ms-grid-row: 5;
-    -ms-grid-column: 2;
-    grid-area: grid-eleventh;
-  }
-  .grid-twelfth {
-    -ms-grid-row: 5;
-    -ms-grid-column: 3;
-    grid-area: grid-twelfth;
   }
 }
 

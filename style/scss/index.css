@@ -79,6 +79,100 @@ body {
   }
 }
 
+@-webkit-keyframes cardShadow {
+  0% {
+    -webkit-box-shadow: inset 0 0 1rem 0 white, 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 white, 0 0 5px 0 #000;
+  }
+  10% {
+    -webkit-box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.9), 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.9), 0 0 5px 0 #000;
+  }
+  20% {
+    -webkit-box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.8), 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.8), 0 0 5px 0 #000;
+  }
+  30% {
+    -webkit-box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.7), 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.7), 0 0 5px 0 #000;
+  }
+  40% {
+    -webkit-box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.6), 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.6), 0 0 5px 0 #000;
+  }
+  50% {
+    -webkit-box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.5), 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.5), 0 0 5px 0 #000;
+  }
+  60% {
+    -webkit-box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.4), 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.4), 0 0 5px 0 #000;
+  }
+  70% {
+    -webkit-box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.3), 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.3), 0 0 5px 0 #000;
+  }
+  80% {
+    -webkit-box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.2), 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.2), 0 0 5px 0 #000;
+  }
+  90% {
+    -webkit-box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.1), 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.1), 0 0 5px 0 #000;
+  }
+  100% {
+    -webkit-box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000;
+  }
+}
+
+@keyframes cardShadow {
+  0% {
+    -webkit-box-shadow: inset 0 0 1rem 0 white, 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 white, 0 0 5px 0 #000;
+  }
+  10% {
+    -webkit-box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.9), 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.9), 0 0 5px 0 #000;
+  }
+  20% {
+    -webkit-box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.8), 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.8), 0 0 5px 0 #000;
+  }
+  30% {
+    -webkit-box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.7), 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.7), 0 0 5px 0 #000;
+  }
+  40% {
+    -webkit-box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.6), 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.6), 0 0 5px 0 #000;
+  }
+  50% {
+    -webkit-box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.5), 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.5), 0 0 5px 0 #000;
+  }
+  60% {
+    -webkit-box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.4), 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.4), 0 0 5px 0 #000;
+  }
+  70% {
+    -webkit-box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.3), 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.3), 0 0 5px 0 #000;
+  }
+  80% {
+    -webkit-box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.2), 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.2), 0 0 5px 0 #000;
+  }
+  90% {
+    -webkit-box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.1), 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.1), 0 0 5px 0 #000;
+  }
+  100% {
+    -webkit-box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000;
+  }
+}
+
 .page-wrapper {
   position: relative;
   background-image: url("../img/bg-sklep.png");
@@ -332,6 +426,11 @@ body {
   border: 4px solid #1b1e22;
   border-radius: 14px;
   padding: 1rem;
+}
+
+.behind-bg .card:hover {
+  -webkit-animation: 1s ease-in-out infinite alternate cardShadow;
+          animation: 1s ease-in-out infinite alternate cardShadow;
 }
 
 .behind-bg .card .card-img {
