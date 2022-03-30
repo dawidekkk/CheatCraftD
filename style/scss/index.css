@@ -90,6 +90,22 @@ body {
   padding: 1rem;
 }
 
+.the-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .logo-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -114,10 +130,6 @@ body {
   text-align: center;
   color: #f2f2f2;
   font-size: 22px;
-}
-
-.discord-wrapper {
-  margin: 2rem auto;
 }
 
 .server,
@@ -201,6 +213,10 @@ body {
   -webkit-animation: 2s linear infinite greenPulse;
           animation: 2s linear infinite greenPulse;
   border: 6px solid rgba(142, 214, 41, 0.884);
+}
+
+.status h3 {
+  font-size: 14px;
 }
 
 .navigation-wrapper {
@@ -919,6 +935,42 @@ footer a {
   footer.items-wrapper {
     padding: 2rem;
   }
+  .grid-header {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+    gap: 0px 0px;
+    margin: 0 auto;
+        grid-template-areas: "server logo-wrapper discord" "header-text header-text header-text";
+  }
+  .logo-wrapper {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: logo-wrapper;
+  }
+  .header-text {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: header-text;
+  }
+  .discord {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: discord;
+  }
+  .server {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: server;
+  }
+  .dis-title,
+  .serv-title {
+    font-size: 20px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1009,6 +1061,9 @@ footer a {
   }
   footer .psc {
     width: auto;
+  }
+  .status > h3 {
+    font-size: 18px;
   }
 }
 

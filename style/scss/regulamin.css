@@ -73,6 +73,22 @@ html {
   padding: 1rem;
 }
 
+.the-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .logo-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -97,10 +113,6 @@ html {
   text-align: center;
   color: #f2f2f2;
   font-size: 22px;
-}
-
-.discord-wrapper {
-  margin: 2rem auto;
 }
 
 .server,
@@ -186,6 +198,10 @@ html {
   border: 6px solid rgba(142, 214, 41, 0.884);
 }
 
+.status h3 {
+  font-size: 14px;
+}
+
 .navigation-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -229,22 +245,22 @@ html {
 }
 
 .navigation-wrapper nav ul li a {
-  color: #e6e6e6;
+  color: #ebebeb;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-decoration: none;
   font-size: 1.25rem;
 }
 
 .navigation-wrapper nav ul li a:hover {
   color: #fff;
-}
-
-.navigation-wrapper nav ul li a .logo-icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-right: .25rem;
 }
 
 .back-to-top {
@@ -280,7 +296,6 @@ html {
 
 .items-wrapper .item-container {
   margin: 1rem auto;
-  width: 100%;
 }
 
 .behind-bg {
@@ -329,11 +344,6 @@ html {
 
 .behind-bg .rule li {
   padding: .25rem;
-}
-
-.behind-bg .item-container {
-  margin: 1rem auto;
-  width: 100%;
 }
 
 footer {
@@ -397,5 +407,171 @@ footer nav ul a {
 footer a {
   color: #b3b3b3;
   text-decoration: none;
+}
+
+@media screen and (min-width: 600px) {
+  .navigation-wrapper nav {
+    width: 30rem;
+  }
+  .navigation-wrapper nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .navigation-wrapper nav ul li a {
+    font-size: 1.5rem;
+  }
+  .item-container {
+    margin: 1rem auto;
+    width: auto;
+  }
+  .behind-bg {
+    width: auto;
+    max-width: 80%;
+  }
+  .payment-server-info {
+    width: 30rem;
+    margin: 0 auto;
+  }
+  .footer-navigation {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    gap: 0px 0px;
+    margin: 1rem auto;
+    width: 28rem;
+        grid-template-areas: "footer-logo-wrapper footer-nav";
+  }
+  .footer-logo-wrapper {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: footer-logo-wrapper;
+  }
+  .footer-nav {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: footer-nav;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 24px;
+  }
+  .footer-nav a {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .grid-social {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "footer-navigation social";
+    margin: 1rem auto;
+  }
+  .footer-navigation {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: footer-navigation;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer-navigation a {
+    font-size: 30px;
+  }
+  .social {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: social;
+  }
+  footer .payment-methods {
+    font-size: 28px;
+  }
+  footer.items-wrapper {
+    padding: 2rem;
+  }
+  .grid-header {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+    gap: 0px 0px;
+    margin: 0 auto;
+        grid-template-areas: "server logo-wrapper discord" "header-text header-text header-text";
+  }
+  .logo-wrapper {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: logo-wrapper;
+  }
+  .header-text {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: header-text;
+  }
+  .discord {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: discord;
+  }
+  .server {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: server;
+  }
+  .dis-title,
+  .serv-title {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #logo-header {
+    width: 16rem;
+    height: 16rem;
+  }
+  .header-text h1 {
+    font-size: 64px;
+    color: #ebebeb;
+  }
+  footer .psc {
+    width: auto;
+  }
+  .status > h3 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .items-wrapper {
+    width: 75rem;
+  }
 }
 /*# sourceMappingURL=regulamin.css.map */
