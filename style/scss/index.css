@@ -102,7 +102,7 @@ body {
           justify-content: center;
 }
 
-.logo-wrapper #logo-img {
+.logo-wrapper .logo-header {
   width: 10rem;
   height: 10rem;
   margin: 1rem auto 0 auto;
@@ -356,14 +356,26 @@ body {
   background-size: cover;
 }
 
+.behind-cards-bg-slider .card-sponsor .sponsor-com {
+  color: #70c7c4;
+}
+
 .behind-cards-bg-slider .card-super-vip {
   background: no-repeat center url(../img/super-tex.png);
   background-size: cover;
 }
 
+.behind-cards-bg-slider .card-super-vip .super-com {
+  color: #d7d53c;
+}
+
 .behind-cards-bg-slider .card-vip {
   background: no-repeat center url(../img/vip-tex.png);
   background-size: cover;
+}
+
+.behind-cards-bg-slider .card-vip .vip-com {
+  color: #d6d5d1;
 }
 
 .behind-cards-bg-slider .card-turbo-drop {
@@ -558,5 +570,68 @@ body {
   color: transparent;
   -webkit-transform: rotateX(-90deg);
   transform: rotateX(-90deg);
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #f2f2f2;
+  text-align: center;
+}
+
+footer .payment-methods {
+  font-size: 22px;
+}
+
+footer .psc {
+  width: 100%;
+  height: 10rem;
+}
+
+footer .sms {
+  width: 8rem;
+  height: 8rem;
+}
+
+footer .payment-server-info {
+  margin: 1rem auto;
+}
+
+footer .logo-footer {
+  width: 10rem;
+  height: 10rem;
+  margin: 1rem auto 0 auto;
+}
+
+footer nav {
+  margin: 1rem auto;
+  text-align: left;
+}
+
+footer nav ul {
+  list-style: disc;
+  padding: .5rem;
+}
+
+footer nav ul a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+footer a {
+  color: #b3b3b3;
+  text-decoration: none;
 }
 /*# sourceMappingURL=index.css.map */
