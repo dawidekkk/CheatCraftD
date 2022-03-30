@@ -242,7 +242,7 @@ body {
 }
 
 .navigation-wrapper nav ul li a {
-  color: #e6e6e6;
+  color: #ebebeb;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -258,12 +258,6 @@ body {
 
 .navigation-wrapper nav ul li a:hover {
   color: #fff;
-}
-
-.navigation-wrapper nav ul li a .logo-icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-right: .25rem;
 }
 
 .back-to-top {
@@ -285,7 +279,7 @@ body {
 
 .items-wrapper .wrapper-title {
   font-size: 48px;
-  color: #f2f2f2;
+  color: #ebebeb;
   text-align: center;
   margin: .75rem auto;
 }
@@ -463,7 +457,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #f2f2f2;
+  color: #e6e6e6;
   font-family: 'mc-font';
 }
 
@@ -480,6 +474,7 @@ body {
 
 .card-header span {
   font-size: 1.25rem;
+  color: #e0e0e0;
 }
 
 .card-header img {
@@ -492,7 +487,7 @@ body {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: card-desc;
-  color: #ebebeb;
+  color: #d6d6d6;
   width: 15rem;
   text-align: left;
   margin: 0 auto;
@@ -604,7 +599,7 @@ body {
   -webkit-perspective: 230;
   perspective: 999999999px;
   background: #f46b45;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .card-buttons .mirror-btn:hover {
@@ -678,6 +673,7 @@ footer {
 
 footer .payment-methods {
   font-size: 22px;
+  color: #cccccc;
 }
 
 footer .psc {
@@ -692,6 +688,7 @@ footer .sms {
 
 footer .payment-server-info {
   margin: 1rem auto;
+  color: #c7c7c7;
 }
 
 footer .logo-footer {
@@ -703,6 +700,16 @@ footer .logo-footer {
 footer nav {
   margin: 1rem auto;
   text-align: left;
+  color: #ebebeb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 footer nav ul {
@@ -711,7 +718,7 @@ footer nav ul {
 }
 
 footer nav ul a {
-  color: #f2f2f2;
+  color: #ebebeb;
   text-decoration: none;
   font-size: 1.25rem;
 }
@@ -987,6 +994,17 @@ footer a {
     -ms-grid-row: 3;
     -ms-grid-column: 3;
     grid-area: grid-sixth-slider;
+  }
+  #logo-header {
+    width: 16rem;
+    height: 16rem;
+  }
+  .header-text h1 {
+    font-size: 64px;
+    color: #ebebeb;
+  }
+  footer .psc {
+    width: auto;
   }
 }
 

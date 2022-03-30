@@ -187,18 +187,13 @@ $bubble-border: 0 -1*$px $white,
         list-style: none;
 
         a {
-          color: hsl(0, 0%, 90%);
+          color: hsl(0, 0%, 92%);
           @include flex-center();
           text-decoration: none;
           font-size: 1.25rem;
 
           &:hover {
             color: #fff;
-          } 
-          
-          .logo-icon {
-            width: 1.5rem; height: 1.5rem;
-            margin-right: .25rem;
           } 
         }
       }
@@ -225,7 +220,7 @@ $bubble-border: 0 -1*$px $white,
 
   .wrapper-title {
     font-size: 48px;
-    color: hsl(0, 0%, 95%);
+    color: hsl(0, 0%, 92%);
     text-align: center;
     margin: .75rem auto;
   }
@@ -386,7 +381,7 @@ $bubble-border: 0 -1*$px $white,
   grid-area: card-header;
   @include flex-center();
   flex-direction: column;
-  color:hsl(0, 0%, 95%);
+  color:hsl(0, 0%, 90%);
   font-family: 'mc-font'; 
   
 
@@ -403,6 +398,7 @@ $bubble-border: 0 -1*$px $white,
 
   span {
     font-size: 1.25rem;
+    color: hsl(0, 0%, 88%);
   }
   
   img {
@@ -413,7 +409,7 @@ $bubble-border: 0 -1*$px $white,
 
 .card-desc {
   grid-area: card-desc;
-  color: hsl(0, 0%, 92%);
+  color: hsl(0, 0%, 84%);
   // @include flex-center();
   width: 15rem;
   text-align: left;
@@ -496,7 +492,7 @@ $bubble-border: 0 -1*$px $white,
     -webkit-perspective: 230;
     perspective: 999999999px;
     background: #f46b45;
-    font-weight: bold;
+    font-weight: 700;
 
     &:hover {
       transform: scale(1.15);
@@ -572,6 +568,7 @@ footer {
 
   .payment-methods {
     font-size: 22px;
+    color: hsl(0, 0%, 80%);
   }
 
   .psc {
@@ -584,6 +581,7 @@ footer {
 
   .payment-server-info {
     margin: 1rem auto;
+    color: hsl(0, 0%, 78%)
   }
 
   .logo-footer {
@@ -594,13 +592,15 @@ footer {
   nav {
     margin: 1rem auto;
     text-align: left;
+    color: hsl(0, 0%, 92%);
+    @include flex-center();
 
     ul {
       list-style: disc;
       padding: .5rem;
 
       a {
-        color: hsl(0, 0%, 95%);
+        color: hsl(0, 0%, 92%);
         text-decoration: none;
         font-size: 1.25rem;
       }
@@ -765,6 +765,18 @@ footer {
   .grid-fifth-slider { grid-area: grid-fifth-slider; }
   .grid-sixth-slider { grid-area: grid-sixth-slider; }
 
+  #logo-header {
+    width: 16rem; height: 16rem;
+  }
+
+  .header-text h1 {
+    font-size: 64px;
+    color: hsl(0, 0%, 92%);
+  }
+
+  footer .psc {
+    width: auto;
+  }
 }
 
 @media screen and (min-width: 1400px) {
