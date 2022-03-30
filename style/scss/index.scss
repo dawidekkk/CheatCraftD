@@ -177,14 +177,14 @@ $bubble-border: 0 -1*$px $white,
   margin: 2rem auto;
 }
 
-.weapons-wrapper {
+.items-wrapper {
   width: 100%;
   margin: 2rem auto;
   background-color: rgba(0, 0, 0, 0.8);
   box-shadow: $bubble-border;
   padding: .5rem;
 
-  .weapons-title {
+  .items-title {
     font-size: 48px;
     color: white;
     text-align: center;
@@ -193,7 +193,7 @@ $bubble-border: 0 -1*$px $white,
   }
 }
 
-.weapon-container {
+.item-container {
   margin: 1rem auto;
   width: 100%;
 }
@@ -239,6 +239,46 @@ $bubble-border: 0 -1*$px $white,
   }
 }
 
+.behind-cards-bg-slider {
+  background-image: linear-gradient(180deg,#757b81,#a1a5aa);
+  border-radius: 14px;
+  padding: .6rem;
+  margin: 0 auto;
+  width: 22rem;
+
+  .card-sliders {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 120px 60px auto; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "card-header"
+      "card-desc"
+      "card-slider"
+      "card-buttons"; 
+    width: 100%; 
+    border: 4px solid hsl(214, 12%, 12%);
+    border-radius: 14px;
+    padding: 1rem;
+  }
+
+  .card-sponsor {
+    background: no-repeat center url(../img/miecz-tex.png);
+    background-size: cover;
+  }
+
+  .card-super-vip {
+    background: no-repeat center url(../img/miecz-tex.png);
+    background-size: cover;
+  }
+
+  .card-vip {
+    background: no-repeat center url(../img/miecz-tex.png);
+    background-size: cover;
+  }
+}
+
 .card-header {
   grid-area: card-header;
   @include flex-center();
@@ -271,6 +311,13 @@ $bubble-border: 0 -1*$px $white,
   width: 14rem;
   text-align: left;
   margin: 0 auto;
+}
+
+.card-slider {
+  grid-area: card-slider;
+  color: white;
+  @include flex-center();
+  flex-direction: column;
 }
 
 .card-buttons {

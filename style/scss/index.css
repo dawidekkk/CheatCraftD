@@ -221,7 +221,7 @@ body {
   margin: 2rem auto;
 }
 
-.weapons-wrapper {
+.items-wrapper {
   width: 100%;
   margin: 2rem auto;
   background-color: rgba(0, 0, 0, 0.8);
@@ -230,14 +230,14 @@ body {
   padding: .5rem;
 }
 
-.weapons-wrapper .weapons-title {
+.items-wrapper .items-title {
   font-size: 48px;
   color: white;
   text-align: center;
   margin: .75rem auto;
 }
 
-.weapon-container {
+.item-container {
   margin: 1rem auto;
   width: 100%;
 }
@@ -279,6 +279,46 @@ body {
 
 .behind-cards-bg .card-kilof {
   background: no-repeat center url(../img/kilof-tex.png);
+  background-size: cover;
+}
+
+.behind-cards-bg-slider {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#757b81), to(#a1a5aa));
+  background-image: linear-gradient(180deg, #757b81, #a1a5aa);
+  border-radius: 14px;
+  padding: .6rem;
+  margin: 0 auto;
+  width: 22rem;
+}
+
+.behind-cards-bg-slider .card-sliders {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-columns: 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 120px 60px auto;
+      grid-template-rows: 1fr 120px 60px auto;
+  gap: 0px 0px;
+      grid-template-areas: "card-header" "card-desc" "card-slider" "card-buttons";
+  width: 100%;
+  border: 4px solid #1b1e22;
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.behind-cards-bg-slider .card-sponsor {
+  background: no-repeat center url(../img/miecz-tex.png);
+  background-size: cover;
+}
+
+.behind-cards-bg-slider .card-super-vip {
+  background: no-repeat center url(../img/miecz-tex.png);
+  background-size: cover;
+}
+
+.behind-cards-bg-slider .card-vip {
+  background: no-repeat center url(../img/miecz-tex.png);
   background-size: cover;
 }
 
@@ -330,8 +370,28 @@ body {
   margin: 0 auto;
 }
 
-.card-buttons {
+.card-slider {
   -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: card-slider;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card-buttons {
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: card-buttons;
   display: -webkit-box;
