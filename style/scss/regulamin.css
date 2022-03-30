@@ -99,6 +99,38 @@ html {
   font-size: 22px;
 }
 
+.server,
+.discord {
+  color: #f2f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.server .join-server-dis,
+.discord .join-server-dis {
+  font-size: 12px;
+  text-align: right;
+}
+
+.server .join-server-serv,
+.discord .join-server-serv {
+  font-size: 12px;
+  text-align: left;
+}
+
+.server-img {
+  width: 4rem;
+  height: 4rem;
+}
+
 .status {
   /* COLOR STATUS ONLINE
   color: rgba(140, 213, 41, 0.7);

@@ -90,6 +90,28 @@ $bubble-border: 0 -1*$px $white,
   font-size: 22px;
 }
 
+.server,
+.discord {
+  color: hsl(0, 0%, 95%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 60%;
+  margin: 0 auto;
+
+  .join-server-dis {
+    font-size: 12px;
+    text-align: right;
+  }
+  .join-server-serv {
+    font-size: 12px;
+    text-align: left;
+  }
+}
+
+.server-img {
+  width: 4rem; height: 4rem;
+}
 
 .status {
   /* COLOR STATUS ONLINE

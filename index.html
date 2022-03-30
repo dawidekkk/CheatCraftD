@@ -21,6 +21,20 @@
       <div class="header-text">
         <h1>Cheatuj albo giń!</h1>
       </div>
+      <div class="discord">
+        <div>
+          <h3 class="dis-title">DISCORD SERVER</h3>
+          <p class="join-server-dis">Kliknij aby dołączyć</p>
+        </div>
+        <a href="#discord"><img src="./style/img/discord-brands.svg" alt="" class="server-img"></a>
+      </div>
+      <div class="server">
+        <a href="#server"><img src="./style/img/mc-icon.png" class="server-img" alt=""></a>
+        <div>
+          <h3 class="serv-title">CHEATCRAFT.pl</h3>
+          <p class="join-server-serv">Kliknij aby dołączyć</p>
+        </div>
+      </div>
       <div class="status online">
         <div class="pulse green-light"></div>
         <h3>
@@ -39,9 +53,9 @@
     </header>
 
     <button type="button" class="btn back-to-top"><img src="./style/img/arrow-up-solid.svg" alt="Ikona strzalki w gore">To top</button>
-  
+  <!-- id="particles-js" -->
     <div class="cards-wrapper">
-      <main id="particles-js">
+      <main >
         <section class="items-wrapper">
           <h2 class="items-title">Broń StatTrack</h2>
           <section class="item-container">
@@ -51,7 +65,7 @@
                   <h3 class="card-title" data-delay=".2s">Miecz Smierci</h3>
                   <span class="card-sub-title" data-delay=".3s">30/30/30/30</span>
                   <span data-delay=".3s">StatTrack</span>
-                  <img src="./style/img/miecz-smierci.png" alt="Zdjecie przedmiotu pt. &quot;Miecz Smierci&quot;">
+                  <img src="./style/img/miecz-smierci.png" class="card-img" alt="Zdjecie przedmiotu pt. &quot;Miecz Smierci&quot;">
                 </div>
                 <div class="card-desc" data-delay=".5s">
                   <p class="card-desc-info">
@@ -79,7 +93,7 @@
                   <h1 class="card-title" data-delay=".2s">Luk Anihilacji</h1>
                   <span class="card-sub-title" data-delay=".3s">30/30/30/30</span>
                   <span data-delay=".3s">StatTrack</span>
-                  <img src="./style/img/luk-anihilacji.png" alt="Zdjecie przedmiotu pt. &quot;Luk anihimacji&quot;">
+                  <img src="./style/img/luk-anihilacji.png" class="card-img" alt="Zdjecie przedmiotu pt. &quot;Luk anihimacji&quot;">
                 </div>
                 <div class="card-desc" data-delay=".5s">
                   <p class="card-desc-info">
@@ -107,7 +121,7 @@
                   <h1 class="card-title" data-delay=".2s">Kilof Zniszczenia</h1>
                   <span class="card-sub-title" data-delay=".3s">30/30/30/30</span>
                   <span data-delay=".3s">StatTrack</span>
-                  <img src="./style/img/kilof-zniszczenia.png" alt="Zdjecie przedmiotu pt. &quot;Kilof Zniszczenia&quot;">
+                  <img src="./style/img/kilof-zniszczenia.png" class="card-img" alt="Zdjecie przedmiotu pt. &quot;Kilof Zniszczenia&quot;">
                 </div>
                 <div class="card-desc" data-delay=".5s">
                   <p class="card-desc-info">
@@ -135,7 +149,7 @@
               <article class="card-sliders card-sponsor">
                 <div class="card-header">
                   <h3 class="card-title" data-delay=".2s">Sponsor</h3>
-                  <img src="./style/img/sponsor-forever.png" alt="Zdjecie przedmiotu pt. &quot;Sponsor&quot;">
+                  <img src="./style/img/sponsor-forever.png" class="card-img" alt="Zdjecie przedmiotu pt. &quot;Sponsor&quot;">
                 </div>
                 <div class="card-desc" data-delay=".5s">
                   <p class="card-desc-info">
@@ -145,8 +159,8 @@
                   </p>
                 </div>
                 <div class="card-slider">
-                  <p class="info-slider">Potrzebuje sponsora na: <span class="value"></span> dni.</p>
-                  <input type="range" min="10" value="50" max="infinite" class="input-slider">
+                  <p class="info-slider">Potrzebuje sponsora na: <span class="value sponsor-com">5</span> dni.</p>
+                  <input type="range" min="10" value="50" max="infinite" class="input-slider input-slider-sponsor">
                 </div>
                 <div class="card-buttons" data-delay=".6s">
                   <button type="button" class="card-button mirror-btn"><span>2,20ZŁ</span><span>SMS</span></button>
@@ -161,7 +175,7 @@
               <article class="card-sliders card-super-vip">
                 <div class="card-header">
                   <h3 class="card-title" data-delay=".2s">Super VIP</h3>
-                  <img src="./style/img/super-vip.png" alt="Zdjecie przedmiotu pt. &quot;Super VIP&quot;">
+                  <img src="./style/img/super-vip.png" class="card-img" alt="Zdjecie przedmiotu pt. &quot;Super VIP&quot;">
                 </div>
                 <div class="card-desc" data-delay=".5s">
                   <p class="card-desc-info">
@@ -171,8 +185,8 @@
                   </p>
                 </div>
                 <div class="card-slider">
-                  <p class="info-slider">Potrzebuje sponsora na: <span class="value"></span> dni.</p>
-                  <input type="range" min="10" value="50" max="infinite" class="input-slider">
+                  <p class="info-slider">Potrzebuje sponsora na: <span class="value super-com"></span> dni.</p>
+                  <input type="range" min="10" value="50" max="infinite" class="input-slider input-slider-super">
                 </div>
                 <div class="card-buttons" data-delay=".6s">
                   <button type="button" class="card-button mirror-btn"><span>2,20ZŁ</span><span>SMS</span></button>
@@ -187,7 +201,7 @@
               <article class="card-sliders card-vip">
                 <div class="card-header">
                   <h3 class="card-title" data-delay=".2s">VIP</h3>
-                  <img src="./style/img/vip30.png" alt="Zdjecie przedmiotu pt. &quot;VIP&quot;">
+                  <img src="./style/img/vip30.png" class="card-img" alt="Zdjecie przedmiotu pt. &quot;VIP&quot;">
                 </div>
                 <div class="card-desc" data-delay=".4s">
                   <p class="card-desc-info">
@@ -197,8 +211,8 @@
                   </p>
                 </div>
                <div class="card-slider" data-delay=".4s">
-                  <p class="info-slider">Potrzebuje sponsora na: <span class="value"></span> dni.</p>
-                  <input type="range" min="10" value="50" max="infinite" class="input-slider">
+                  <p class="info-slider">Potrzebuje sponsora na: <span class="value vip-com"></span> dni.</p>
+                  <input type="range" min="10" value="50" max="infinite" class="input-slider input-slider-vip">
                 </div>
                 <div class="card-buttons" data-delay=".6s">
                   <button type="button" class="card-button mirror-btn"><span>2,20ZŁ</span><span>SMS</span></button>
@@ -217,7 +231,7 @@
               <article class="card card-unban">
                 <div class="card-header">
                   <h3 class="card-title" data-delay=".2s">Unban</h3>
-                  <img src="./style/img/unban.png" alt="Zdjecie przedmiotu pt. &quot;Unban&quot;">
+                  <img src="./style/img/unban.png" class="card-img" alt="Zdjecie przedmiotu pt. &quot;Unban&quot;">
                 </div>
                 <div class="card-desc" data-delay=".5s">
                   <p class="card-desc-info">
@@ -239,7 +253,7 @@
               <article class="card-sliders card-turbo-drop">
                 <div class="card-header">
                   <h3 class="card-title" data-delay=".2s">TURBO DROP</h3>
-                  <img src="./style/img/turbo-drop.png" alt="Zdjecie przedmiotu pt. &quot;Turbo drop&quot;">
+                  <img src="./style/img/turbo-drop.png" class="card-img" alt="Zdjecie przedmiotu pt. &quot;Turbo drop&quot;">
                 </div>
                 <div class="card-desc" data-delay=".4s">
                   <p class="card-desc-info">
@@ -264,7 +278,7 @@
               <article class="card-sliders card-cheat-case">
                 <div class="card-header">
                   <h3 class="card-title" data-delay=".2s">CheatCase</h3>
-                  <img src="./style/img/cheat-case.png" alt="Zdjecie przedmiotu pt. &quot;CheatCase&quot;">
+                  <img src="./style/img/cheat-case.png" class="card-img" alt="Zdjecie przedmiotu pt. &quot;CheatCase&quot;">
                 </div>
                 <div class="card-desc" data-delay=".4s">
                   <p class="card-desc-info">
@@ -291,7 +305,7 @@
               <article class="card card-colorful">
                 <div class="card-header">
                   <h3 class="card-title card-title-colorful colorful" data-delay=".2s">KOLOROWY NICK</h3>
-                  <img src="./style/img/kolorowy.png" alt="Zdjecie przedmiotu pt. &quot;Kolorowy nick&quot;">
+                  <img src="./style/img/kolorowy.png" class="card-img" alt="Zdjecie przedmiotu pt. &quot;Kolorowy nick&quot;">
                 </div>
                 <div class="card-desc" data-delay=".5s">
                   <p class="card-desc-info">
@@ -312,7 +326,7 @@
               <article class="card card-green">
                 <div class="card-header">
                   <h3 class="card-title green" data-delay=".2s">ZIELONY NICK</h3>
-                  <img src="./style/img/green.png" alt="Zdjecie przedmiotu pt. &quot;Zielony nick&quot;">
+                  <img src="./style/img/green.png" class="card-img" alt="Zdjecie przedmiotu pt. &quot;Zielony nick&quot;">
                 </div>
                 <div class="card-desc" data-delay=".5s">
                   <p class="card-desc-info">
@@ -333,7 +347,7 @@
               <article class="card card-pink pink">
                 <div class="card-header">
                   <h3 class="card-title pink" data-delay=".2s">ROZOWY NICK</h3>
-                  <img src="./style/img/pink.png" alt="Zdjecie przedmiotu pt. &quot;Rozowy nick&quot;">
+                  <img src="./style/img/pink.png" class="card-img" alt="Zdjecie przedmiotu pt. &quot;Rozowy nick&quot;">
                 </div>
                 <div class="card-desc" data-delay=".5s">
                   <p class="card-desc-info">
