@@ -88,6 +88,21 @@ $bubble-border: 0 -1*$px $white,
   100% {box-shadow:inset 0 0 1rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000}
 }
 
+@keyframes shadowReverse {
+  0% {box-shadow:inset 0 0 1rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000}
+  10% {box-shadow:inset 0 0 1rem 0 rgba(255, 255, 255, 0.1), 0 0 5px 0 #000}
+  20% {box-shadow:inset 0 0 1rem 0 rgba(255, 255, 255, 0.2), 0 0 5px 0 #000}
+  30% {box-shadow:inset 0 0 1rem 0 rgba(255, 255, 255, 0.3), 0 0 5px 0 #000}
+  40% {box-shadow:inset 0 0 1rem 0 rgba(255, 255, 255, 0.4), 0 0 5px 0 #000}
+  50% {box-shadow:inset 0 0 1rem 0 rgba(255, 255, 255, 0.5), 0 0 5px 0 #000}
+  60% {box-shadow:inset 0 0 1rem 0 rgba(255, 255, 255, 0.6), 0 0 5px 0 #000}
+  70% {box-shadow:inset 0 0 1rem 0 rgba(255, 255, 255, 0.7), 0 0 5px 0 #000}
+  80% {box-shadow:inset 0 0 1rem 0 rgba(255, 255, 255, 0.8), 0 0 5px 0 #000}
+  90% {box-shadow:inset 0 0 1rem 0 rgba(255, 255, 255, 0.9), 0 0 5px 0 #000}
+  100% {box-shadow:inset 0 0 1rem 0 rgba(255, 255, 255, 1), 0 0 5px 0 #000}
+
+}
+
 ///////////////////// BODY //////////////////////////
 
 .page-wrapper {
@@ -237,6 +252,22 @@ $bubble-border: 0 -1*$px $white,
 
 ///////////////////// CARDS //////////////////////////
 
+.test {
+  animation: 1s ease-in infinite alternate shadowReverse; 
+}
+
+// .testR {
+//   transition: all 1s ease;
+//   animation: 1s ease-in-out 2 alternate-reverse shadowReverse; 
+// }
+
+// .testRemove {
+//   // animation: 1s ease-in-out infinite alternate cardShadow; 
+//   animation-play-state: running;
+//   animation-direction: reverse;
+//   animation-iteration-count: 2;
+// }
+
 .cards-wrapper {
   margin: 2rem auto;
 }
@@ -282,9 +313,12 @@ $bubble-border: 0 -1*$px $white,
     border: 4px solid hsl(214, 12%, 12%);
     border-radius: 14px;
     padding: 1rem;
+    transition: all 1s ease-out;
     
     &:hover {
-      animation: 1s ease-in-out infinite alternate cardShadow; 
+      // animation: 1s ease-in-out infinite alternate cardShadow; 
+      // transition: all 1s ease-out;
+      animation: 1s ease-in infinite alternate shadowReverse;
     }
 
     .card-img {
