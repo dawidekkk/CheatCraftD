@@ -213,6 +213,31 @@ $bubble-border: 0 -1*$px $white,
   display: none;
 }
 
+.opacity-zero {
+  opacity: 0;
+}
+
+.opacity-one {
+  opacity: 1;
+  transition: all 1.5s;
+}
+
+.intersection-anim {
+  opacity: 0;
+}
+
+@keyframes anim1 {
+  from{
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .block {
   display: block;
 }
@@ -537,7 +562,7 @@ footer {
   .grid-wrapper {
     display: grid; 
     grid-template-columns: 1fr 1fr; 
-    grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: auto auto auto auto auto auto auto; 
     gap: 0px 0px; 
     grid-template-areas: 
       "grid-title grid-title"

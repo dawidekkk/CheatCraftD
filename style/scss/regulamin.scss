@@ -199,8 +199,35 @@ $bubble-border: 0 -1*$px $white,
   }
 }
 
+
+
 .none {
   display: none;
+}
+
+.opacity-zero {
+  opacity: 0;
+}
+
+.opacity-one {
+  opacity: 1;
+  transition: all 1.5s;
+}
+
+.intersection-anim {
+  opacity: 0;
+}
+
+@keyframes anim1 {
+  from{
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .show-btn {

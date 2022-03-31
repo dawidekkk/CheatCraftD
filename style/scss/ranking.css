@@ -273,6 +273,46 @@ html {
   display: none;
 }
 
+.opacity-zero {
+  opacity: 0;
+}
+
+.opacity-one {
+  opacity: 1;
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+}
+
+.intersection-anim {
+  opacity: 0;
+}
+
+@-webkit-keyframes anim1 {
+  from {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes anim1 {
+  from {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .block {
   display: block;
 }
@@ -701,8 +741,8 @@ footer a {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: auto 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: auto auto auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto auto;
     gap: 0px 0px;
         grid-template-areas: "grid-title grid-title" "grid-first grid-second" "grid-third grid-fourth" "grid-fifth grif-sixth" "grid-seventh grid-eighth" "grid-ninth grid-tenth" "grid-eleventh grid-twelfth";
   }

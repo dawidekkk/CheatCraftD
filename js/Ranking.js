@@ -15,7 +15,9 @@ const toggleList = (btn, list) => {
 }
 
 toggleList('.toggle-btn_topka_rankingu', '.show-list_topka_rankingu');
-toggleList('.toggle-btn_topka_gildii', '.show-list_topka-gildii');
+toggleList('.toggle-btn_topka_gildii', '.show-list_topka_gildii');
+toggleList('.toggle-btn_topka_zabojcow', '.show-list_topka_zabojcow');
+toggleList('.toggle-btn_topka_koxy', '.show-list_topka_koxy');
 
 // const toggleList = (list, btn) => {
 //   const showList = document.querySelector(list)

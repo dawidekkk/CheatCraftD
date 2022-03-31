@@ -507,7 +507,7 @@ body {
   transition: all 1.5s;
 }
 
-.anim {
+.intersection-anim {
   opacity: 0;
 }
 
@@ -765,10 +765,6 @@ body {
   line-height: 1.25;
   letter-spacing: 1.5px;
   font-weight: lighter;
-}
-
-.card-header .card-title-colorful {
-  font-size: 1.75rem;
 }
 
 .card-header span {

@@ -263,7 +263,7 @@ $bubble-border: 0 -1*$px $white,
   transition: all 1.5s;
 }
 
-.anim {
+.intersection-anim {
   opacity: 0;
 }
 
@@ -503,9 +503,7 @@ $bubble-border: 0 -1*$px $white,
     font-weight: lighter;
   }
 
-  .card-title-colorful {
-    font-size: 1.75rem;
-  }
+  
 
   span {
     font-size: 1.25rem;

@@ -1,7 +1,7 @@
 'use strict';
 
 const cards = document.querySelectorAll('.opacity-zero');
-const anim = document.querySelectorAll('.anim');
+const anim = document.querySelectorAll('.intersection-anim');
 
 function intersectionOne(classOne, classTwo, t) {
   const observer = new IntersectionObserver((entries, observer) => {
