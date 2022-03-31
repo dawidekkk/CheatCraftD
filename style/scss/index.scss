@@ -100,7 +100,16 @@ $bubble-border: 0 -1*$px $white,
   80% {box-shadow:inset 0 0 1rem 0 rgba(255, 255, 255, 0.8), 0 0 5px 0 #000}
   90% {box-shadow:inset 0 0 1rem 0 rgba(255, 255, 255, 0.9), 0 0 5px 0 #000}
   100% {box-shadow:inset 0 0 1rem 0 rgba(255, 255, 255, 1), 0 0 5px 0 #000}
+}
 
+@keyframes test {
+  from {
+    box-shadow:inset 0 0 1rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000
+  }
+
+  to {
+    box-shadow:inset 0 0 1rem 0 rgba(255, 255, 255, 1), 0 0 5px 0 #000
+  }
 }
 
 ///////////////////// BODY //////////////////////////
@@ -135,6 +144,7 @@ $bubble-border: 0 -1*$px $white,
   color: hsl(0, 0%, 95%);
   font-size: 22px;
   margin-bottom: 2rem;
+  font-family: 'mc-font';
 }
 
 .server,
@@ -244,10 +254,40 @@ $bubble-border: 0 -1*$px $white,
   display: none;
 }
 
+.opacity-zero {
+  opacity: 0;
+}
+
+.opacity-one {
+  opacity: 1;
+  transition: all 1.5s;
+}
+
+.anim {
+  opacity: 0;
+}
+
+@keyframes anim1 {
+  from{
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .show-btn {
   display: block;
   position: fixed;
   top: 85%; left: 85%;
+}
+
+.back-to-top {
+  padding: .5rem;
+  z-index: 100;
 }
 
 ///////////////////// CARDS //////////////////////////
@@ -275,7 +315,7 @@ $bubble-border: 0 -1*$px $white,
 .items-wrapper {
   width: 100%;
   margin: 2rem auto;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: hsla(0, 0%, 0%, 0.8);
   box-shadow: $bubble-border;
   padding: .5rem;
 
@@ -313,12 +353,15 @@ $bubble-border: 0 -1*$px $white,
     border: 4px solid hsl(214, 12%, 12%);
     border-radius: 14px;
     padding: 1rem;
-    transition: all 1s ease-out;
+    // animation: 1s ease-out infinite test normal;
+    // animation-play-state: paused;
+    transition: transform 2s ease-in-out;
     
     &:hover {
-      // animation: 1s ease-in-out infinite alternate cardShadow; 
-      // transition: all 1s ease-out;
-      animation: 1s ease-in infinite alternate shadowReverse;
+      // animation-play-state: running;
+      // // animation-fill-mode: forwards;
+      // transition: all 1s ease;
+      transform: rotate(360);
     }
 
     .card-img {
@@ -766,6 +809,10 @@ footer {
   .grid-fourth-slider { grid-area: grid-fourth-slider; }
   .grid-fifth-slider { grid-area: grid-fifth-slider; }
   .grid-sixth-slider { grid-area: grid-sixth-slider; }
+
+  .show-btn {
+    top: 85%; left: 92%;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -874,6 +921,12 @@ footer {
 @media screen and (min-width: 1400px) {
   .items-wrapper {
     width: 75rem;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .show-btn {
+    top: 85%; left: 82%;
   }
 }
 

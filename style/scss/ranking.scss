@@ -213,10 +213,19 @@ $bubble-border: 0 -1*$px $white,
   display: none;
 }
 
+.block {
+  display: block;
+}
+
 .show-btn {
   display: block;
   position: fixed;
   top: 85%; left: 85%;
+}
+
+.back-to-top {
+  padding: .5rem;
+  z-index: 100;
 }
 
 ///////////////////// MAIN //////////////////////////
@@ -258,6 +267,7 @@ $bubble-border: 0 -1*$px $white,
   padding: .6rem;
   margin: 0 auto;
   width: 22rem;
+  transition: all 1s;
 
   .rank {
     @include flex-center();
@@ -271,6 +281,8 @@ $bubble-border: 0 -1*$px $white,
     background-color: #bcbfc2;
     height: auto;
     padding: 20px;
+    transition: all 1s;
+    
 
     .rank-title {
       font-size: 2rem;
@@ -298,14 +310,43 @@ $bubble-border: 0 -1*$px $white,
     width: 80%;
     border-radius: 8px;
     padding: 0.75rem;
-    margin: 0 auto;
+    margin: 1rem auto 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #e9e3d9;
+    background-color: hsl(37, 27%, 88%);
     font-size: 16px;
     font-weight: 700;
     cursor: pointer;
+    border: none;
+    transition: all .25s;
+
+    &:hover {
+      background-color: hsl(37, 27%, 95%);
+    }
+  }
+}
+
+.player-list {
+  width: 80%;
+  padding: .25rem;
+  transition: all 1s;
+
+  table {
+    display: flex;
+
+    tbody {
+      width: 100%;
+    }
+
+    tr {
+      width: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      border-bottom: 2px solid black;
+      padding: .5rem;
+    }
   }
 }
 
@@ -408,6 +449,12 @@ footer {
     a {
       font-size: 24px;
     }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .show-btn {
+    top: 85%; left: 92%;
   }
 }
 
@@ -546,10 +593,8 @@ footer {
   }
 }
 
-.none {
-  display: none;
-}
-
-.block {
-  display: block;
+@media screen and (min-width: 1800px) {
+  .show-btn {
+    top: 85%; left: 82%;
+  }
 }

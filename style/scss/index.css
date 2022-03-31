@@ -268,6 +268,28 @@ body {
   }
 }
 
+@-webkit-keyframes test {
+  from {
+    -webkit-box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000;
+  }
+  to {
+    -webkit-box-shadow: inset 0 0 1rem 0 white, 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 white, 0 0 5px 0 #000;
+  }
+}
+
+@keyframes test {
+  from {
+    -webkit-box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000;
+  }
+  to {
+    -webkit-box-shadow: inset 0 0 1rem 0 white, 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 white, 0 0 5px 0 #000;
+  }
+}
+
 .page-wrapper {
   position: relative;
   background-image: url("../img/bg-sklep.png");
@@ -320,6 +342,7 @@ body {
   color: #f2f2f2;
   font-size: 22px;
   margin-bottom: 2rem;
+  font-family: 'mc-font';
 }
 
 .server,
@@ -474,11 +497,56 @@ body {
   display: none;
 }
 
+.opacity-zero {
+  opacity: 0;
+}
+
+.opacity-one {
+  opacity: 1;
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+}
+
+.anim {
+  opacity: 0;
+}
+
+@-webkit-keyframes anim1 {
+  from {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes anim1 {
+  from {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .show-btn {
   display: block;
   position: fixed;
   top: 85%;
   left: 85%;
+}
+
+.back-to-top {
+  padding: .5rem;
+  z-index: 100;
 }
 
 .test {
@@ -534,13 +602,15 @@ body {
   border: 4px solid #1b1e22;
   border-radius: 14px;
   padding: 1rem;
-  -webkit-transition: all 1s ease-out;
-  transition: all 1s ease-out;
+  -webkit-transition: -webkit-transform 2s ease-in-out;
+  transition: -webkit-transform 2s ease-in-out;
+  transition: transform 2s ease-in-out;
+  transition: transform 2s ease-in-out, -webkit-transform 2s ease-in-out;
 }
 
 .behind-bg .card:hover {
-  -webkit-animation: 1s ease-in infinite alternate shadowReverse;
-          animation: 1s ease-in infinite alternate shadowReverse;
+  -webkit-transform: rotate(360);
+          transform: rotate(360);
 }
 
 .behind-bg .card .card-img {
@@ -1103,6 +1173,10 @@ footer a {
     -ms-grid-column: 2;
     grid-area: grid-sixth-slider;
   }
+  .show-btn {
+    top: 85%;
+    left: 92%;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -1279,6 +1353,13 @@ footer a {
 @media screen and (min-width: 1400px) {
   .items-wrapper {
     width: 75rem;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .show-btn {
+    top: 85%;
+    left: 82%;
   }
 }
 /*# sourceMappingURL=index.css.map */

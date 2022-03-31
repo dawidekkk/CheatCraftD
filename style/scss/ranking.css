@@ -273,11 +273,20 @@ html {
   display: none;
 }
 
+.block {
+  display: block;
+}
+
 .show-btn {
   display: block;
   position: fixed;
   top: 85%;
   left: 85%;
+}
+
+.back-to-top {
+  padding: .5rem;
+  z-index: 100;
 }
 
 .ranks-wrapper {
@@ -319,6 +328,8 @@ html {
   padding: .6rem;
   margin: 0 auto;
   width: 22rem;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .behind-bg .rank {
@@ -344,6 +355,8 @@ html {
   background-color: #bcbfc2;
   height: auto;
   padding: 20px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .behind-bg .rank .rank-title {
@@ -385,7 +398,7 @@ html {
   width: 80%;
   border-radius: 8px;
   padding: 0.75rem;
-  margin: 0 auto;
+  margin: 1rem auto 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -395,10 +408,48 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #e9e3d9;
+  background-color: #e9e2d8;
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
+  border: none;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+}
+
+.behind-bg .rank-button:hover {
+  background-color: #f6f3ef;
+}
+
+.player-list {
+  width: 80%;
+  padding: .25rem;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.player-list table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.player-list table tbody {
+  width: 100%;
+}
+
+.player-list table tr {
+  width: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-bottom: 2px solid black;
+  padding: .5rem;
 }
 
 footer {
@@ -519,6 +570,13 @@ footer a {
   }
   .footer-nav a {
     font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .show-btn {
+    top: 85%;
+    left: 92%;
   }
 }
 
@@ -742,11 +800,10 @@ footer a {
   }
 }
 
-.none {
-  display: none;
-}
-
-.block {
-  display: block;
+@media screen and (min-width: 1800px) {
+  .show-btn {
+    top: 85%;
+    left: 82%;
+  }
 }
 /*# sourceMappingURL=ranking.css.map */

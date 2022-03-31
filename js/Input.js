@@ -21,11 +21,6 @@ sponsorInput.addEventListener('input', function() {
 
   let val = sponsorInputValue.textContent = this.value;
   let i = this.value;
-  let j;
-
-  for(j of sms) {
-    console.log(j);
-  }
 
   for(i; i <= val; i++) {
 
@@ -34,6 +29,7 @@ sponsorInput.addEventListener('input', function() {
       btnSponsorSms.textContent = `${sms[sms.length - 1]}PLN`
     } else {
       sponsorInputValue.textContent = `${i} dni.`
+      btnSponsorSms.textContent = `$$$`;
     }
     
   }

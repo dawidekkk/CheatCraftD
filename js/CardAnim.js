@@ -12,3 +12,4 @@ const card = document.querySelector('.card-miecz');
 //     // card.classList.remove('test')
 //     card.classList.toggle('testR')
 // })
+

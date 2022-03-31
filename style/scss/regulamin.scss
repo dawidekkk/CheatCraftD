@@ -96,10 +96,6 @@ $bubble-border: 0 -1*$px $white,
   margin-bottom: 2rem;
 }
 
-// .discord-wrapper {
-//   margin: 2rem auto;
-// }
-
 .server,
 .discord {
   display: flex;
@@ -211,6 +207,11 @@ $bubble-border: 0 -1*$px $white,
   display: block;
   position: fixed;
   top: 85%; left: 85%;
+}
+
+.back-to-top {
+  padding: .5rem;
+  z-index: 100;
 }
 
 ///////////////////// MAIN //////////////////////////
@@ -392,6 +393,12 @@ footer {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .show-btn {
+    top: 85%; left: 92%;
+  }
+}
+
 @media screen and (min-width: 992px) {
   .grid-social {
     display: grid;
@@ -467,5 +474,11 @@ footer {
 @media screen and (min-width: 1400px) {
   .items-wrapper {
     width: 75rem;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .show-btn {
+    top: 85%; left: 82%;
   }
 }
