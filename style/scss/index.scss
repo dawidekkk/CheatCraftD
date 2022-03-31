@@ -10,7 +10,7 @@ html {
 
 body {
   width: 100%; height: 100%;
-  
+  position: relative;
 }
 
 #particles-js canvas{
@@ -224,8 +224,14 @@ $bubble-border: 0 -1*$px $white,
   }
 }
 
-.back-to-top {
+.none {
   display: none;
+}
+
+.show-btn {
+  display: block;
+  position: fixed;
+  top: 85%; left: 85%;
 }
 
 ///////////////////// CARDS //////////////////////////

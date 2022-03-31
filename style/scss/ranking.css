@@ -268,8 +268,15 @@ html {
   color: #fff;
 }
 
-.back-to-top {
+.none {
   display: none;
+}
+
+.show-btn {
+  display: block;
+  position: fixed;
+  top: 85%;
+  left: 85%;
 }
 
 .ranks-wrapper {
