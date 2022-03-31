@@ -741,4 +741,12 @@ footer a {
     width: 75rem;
   }
 }
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
 /*# sourceMappingURL=ranking.css.map */

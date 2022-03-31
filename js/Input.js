@@ -1,7 +1,5 @@
 'use strict'
 
-// CENA BUTTONOW!!!
-
 let sponsorInput = document.getElementById('sponsor-input')
 let sponsorInputValue = document.getElementById('sponsor-value')
 let superInput = document.getElementById('super-input')
@@ -19,22 +17,15 @@ let sms = [5.50, 6.88, 8.52, 10.17, 11, 12.93, 14.58, 16.22, 17.6, 19.25, 20.9, 
 let psc = [5, 6.25, 7.75, 9.25, 10, 11.75, 13.25, 14.75, 16, 17.5, 19, 20, 21.5, 23, 25, 26, 27.25, 28.5, 30, 50]
 let przelew = [5, 6.25, 7.75, 9.25, 10, 11.75, 13.25, 14.75, 16, 17.5, 19, 20, 21.5, 23, 25, 26, 27.25, 28.5, 30, 50]
 
-
-let j;
-let arr = [];
-sms.forEach((e,i) => console.log(e,i))
-
 sponsorInput.addEventListener('input', function() {
 
   let val = sponsorInputValue.textContent = this.value;
-
-  // if(val == 10) {
-  //   btnSponsor.forEach(e => e.textContent = sms[0])
-  // } else if (val == 15) {
-  //   btnSponsor.forEach(e => e.textContent = sms[1])
-  // }
-
   let i = this.value;
+  let j;
+
+  for(j of sms) {
+    console.log(j);
+  }
 
   for(i; i <= val; i++) {
 

@@ -535,33 +535,6 @@ footer {
     font-size: 18px;
   }
 
-  // grid poziomy
-  // .grid-wrapper {
-  //   display: grid; 
-  //   grid-template-columns: 1fr 1fr 1fr; 
-  //   grid-template-rows: auto 1fr 1fr 1fr 1fr; 
-  //   gap: 0px 0px; 
-  //   grid-template-areas: 
-  //   "grid-title grid-title grid-title"
-  //   "grid-first grid-second grid-third"
-  //   "grid-fourth grid-fifth grid-sixth"
-  //   "grid-seventh grid-eighth grid-ninth"
-  //   "grid-tenth grid-eleventh grid-twelfth";
-  // }
-  //   .grid-title { grid-area: grid-title; }
-  //   .grid-first { grid-area: grid-first; }
-  //   .grid-second { grid-area: grid-second; }
-  //   .grid-third { grid-area: grid-third; }
-  //   .grid-fourth { grid-area: grid-fourth; }
-  //   .grid-fifth { grid-area: grid-fifth; }
-  //   .grif-sixth { grid-area: grif-sixth; }
-  //   .grid-seventh { grid-area: grid-seventh; }
-  //   .grid-eighth { grid-area: grid-eighth; }
-  //   .grid-ninth { grid-area: grid-ninth; }
-  //   .grid-tenth { grid-area: grid-tenth; }
-  //   .grid-eleventh { grid-area: grid-eleventh; }
-  //   .grid-twelfth { grid-area: grid-twelfth; }
-
   .behind-bg {
     width: 34rem;
   }
@@ -573,3 +546,10 @@ footer {
   }
 }
 
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
