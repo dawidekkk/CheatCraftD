@@ -20,7 +20,6 @@ let btnVip = document.querySelectorAll('.btn-price-vip')
 
 let sms = [5.50, 6.88, 8.52, 10.17, 11, 12.93, 14.58, 16.22, 17.6, 19.25, 20.9, 22, 23.65, 25.3, 27.5, 28.6, 29.98, 31.35, 33, 55.01]
 let psc = [5, 6.25, 7.75, 9.25, 10, 11.75, 13.25, 14.75, 16, 17.5, 19, 20, 21.5, 23, 25, 26, 27.25, 28.5, 30, 50]
-let przelew = [5, 6.25, 7.75, 9.25, 10, 11.75, 13.25, 14.75, 16, 17.5, 19, 20, 21.5, 23, 25, 26, 27.25, 28.5, 30, 50]
 
 sponsorInput.addEventListener('input', function() {
 
@@ -30,11 +29,14 @@ sponsorInput.addEventListener('input', function() {
   for(i; i <= val; i++) {
 
     if(val == 10) {
-      sponsorInputValue.textContent = `${i} dni.`
-      btnSponsorSms.textContent = `${sms[0]}PLN`
-      btnSponsor.forEach(e => {
+      setTimeout(() => {
+        btnSponsorSms.textContent = `${sms[0]}PLN`
+        btnSponsor.forEach(e => {
         e.textContent = `${psc[0]}PLN`
-      })
+        btnSponsorSms.textContent = 'SMS'
+        })
+      }, 1000)
+      
     } else if(val == 15) {
       sponsorInputValue.textContent = `${i} dni.`
       btnSponsorSms.textContent = `${sms[1]}PLN`
