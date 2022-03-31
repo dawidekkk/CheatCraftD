@@ -13,20 +13,40 @@ let turboInputValue = document.getElementById('turbo-value')
 let cheatInput = document.getElementById('cheat-input')
 let cheatInputValue = document.getElementById('cheat-value')
 
-let btn = document.querySelectorAll('.btn-price')
+let btnSponsorSms = document.querySelector('.btn-price-sponsor_sms')
 
-let sms = [5.50, 6.88, 8.52, 10.17, 11, 12.93, 14.58, 16.22, 17.6, 19.25, 20,9, 22, 23.65, 25.3, 27.5, 28.6, 29.98, 31.35, 33, 55.01]
+let sms = [5.50, 6.88, 8.52, 10.17, 11, 12.93, 14.58, 16.22, 17.6, 19.25, 20.9, 22, 23.65, 25.3, 27.5, 28.6, 29.98, 31.35, 33, 55.01]
 let psc = [5, 6.25, 7.75, 9.25, 10, 11.75, 13.25, 14.75, 16, 17.5, 19, 20, 21.5, 23, 25, 26, 27.25, 28.5, 30, 50]
 let przelew = [5, 6.25, 7.75, 9.25, 10, 11.75, 13.25, 14.75, 16, 17.5, 19, 20, 21.5, 23, 25, 26, 27.25, 28.5, 30, 50]
+
+
+let j;
+let arr = [];
+sms.forEach((e,i) => console.log(e,i))
 
 sponsorInput.addEventListener('input', function() {
 
   let val = sponsorInputValue.textContent = this.value;
-  if(val == 100) {
-    sponsorInputValue.textContent = 'zawsze.';
-  } else {
-    sponsorInputValue.textContent = `${this.value} dni.`
+
+  // if(val == 10) {
+  //   btnSponsor.forEach(e => e.textContent = sms[0])
+  // } else if (val == 15) {
+  //   btnSponsor.forEach(e => e.textContent = sms[1])
+  // }
+
+  let i = this.value;
+
+  for(i; i <= val; i++) {
+
+    if(val == 100) {
+      sponsorInputValue.textContent = 'zawsze.';
+      btnSponsorSms.textContent = `${sms[sms.length - 1]}PLN`
+    } else {
+      sponsorInputValue.textContent = `${i} dni.`
+    }
+    
   }
+  
 })
 
 superInput.addEventListener('input', function() {
