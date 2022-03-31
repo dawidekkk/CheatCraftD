@@ -33,116 +33,116 @@ sponsorInput.addEventListener('input', function() {
       sponsorInputValue.textContent = `${i} dni.`
       btnSponsorSms.textContent = `${sms[0]}PLN`
       btnSponsor.forEach(e => {
-        e.textContent = `${sms[0]}PLN`
+        e.textContent = `${psc[0]}PLN`
       })
     } else if(val == 15) {
       sponsorInputValue.textContent = `${i} dni.`
       btnSponsorSms.textContent = `${sms[1]}PLN`
       btnSponsor.forEach(e => {
-        e.textContent = `${sms[1]}PLN`
+        e.textContent = `${psc[1]}PLN`
       })
     } else if(val == 20) {
       sponsorInputValue.textContent = `${i} dni.`
       btnSponsorSms.textContent = `${sms[2]}PLN`
       btnSponsor.forEach(e => {
-        e.textContent = `${sms[2]}PLN`
+        e.textContent = `${psc[2]}PLN`
       })
     } else if(val == 25) {
       sponsorInputValue.textContent = `${i} dni.`
       btnSponsorSms.textContent = `${sms[3]}PLN`
       btnSponsor.forEach(e => {
-        e.textContent = `${sms[3]}PLN`
+        e.textContent = `${psc[3]}PLN`
       })
     } else if(val == 30) {
       sponsorInputValue.textContent = `${i} dni.`
       btnSponsorSms.textContent = `${sms[4]}PLN`
       btnSponsor.forEach(e => {
-        e.textContent = `${sms[4]}PLN`
+        e.textContent = `${psc[4]}PLN`
       })
     } else if(val == 35) {
       sponsorInputValue.textContent = `${i} dni.`
       btnSponsorSms.textContent = `${sms[5]}PLN`
       btnSponsor.forEach(e => {
-        e.textContent = `${sms[5]}PLN`
+        e.textContent = `${psc[5]}PLN`
       })
     } else if(val == 40) {
       sponsorInputValue.textContent = `${i} dni.`
       btnSponsorSms.textContent = `${sms[6]}PLN`
       btnSponsor.forEach(e => {
-        e.textContent = `${sms[6]}PLN`
+        e.textContent = `${psc[6]}PLN`
       })
     } else if(val == 45) {
       sponsorInputValue.textContent = `${i} dni.`
       btnSponsorSms.textContent = `${sms[7]}PLN`
       btnSponsor.forEach(e => {
-        e.textContent = `${sms[7]}PLN`
+        e.textContent = `${psc[7]}PLN`
       })
     } else if(val == 50) {
       sponsorInputValue.textContent = `${i} dni.`
       btnSponsorSms.textContent = `${sms[8]}PLN`
       btnSponsor.forEach(e => {
-        e.textContent = `${sms[8]}PLN`
+        e.textContent = `${psc[8]}PLN`
       })
     } else if(val == 55) {
       sponsorInputValue.textContent = `${i} dni.`
       btnSponsorSms.textContent = `${sms[9]}PLN`
       btnSponsor.forEach(e => {
-        e.textContent = `${sms[9]}PLN`
+        e.textContent = `${psc[9]}PLN`
       })
     } else if(val == 60) {
       sponsorInputValue.textContent = `${i} dni.`
       btnSponsorSms.textContent = `${sms[10]}PLN`
       btnSponsor.forEach(e => {
-        e.textContent = `${sms[10]}PLN`
+        e.textContent = `${psc[10]}PLN`
       })
     } else if(val == 65) {
       sponsorInputValue.textContent = `${i} dni.`
       btnSponsorSms.textContent = `${sms[11]}PLN`
       btnSponsor.forEach(e => {
-        e.textContent = `${sms[11]}PLN`
+        e.textContent = `${psc[11]}PLN`
       })
     } else if(val == 70) {
       sponsorInputValue.textContent = `${i} dni.`
       btnSponsorSms.textContent = `${sms[12]}PLN`
       btnSponsor.forEach(e => {
-        e.textContent = `${sms[12]}PLN`
+        e.textContent = `${psc[12]}PLN`
       })
     } else if(val == 75) {
       sponsorInputValue.textContent = `${i} dni.`
       btnSponsorSms.textContent = `${sms[13]}PLN`
       btnSponsor.forEach(e => {
-        e.textContent = `${sms[13]}PLN`
+        e.textContent = `${psc[13]}PLN`
       })
     } else if(val == 80) {
       sponsorInputValue.textContent = `${i} dni.`
       btnSponsorSms.textContent = `${sms[14]}PLN`
       btnSponsor.forEach(e => {
-        e.textContent = `${sms[14]}PLN`
+        e.textContent = `${psc[14]}PLN`
       })
     } else if(val == 85) {
       sponsorInputValue.textContent = `${i} dni.`
       btnSponsorSms.textContent = `${sms[15]}PLN`
       btnSponsor.forEach(e => {
-        e.textContent = `${sms[15]}PLN`
+        e.textContent = `${psc[15]}PLN`
       })
     } else if(val == 90) {
       sponsorInputValue.textContent = `${i} dni.`
       btnSponsorSms.textContent = `${sms[16]}PLN`
       btnSponsor.forEach(e => {
-        e.textContent = `${sms[16]}PLN`
+        e.textContent = `${psc[16]}PLN`
       })
     } else if(val == 95) {
       sponsorInputValue.textContent = `${i} dni.`
       btnSponsorSms.textContent = `${sms[17]}PLN`
       btnSponsor.forEach(e => {
-        e.textContent = `${sms[17]}PLN`
+        e.textContent = `${psc[17]}PLN`
       })
     } else if(val == 100) {
       sponsorInputValue.textContent = `${i} dni.`
       sponsorInputValue.textContent = 'zawsze.';
       btnSponsorSms.textContent = `${sms[sms.length - 1]}PLN`
       btnSponsor.forEach(e => {
-        e.textContent = `${sms[sms.length - 1]}PLN`
+        e.textContent = `${psc[psc.length - 1]}PLN`
       })
     } 
   }
