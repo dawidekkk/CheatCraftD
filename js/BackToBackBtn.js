@@ -11,13 +11,13 @@ const scroll = () => {
   }
 }
 
-window.onscroll = () => {
-  scroll();
-}
-
 const backToTop = () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+}
+
+window.onscroll = () => {
+  scroll();
 }
 
 backBtn.addEventListener("click", backToTop);
