@@ -167,9 +167,12 @@ $bubble-border: 0 -1*$px $white,
   @include flex-center();
   flex-wrap: wrap;
   margin: 1rem auto;
+  width: 100%;
+  max-width: 100%;
 
   nav {
     width: 24rem;
+    max-width: 100%;
 
     ul {
       display: flex;
@@ -279,6 +282,7 @@ $bubble-border: 0 -1*$px $white,
   padding: .6rem;
   margin: 0 auto;
   width: 22rem;
+  max-width: 100%;
   text-align: left;
 
   .rule {
@@ -292,6 +296,7 @@ $bubble-border: 0 -1*$px $white,
     -khtml-box-shadow: rgb(255, 255, 255) inset 0 0 1rem;
     background-color: #bcbfc2;
     height: auto;
+    width: 100%; 
     padding: 2.25rem;
 
     .rule-title {

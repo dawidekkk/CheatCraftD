@@ -216,10 +216,13 @@ html {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 1rem auto;
+  width: 100%;
+  max-width: 100%;
 }
 
 .navigation-wrapper nav {
   width: 24rem;
+  max-width: 100%;
 }
 
 .navigation-wrapper nav ul {
@@ -358,6 +361,7 @@ html {
   padding: .6rem;
   margin: 0 auto;
   width: 22rem;
+  max-width: 100%;
   text-align: left;
 }
 
@@ -383,6 +387,7 @@ html {
   -khtml-box-shadow: white inset 0 0 1rem;
   background-color: #bcbfc2;
   height: auto;
+  width: 100%;
   padding: 2.25rem;
 }
 

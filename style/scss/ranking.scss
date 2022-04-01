@@ -8,17 +8,14 @@ html {
   scroll-behavior: smooth;
 }
 
-// #particles-js canvas{
-//   position: absolute;
-//   z-index: -5;
-//   top: 0;
-//   max-width: 67%;
-// }
-
 @font-face {
   font-family: "mc-font";
   src: url(../fonts/minecraft-webfont.woff) format("woff"),
   url(../fonts/minecraft-webfont.woff2) format("woff");
+}
+
+#particles-js canvas{
+  display: none;
 }
 
 ///////////////////// SCSS //////////////////////////
@@ -78,6 +75,7 @@ $bubble-border: 0 -1*$px $white,
   background-position: center;
   width: auto; height: 100%;
   padding: 1rem;
+  z-index: 50;
 }
 
 .the-header {
@@ -177,9 +175,12 @@ $bubble-border: 0 -1*$px $white,
   @include flex-center();
   flex-wrap: wrap;
   margin: 1rem auto;
+  width: 100%;
+  max-width: 100%;
 
   nav {
     width: 24rem;
+    max-width: 100%;
 
     ul {
       display: flex;
@@ -257,6 +258,7 @@ $bubble-border: 0 -1*$px $white,
 
 .ranks-wrapper {
   margin: 2rem auto;
+  z-index: 50;
 }
 
 .items-wrapper {
@@ -292,6 +294,7 @@ $bubble-border: 0 -1*$px $white,
   padding: .6rem;
   margin: 0 auto;
   width: 22rem;
+  max-width: 100%;
   transition: all 1s;
 
   .rank {
@@ -305,6 +308,8 @@ $bubble-border: 0 -1*$px $white,
     -khtml-box-shadow: rgb(255, 255, 255) inset 0 0 1rem;
     background-color: #bcbfc2;
     height: auto;
+    width: 100%; 
+    max-width: auto;
     padding: 20px;
     transition: all 1s;
     
@@ -610,11 +615,22 @@ footer {
   .behind-bg {
     width: 34rem;
   }
+
+  
 }
 
 @media screen and (min-width: 1400px) {
   .items-wrapper {
     width: 75rem;
+  }
+
+  #particles-js canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    z-index: -10;
+    display: block;
   }
 }
 
