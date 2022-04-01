@@ -16,17 +16,13 @@ body {
   position: relative;
 }
 
-#particles-js canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  max-width: 100%;
-  z-index: -10;
-}
-
 @font-face {
   font-family: "mc-font";
   src: url(../fonts/minecraft-webfont.woff) format("woff"), url(../fonts/minecraft-webfont.woff2) format("woff");
+}
+
+#particles-js canvas {
+  display: none;
 }
 
 @-webkit-keyframes logoAnim {
@@ -1360,6 +1356,14 @@ footer a {
 @media screen and (min-width: 1400px) {
   .items-wrapper {
     width: 75rem;
+  }
+  #particles-js canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    z-index: -10;
+    display: block;
   }
 }
 
