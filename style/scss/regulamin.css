@@ -424,10 +424,11 @@ footer {
 
 footer .payment-methods {
   font-size: 22px;
+  color: #cccccc;
 }
 
 footer .psc {
-  width: 100%;
+  width: 24rem;
   height: 10rem;
 }
 
@@ -438,6 +439,7 @@ footer .sms {
 
 footer .payment-server-info {
   margin: 1rem auto;
+  color: #c7c7c7;
 }
 
 footer .logo-footer {
@@ -449,6 +451,16 @@ footer .logo-footer {
 footer nav {
   margin: 1rem auto;
   text-align: left;
+  color: #ebebeb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 footer nav ul {
@@ -457,7 +469,7 @@ footer nav ul {
 }
 
 footer nav ul a {
-  color: #f2f2f2;
+  color: #ebebeb;
   text-decoration: none;
   font-size: 1.25rem;
 }
