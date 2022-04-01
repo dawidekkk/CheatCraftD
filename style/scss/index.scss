@@ -15,10 +15,10 @@ body {
 
 #particles-js canvas{
   position: absolute;
-  z-index: -5;
   top: 0;
   left: 0;
-  // max-width: 67%;
+  max-width: 100%;
+  z-index: -10;
 }
 
 @font-face {
@@ -122,6 +122,7 @@ $bubble-border: 0 -1*$px $white,
   background-position: center;
   width: auto; height: 100%;
   padding: 1rem;
+  z-index: 50;
 }
 
 .the-header {
@@ -310,12 +311,13 @@ $bubble-border: 0 -1*$px $white,
 
 .cards-wrapper {
   margin: 2rem auto;
+  z-index: 25;
 }
 
 .items-wrapper {
   width: 100%;
   margin: 2rem auto;
-  background-color: hsla(0, 0%, 0%, 0.8);
+  background-color: hsla(0, 0%, 0%, 0.92);
   box-shadow: $bubble-border;
   padding: .5rem;
 
@@ -338,6 +340,7 @@ $bubble-border: 0 -1*$px $white,
   padding: .6rem;
   margin: 0 auto;
   width: 22rem;
+  max-width: 100%;
 
   .card {
     display: grid; 
@@ -575,6 +578,11 @@ $bubble-border: 0 -1*$px $white,
 .card-buttons {
   grid-area: card-buttons;
   display: flex;
+  transition: all 1s;
+
+  .btn-price-sponsor_sms {
+    transition: all 1s;
+  }
 
   .card-button {
     border-radius: 2px;
