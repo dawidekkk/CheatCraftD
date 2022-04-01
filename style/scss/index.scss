@@ -215,9 +215,12 @@ $bubble-border: 0 -1*$px $white,
   @include flex-center();
   flex-wrap: wrap;
   margin: 1rem auto;
+  width: 100%;
+  max-width: 100%;
 
   nav {
     width: 24rem;
+    max-width: 100%;
 
     ul {
       display: flex;

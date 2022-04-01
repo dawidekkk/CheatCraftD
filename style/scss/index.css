@@ -443,10 +443,13 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 1rem auto;
+  width: 100%;
+  max-width: 100%;
 }
 
 .navigation-wrapper nav {
   width: 24rem;
+  max-width: 100%;
 }
 
 .navigation-wrapper nav ul {
