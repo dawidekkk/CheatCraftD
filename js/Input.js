@@ -1,7 +1,5 @@
 'use strict'
 
-let sponsorInput = document.getElementById('sponsor-input')
-let sponsorInputValue = document.getElementById('sponsor-value')
 let superInput = document.getElementById('super-input')
 let superInputValue = document.getElementById('super-value')
 let vipInput = document.getElementById('vip-input')
@@ -11,7 +9,8 @@ let turboInputValue = document.getElementById('turbo-value')
 let cheatInput = document.getElementById('cheat-input')
 let cheatInputValue = document.getElementById('cheat-value')
 
-
+let sponsorInput = document.getElementById('sponsor-input')
+let sponsorInputValue = document.getElementById('sponsor-value')
 
 let btnSuperSms = document.querySelector('.btn-price-super_sms')
 let btnSuper = document.querySelectorAll('.btn-price-super')
@@ -21,152 +20,162 @@ let btnVip = document.querySelectorAll('.btn-price-vip')
 let sms = [5.50, 6.88, 8.52, 10.17, 11, 12.93, 14.58, 16.22, 17.6, 19.25, 20.9, 22, 23.65, 25.3, 27.5, 28.6, 29.98, 31.35, 33, 55.01]
 let psc = [5, 6.25, 7.75, 9.25, 10, 11.75, 13.25, 14.75, 16, 17.5, 19, 20, 21.5, 23, 25, 26, 27.25, 28.5, 30, 50]
 
-sponsorInput.addEventListener('input', function() {
+let btnSponsorSms = document.querySelector('.btn-price-sponsor_sms')
+let btnSponsorPsc = document.querySelector('.btn-price-sponsor_psc')
+let btnSponsorPrzelew = document.querySelector('.btn-price-sponsor_przelew')
 
-  let val = sponsorInputValue.textContent = this.value;
-  let i = this.value;
-  let btnSponsorSms = document.querySelector('.btn-price-sponsor_sms')
-  let btnSponsorPsc = document.querySelector('.btn-price-sponsor_psc')
-  let btnSponsorPrzelew = document.querySelector('.btn-price-sponsor_przelew')
+sponsorInput.oninput = function() {
+  sponsorInputValue.innerHTML = sms[this.value];
+}
+sponsorInput.oninput();
 
-  for(i; i <= val; i++) {
+// sponsorInput.addEventListener('input', function() {
 
-    // if(val == 10) {
-    //   // setTimeout(() => {
+//   let btnSponsorSms = document.querySelector('.btn-price-sponsor_sms')
+//   let btnSponsorPsc = document.querySelector('.btn-price-sponsor_psc')
+//   let btnSponsorPrzelew = document.querySelector('.btn-price-sponsor_przelew')
+  
+//   let val = sponsorInputValue.textContent = this.value;
+//   let i = this.value;
 
-    //   //   // btnSponsorSms.textContent = `${sms[0]}PLN`
-    //   //   // btnSponsorPsc.textContent = `${psc[0]}PLN`
-    //   //   // btnSponsorPrzelew.textContent `${psc[0]}PLN`
-    //   // }, 1000)
-    //     // btnSponsorSms.textContent = 'SMS';
-    //     // btnSponsorPsc.textContent = 'PSC';
-    //     // btnSponsorPrzelew.textContent = 'PRZELEW';
+//   for(i; i <= val; i++) {
+
+//     // if(val == 10) {
+//     //   // setTimeout(() => {
+
+//     //   //   // btnSponsorSms.textContent = `${sms[0]}PLN`
+//     //   //   // btnSponsorPsc.textContent = `${psc[0]}PLN`
+//     //   //   // btnSponsorPrzelew.textContent `${psc[0]}PLN`
+//     //   // }, 1000)
+//     //     // btnSponsorSms.textContent = 'SMS';
+//     //     // btnSponsorPsc.textContent = 'PSC';
+//     //     // btnSponsorPrzelew.textContent = 'PRZELEW';
         
       
-    // } else if(val == 15) {
-    //   sponsorInputValue.textContent = `${i} dni.`
-    //   btnSponsorSms.textContent = `${sms[1]}PLN`
-    //   btnSponsor.forEach(e => {
-    //     e.textContent = `${psc[1]}PLN`
-    //   })
-    // } else if(val == 20) {
-    //   sponsorInputValue.textContent = `${i} dni.`
-    //   btnSponsorSms.textContent = `${sms[2]}PLN`
-    //   btnSponsor.forEach(e => {
-    //     e.textContent = `${psc[2]}PLN`
-    //   })
-    // } else if(val == 25) {
-    //   sponsorInputValue.textContent = `${i} dni.`
-    //   btnSponsorSms.textContent = `${sms[3]}PLN`
-    //   btnSponsor.forEach(e => {
-    //     e.textContent = `${psc[3]}PLN`
-    //   })
-    // } else if(val == 30) {
-    //   sponsorInputValue.textContent = `${i} dni.`
-    //   btnSponsorSms.textContent = `${sms[4]}PLN`
-    //   btnSponsor.forEach(e => {
-    //     e.textContent = `${psc[4]}PLN`
-    //   })
-    // } else if(val == 35) {
-    //   sponsorInputValue.textContent = `${i} dni.`
-    //   btnSponsorSms.textContent = `${sms[5]}PLN`
-    //   btnSponsor.forEach(e => {
-    //     e.textContent = `${psc[5]}PLN`
-    //   })
-    // } else if(val == 40) {
-    //   sponsorInputValue.textContent = `${i} dni.`
-    //   btnSponsorSms.textContent = `${sms[6]}PLN`
-    //   btnSponsor.forEach(e => {
-    //     e.textContent = `${psc[6]}PLN`
-    //   })
-    // } else if(val == 45) {
-    //   sponsorInputValue.textContent = `${i} dni.`
-    //   btnSponsorSms.textContent = `${sms[7]}PLN`
-    //   btnSponsor.forEach(e => {
-    //     e.textContent = `${psc[7]}PLN`
-    //   })
-    // } else if(val == 50) {
-    //   sponsorInputValue.textContent = `${i} dni.`
-    //   btnSponsorSms.textContent = `${sms[8]}PLN`
-    //   btnSponsor.forEach(e => {
-    //     e.textContent = `${psc[8]}PLN`
-    //   })
-    // } else if(val == 55) {
-    //   sponsorInputValue.textContent = `${i} dni.`
-    //   btnSponsorSms.textContent = `${sms[9]}PLN`
-    //   btnSponsor.forEach(e => {
-    //     e.textContent = `${psc[9]}PLN`
-    //   })
-    // } else if(val == 60) {
-    //   sponsorInputValue.textContent = `${i} dni.`
-    //   btnSponsorSms.textContent = `${sms[10]}PLN`
-    //   btnSponsor.forEach(e => {
-    //     e.textContent = `${psc[10]}PLN`
-    //   })
-    // } else if(val == 65) {
-    //   sponsorInputValue.textContent = `${i} dni.`
-    //   btnSponsorSms.textContent = `${sms[11]}PLN`
-    //   btnSponsor.forEach(e => {
-    //     e.textContent = `${psc[11]}PLN`
-    //   })
-    // } else if(val == 70) {
-    //   sponsorInputValue.textContent = `${i} dni.`
-    //   btnSponsorSms.textContent = `${sms[12]}PLN`
-    //   btnSponsor.forEach(e => {
-    //     e.textContent = `${psc[12]}PLN`
-    //   })
-    // } else if(val == 75) {
-    //   sponsorInputValue.textContent = `${i} dni.`
-    //   btnSponsorSms.textContent = `${sms[13]}PLN`
-    //   btnSponsor.forEach(e => {
-    //     e.textContent = `${psc[13]}PLN`
-    //   })
-    // } else if(val == 80) {
-    //   sponsorInputValue.textContent = `${i} dni.`
-    //   btnSponsorSms.textContent = `${sms[14]}PLN`
-    //   btnSponsor.forEach(e => {
-    //     e.textContent = `${psc[14]}PLN`
-    //   })
-    // } else if(val == 85) {
-    //   sponsorInputValue.textContent = `${i} dni.`
-    //   btnSponsorSms.textContent = `${sms[15]}PLN`
-    //   btnSponsor.forEach(e => {
-    //     e.textContent = `${psc[15]}PLN`
-    //   })
-    // } else if(val == 90) {
-    //   sponsorInputValue.textContent = `${i} dni.`
-    //   btnSponsorSms.textContent = `${sms[16]}PLN`
-    //   btnSponsor.forEach(e => {
-    //     e.textContent = `${psc[16]}PLN`
-    //   })
-    // } else if(val == 95) {
-    //   sponsorInputValue.textContent = `${i} dni.`
-    //   btnSponsorSms.textContent = `${sms[17]}PLN`
-    //   btnSponsor.forEach(e => {
-    //     e.textContent = `${psc[17]}PLN`
-    //   })
-    // } else if(val == 100) {
-    //   sponsorInputValue.textContent = `${i} dni.`
-    //   sponsorInputValue.textContent = 'zawsze.';
-    //   btnSponsorSms.textContent = `${sms[sms.length - 1]}PLN`
-    //   btnSponsor.forEach(e => {
-    //     e.textContent = `${psc[psc.length - 1]}PLN`
-    //   })
-    // } 
-  }
+//     // } else if(val == 15) {
+//     //   sponsorInputValue.textContent = `${i} dni.`
+//     //   btnSponsorSms.textContent = `${sms[1]}PLN`
+//     //   btnSponsor.forEach(e => {
+//     //     e.textContent = `${psc[1]}PLN`
+//     //   })
+//     // } else if(val == 20) {
+//     //   sponsorInputValue.textContent = `${i} dni.`
+//     //   btnSponsorSms.textContent = `${sms[2]}PLN`
+//     //   btnSponsor.forEach(e => {
+//     //     e.textContent = `${psc[2]}PLN`
+//     //   })
+//     // } else if(val == 25) {
+//     //   sponsorInputValue.textContent = `${i} dni.`
+//     //   btnSponsorSms.textContent = `${sms[3]}PLN`
+//     //   btnSponsor.forEach(e => {
+//     //     e.textContent = `${psc[3]}PLN`
+//     //   })
+//     // } else if(val == 30) {
+//     //   sponsorInputValue.textContent = `${i} dni.`
+//     //   btnSponsorSms.textContent = `${sms[4]}PLN`
+//     //   btnSponsor.forEach(e => {
+//     //     e.textContent = `${psc[4]}PLN`
+//     //   })
+//     // } else if(val == 35) {
+//     //   sponsorInputValue.textContent = `${i} dni.`
+//     //   btnSponsorSms.textContent = `${sms[5]}PLN`
+//     //   btnSponsor.forEach(e => {
+//     //     e.textContent = `${psc[5]}PLN`
+//     //   })
+//     // } else if(val == 40) {
+//     //   sponsorInputValue.textContent = `${i} dni.`
+//     //   btnSponsorSms.textContent = `${sms[6]}PLN`
+//     //   btnSponsor.forEach(e => {
+//     //     e.textContent = `${psc[6]}PLN`
+//     //   })
+//     // } else if(val == 45) {
+//     //   sponsorInputValue.textContent = `${i} dni.`
+//     //   btnSponsorSms.textContent = `${sms[7]}PLN`
+//     //   btnSponsor.forEach(e => {
+//     //     e.textContent = `${psc[7]}PLN`
+//     //   })
+//     // } else if(val == 50) {
+//     //   sponsorInputValue.textContent = `${i} dni.`
+//     //   btnSponsorSms.textContent = `${sms[8]}PLN`
+//     //   btnSponsor.forEach(e => {
+//     //     e.textContent = `${psc[8]}PLN`
+//     //   })
+//     // } else if(val == 55) {
+//     //   sponsorInputValue.textContent = `${i} dni.`
+//     //   btnSponsorSms.textContent = `${sms[9]}PLN`
+//     //   btnSponsor.forEach(e => {
+//     //     e.textContent = `${psc[9]}PLN`
+//     //   })
+//     // } else if(val == 60) {
+//     //   sponsorInputValue.textContent = `${i} dni.`
+//     //   btnSponsorSms.textContent = `${sms[10]}PLN`
+//     //   btnSponsor.forEach(e => {
+//     //     e.textContent = `${psc[10]}PLN`
+//     //   })
+//     // } else if(val == 65) {
+//     //   sponsorInputValue.textContent = `${i} dni.`
+//     //   btnSponsorSms.textContent = `${sms[11]}PLN`
+//     //   btnSponsor.forEach(e => {
+//     //     e.textContent = `${psc[11]}PLN`
+//     //   })
+//     // } else if(val == 70) {
+//     //   sponsorInputValue.textContent = `${i} dni.`
+//     //   btnSponsorSms.textContent = `${sms[12]}PLN`
+//     //   btnSponsor.forEach(e => {
+//     //     e.textContent = `${psc[12]}PLN`
+//     //   })
+//     // } else if(val == 75) {
+//     //   sponsorInputValue.textContent = `${i} dni.`
+//     //   btnSponsorSms.textContent = `${sms[13]}PLN`
+//     //   btnSponsor.forEach(e => {
+//     //     e.textContent = `${psc[13]}PLN`
+//     //   })
+//     // } else if(val == 80) {
+//     //   sponsorInputValue.textContent = `${i} dni.`
+//     //   btnSponsorSms.textContent = `${sms[14]}PLN`
+//     //   btnSponsor.forEach(e => {
+//     //     e.textContent = `${psc[14]}PLN`
+//     //   })
+//     // } else if(val == 85) {
+//     //   sponsorInputValue.textContent = `${i} dni.`
+//     //   btnSponsorSms.textContent = `${sms[15]}PLN`
+//     //   btnSponsor.forEach(e => {
+//     //     e.textContent = `${psc[15]}PLN`
+//     //   })
+//     // } else if(val == 90) {
+//     //   sponsorInputValue.textContent = `${i} dni.`
+//     //   btnSponsorSms.textContent = `${sms[16]}PLN`
+//     //   btnSponsor.forEach(e => {
+//     //     e.textContent = `${psc[16]}PLN`
+//     //   })
+//     // } else if(val == 95) {
+//     //   sponsorInputValue.textContent = `${i} dni.`
+//     //   btnSponsorSms.textContent = `${sms[17]}PLN`
+//     //   btnSponsor.forEach(e => {
+//     //     e.textContent = `${psc[17]}PLN`
+//     //   })
+//     // } else if(val == 100) {
+//     //   sponsorInputValue.textContent = `${i} dni.`
+//     //   sponsorInputValue.textContent = 'zawsze.';
+//     //   btnSponsorSms.textContent = `${sms[sms.length - 1]}PLN`
+//     //   btnSponsor.forEach(e => {
+//     //     e.textContent = `${psc[psc.length - 1]}PLN`
+//     //   })
+//     // } 
+//   }
 
-  if(val == 10) {
-    setTimeout(() => {
-      btnSponsorSms.textContent = 'SMS'
-      btnSponsorPsc.textContent = 'PSC'
-      btnSponsorPrzelew.textContent = 'PRZELEW'
-    }, 1000)
-    btnSponsorSms.textContent = `${sms[0]}PLN`
-    btnSponsorPsc.textContent = `${sms[0]}PLN`
-    btnSponsorPrzelew.textContent = `${sms[0]}PLN`
-    
-  }
-})
+//   if(val == 10) {
+//     setTimeout(() => {
+//       btnSponsorSms.textContent = 'SMS'
+//       btnSponsorPsc.textContent = 'PSC'
+//       btnSponsorPrzelew.textContent = 'PRZELEW'
+//     }, 1000)
+//     // btnSponsorSms.textContent = `${sms[0]}PLN`
+//     // btnSponsorPsc.textContent = `${sms[0]}PLN`
+//     // btnSponsorPrzelew.textContent = `${sms[0]}PLN`
+//     btnSponsorSms.textContent = sms[this.value]
+//   }
+// })
 
 superInput.addEventListener('input', function() {
   let val = superInputValue.textContent = this.value;

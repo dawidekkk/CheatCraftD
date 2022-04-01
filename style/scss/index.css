@@ -883,16 +883,21 @@ body {
 
 .card-buttons .input-buttons {
   width: 5.8rem;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#F09819), to(#EDDE5D));
-  background-image: linear-gradient(0deg, #F09819 0%, #EDDE5D 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#f09719), to(#eddf5e));
+  background-image: linear-gradient(0deg, #f09719 0%, #eddf5e 100%);
   border-radius: 2px;
   line-height: 42px;
   font-weight: 700;
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
-          box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  -webkit-box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(255, 255, 255, 0.1), 4px 4px 5px 0px rgba(255, 255, 255, 0.1);
+          box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(255, 255, 255, 0.1), 4px 4px 5px 0px rgba(255, 255, 255, 0.1);
+}
+
+.card-buttons .input-buttons:hover {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#ffaa33), to(#fff599));
+  background-image: linear-gradient(0deg, #ffaa33 0%, #fff599 100%);
 }
 
 .card-buttons .mirror-btn {
