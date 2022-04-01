@@ -1,5 +1,8 @@
 'use strict'
 
+// Inputs ID's and Inputs range ID"s
+let sponsorInput = document.getElementById('sponsor-input')
+let sponsorInputValue = document.getElementById('sponsor-value')
 let superInput = document.getElementById('super-input')
 let superInputValue = document.getElementById('super-value')
 let vipInput = document.getElementById('vip-input')
@@ -9,25 +12,35 @@ let turboInputValue = document.getElementById('turbo-value')
 let cheatInput = document.getElementById('cheat-input')
 let cheatInputValue = document.getElementById('cheat-value')
 
-let sponsorInput = document.getElementById('sponsor-input')
-let sponsorInputValue = document.getElementById('sponsor-value')
-
-let btnSuperSms = document.querySelector('.btn-price-super_sms')
-let btnSuper = document.querySelectorAll('.btn-price-super')
-let btnVipSms = document.querySelector('.btn-price-vip_sms')
-let btnVip = document.querySelectorAll('.btn-price-vip')
-
-let sms = [5.50, 6.88, 8.52, 10.17, 11, 12.93, 14.58, 16.22, 17.6, 19.25, 20.9, 22, 23.65, 25.3, 27.5, 28.6, 29.98, 31.35, 33, 55.01]
-let psc = [5, 6.25, 7.75, 9.25, 10, 11.75, 13.25, 14.75, 16, 17.5, 19, 20, 21.5, 23, 25, 26, 27.25, 28.5, 30, 50]
-
+// Inputs buttons
 let btnSponsorSms = document.querySelector('.btn-price-sponsor_sms')
 let btnSponsorPsc = document.querySelector('.btn-price-sponsor_psc')
 let btnSponsorPrzelew = document.querySelector('.btn-price-sponsor_przelew')
+// let btnSuperSms = document.querySelector('.btn-price-super_sms')
+// let btnSuper = document.querySelectorAll('.btn-price-super')
+// let btnVipSms = document.querySelector('.btn-price-vip_sms')
+// let btnVip = document.querySelectorAll('.btn-price-vip')
 
-sponsorInput.oninput = function() {
-  sponsorInputValue.innerHTML = sms[this.value];
-}
-sponsorInput.oninput();
+// Input price
+let sms = [5.50, 6.88, 8.52, 10.17, 11, 12.93, 14.58, 16.22, 17.6, 19.25, 20.9, 22, 23.65, 25.3, 27.5, 28.6, 29.98, 31.35, 33, 55.01]
+let psc = [5, 6.25, 7.75, 9.25, 10, 11.75, 13.25, 14.75, 16, 17.5, 19, 20, 21.5, 23, 25, 26, 27.25, 28.5, 30, 50]
+
+
+// sponsorInput.oninput = function() {
+//   sponsorInputValue.innerHTML = sms[this.value];
+// }
+// sponsorInput.oninput();
+
+sponsorInput.addEventListener("input", function() {
+  setTimeout(() => {
+    btnSponsorSms.textContent = 'SMS';
+    btnSponsorPsc.textContent = 'PSC'
+    btnSponsorPrzelew.textContent = 'PRZELEW'
+  }, 2000)
+  btnSponsorSms.textContent = sms[this.value];
+  btnSponsorPsc.textContent = psc[this.value];
+  btnSponsorPrzelew.textContent = psc[this.value];
+})
 
 // sponsorInput.addEventListener('input', function() {
 
