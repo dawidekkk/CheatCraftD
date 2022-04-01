@@ -571,17 +571,14 @@ $bubble-border: 0 -1*$px $white,
   .input-slider-vip {
     background-color: hsl(48, 6%, 83%);
   }
-
 }
+
+
 
 .card-buttons {
   grid-area: card-buttons;
   display: flex;
   transition: all 1s;
-
-  .btn-price-sponsor_sms {
-    transition: all 1s;
-  }
 
   .card-button {
     border-radius: 2px;
@@ -595,6 +592,17 @@ $bubble-border: 0 -1*$px $white,
     transition: transform 0.5s;
     letter-spacing: 0.5px;
     margin: 1rem auto .25rem auto;
+  }
+
+  .input-buttons {
+    width: 5.8rem;
+    background-image: linear-gradient(0deg, #F09819 0%, #EDDE5D 100%);
+    border-radius: 2px;
+    line-height: 42px;
+    font-weight: 700;
+    border: none;
+    box-shadow: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
   }
 
   .mirror-btn {
