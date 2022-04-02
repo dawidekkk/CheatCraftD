@@ -33,17 +33,19 @@ let psc = [5, 6.25, 7.75, 9.25, 10, 11.75, 13.25, 14.75, 16, 17.5, 19, 20, 21.5,
 
 let price = document.querySelector('.price');
 
-sponsorInput.addEventListener("input", function() {
+sponsorInput.addEventListener("change", function() {
   // let val = ();
   let val = sponsorInputValue.textContent = this.value;
   let i = this.value;
   console.log(val);
 
-  // btnSponsorSms.textContent = 'SMS';
-  // btnSponsorPsc.textContent = 'PSC'
-  // btnSponsorPrzelew.textContent = 'PRZELEW'
+  setTimeout(() => {
+    btnSponsorSms.textContent = 'SMS';
+    btnSponsorPsc.textContent = 'PSC'
+    btnSponsorPrzelew.textContent = 'PRZELEW'
+  }, 1500)
 
-  btnSponsorSms.textContent = `${sms[i]}PLN SMS`;
+  btnSponsorSms.textContent = `${sms[i]}PLN`;
   btnSponsorPsc.textContent = psc[i];
   btnSponsorPrzelew.textContent = psc[i];
 
