@@ -4,8 +4,11 @@
 const card = document.querySelector('.card-miecz');
 
 card.addEventListener('mouseenter', () => {
-  card.classList.toggle('testIn')
+  card.classList.add('testIn')
+  card.classList.remove('testOut')
 })
+
+
 
 // card.addEventListener('mouseleave', () => {
 //     // card.classList.remove('test')
@@ -22,7 +25,7 @@ card.addEventListener('mouseenter', () => {
 // }, 1000)
 
 card.addEventListener('mouseleave', function() {
-  // card.classList.remove('testIn')
-  card.classList.toggle('testOut')
+  card.classList.add('testOut')
+  card.classList.remove('testIn')
 })
 
