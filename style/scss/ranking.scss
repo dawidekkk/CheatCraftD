@@ -364,6 +364,8 @@ $bubble-border: 0 -1*$px $white,
 
 .player-list {
   width: 80%;
+  // height: 200px;
+  // overflow: scroll;
   padding: .25rem;
   transition: all 1s;
 
