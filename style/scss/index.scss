@@ -846,7 +846,7 @@ footer {
     gap: 0px 0px;
     margin: 0 auto;
     grid-template-areas: 
-    "server logo-wrapper discord"
+    "server logo-wrapper discord"y
     "header-text header-text header-text"; 
   }
   .logo-wrapper { grid-area: logo-wrapper; }
@@ -930,5 +930,126 @@ footer {
   .show-btn {
     top: 85%; left: 82%;
   }
+}
+
+.modal {
+  @include flex-center();
+  flex-direction: column;
+  border-radius: 14px;  
+  border: 4px solid #1a1d21;
+  box-shadow: inset 0 0 1rem 0 #fff, 0 0 5px 0 #000;
+  -moz-box-shadow: inset 0 0 1rem 0 #fff, 0 0 5px 0 #000;
+  -webkit-box-shadow: inset 0 0 1rem 0 #fff, 0 0 5px 0 #000;
+  -khtml-box-shadow: rgb(255, 255, 255) inset 0 0 1rem;
+  background-color: #bcbfc2;
+  height: auto;
+  // width: 100%; 
+  // max-width: auto;
+  padding: 20px;
+  transition: all 1s;
+  font-size: 12px;
+
+  .modal-rule {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: inherit;
+
+    h3 {
+      font-size: 14px;
+    }
+
+    a {
+      font-size: 14px;
+      color: rgb(143, 143, 143);
+    }
+
+    .modal-link {
+      padding: .5rem;
+      background-color: inherit;
+      border: 2px solid grey;
+      border-radius: 4px;
+    }
+  }
+
+  .modal-info {
+    text-align: left;
+ 
+    .modal-accept {
+      display: flex;
+      
+
+      input {
+        width: 28px;
+      }
+      
+      .modal-accept-p {
+        width: 80%;
+        margin: 1rem auto;
+      }
+    }
+
+    .modal-p {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .modal-info-mojang {
+    text-align: left;
+    margin-bottom: 1rem;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+
+    p {
+      padding: 1rem;
+    }
+  }
+
+  .modal-nick {
+    // width: inherit;
+    min-width: 100%;
+
+    input {
+      width: 100%;
+      height: 50px;
+      padding: .5rem;
+      border-radius: 4px;
+      border: none;
+      box-shadow: 0 7px 25px 0 rgba(0,0,0,.07);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+  }
+
+  .modal-btns {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    button {
+    //   display: flex;
+    // align-items: center;
+    // justify-content: space-around;
+      padding: .5rem;
+      border: none;
+      border-radius: 4px;
+      margin-left: 8px;
+    }
+
+    .cancel {
+      background: none;
+    }
+
+    .buy {
+      box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(0deg, #F09819 0%, #EDDE5D 100%);
+    }
+  }
+}
+
+.hidden {
+  display: none;
 }
 
