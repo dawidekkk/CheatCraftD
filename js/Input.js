@@ -39,16 +39,19 @@ sponsorInput.addEventListener("change", function() {
   let i = this.value;
   console.log(val);
 
-  setTimeout(() => {
+  const showText = () => {
     btnSponsorSms.textContent = 'SMS';
     btnSponsorPsc.textContent = 'PSC'
     btnSponsorPrzelew.textContent = 'PRZELEW'
-  }, 1500)
+  }
+
+  // setTimeout(showText, 750, btnSponsorSms.textContent = `${sms[i]}PLN`)
+
+  setTimeout(showText, 1000)
 
   btnSponsorSms.textContent = `${sms[i]}PLN`;
   btnSponsorPsc.textContent = psc[i];
   btnSponsorPrzelew.textContent = psc[i];
-
 
 })
 

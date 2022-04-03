@@ -171,7 +171,7 @@ body {
   }
 }
 
-@-webkit-keyframes shadowReverse {
+@-webkit-keyframes cardShadowReverse {
   0% {
     -webkit-box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000;
             box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000;
@@ -218,7 +218,7 @@ body {
   }
 }
 
-@keyframes shadowReverse {
+@keyframes cardShadowReverse {
   0% {
     -webkit-box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000;
             box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000;
@@ -265,7 +265,29 @@ body {
   }
 }
 
-@-webkit-keyframes test {
+@-webkit-keyframes card {
+  from {
+    -webkit-box-shadow: inset 0 0 1rem 0 white, 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 white, 0 0 5px 0 #000;
+  }
+  to {
+    -webkit-box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000;
+  }
+}
+
+@keyframes card {
+  from {
+    -webkit-box-shadow: inset 0 0 1rem 0 white, 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 white, 0 0 5px 0 #000;
+  }
+  to {
+    -webkit-box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000;
+            box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000;
+  }
+}
+
+@-webkit-keyframes cardReverse {
   from {
     -webkit-box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000;
             box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000;
@@ -276,7 +298,7 @@ body {
   }
 }
 
-@keyframes test {
+@keyframes cardReverse {
   from {
     -webkit-box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000;
             box-shadow: inset 0 0 1rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000;
@@ -285,6 +307,33 @@ body {
     -webkit-box-shadow: inset 0 0 1rem 0 white, 0 0 5px 0 #000;
             box-shadow: inset 0 0 1rem 0 white, 0 0 5px 0 #000;
   }
+}
+
+.testIn {
+  -webkit-animation-name: card;
+          animation-name: card;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+.testOut {
+  -webkit-animation-name: card;
+          animation-name: card;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
 }
 
 .page-wrapper {
@@ -605,15 +654,18 @@ body {
   border: 4px solid #1b1e22;
   border-radius: 14px;
   padding: 1rem;
-  -webkit-transition: -webkit-transform 2s ease-in-out;
-  transition: -webkit-transform 2s ease-in-out;
-  transition: transform 2s ease-in-out;
-  transition: transform 2s ease-in-out, -webkit-transform 2s ease-in-out;
 }
 
 .behind-bg .card:hover {
-  -webkit-transform: rotate(360);
-          transform: rotate(360);
+  -webkit-animation-name: card;
+          animation-name: card;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-direction: reverse;
 }
 
 .behind-bg .card .card-img {
@@ -893,6 +945,8 @@ body {
           box-shadow: none;
   -webkit-box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(255, 255, 255, 0.1), 4px 4px 5px 0px rgba(255, 255, 255, 0.1);
           box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(255, 255, 255, 0.1), 4px 4px 5px 0px rgba(255, 255, 255, 0.1);
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .card-buttons .input-buttons:hover {
