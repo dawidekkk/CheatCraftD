@@ -355,12 +355,19 @@ html {
   display: block;
   position: fixed;
   top: 85%;
-  left: 85%;
+  left: 82%;
 }
 
 .back-to-top {
   padding: .5rem;
   z-index: 100;
+  background: none;
+  border: none;
+}
+
+.back-to-top i {
+  color: white;
+  font-size: 36px;
 }
 
 .rules-wrapper {
@@ -690,12 +697,33 @@ footer a {
   .items-wrapper {
     width: 75rem;
   }
+  #particles-js canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    z-index: -10;
+    display: block;
+  }
+  .show-btn {
+    top: 75%;
+    left: 88%;
+  }
+  button svg {
+    width: 180px;
+    height: 180px;
+  }
 }
 
 @media screen and (min-width: 1800px) {
   .show-btn {
-    top: 85%;
+    top: 80%;
     left: 82%;
   }
+}
+
+button svg {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
 }
 /*# sourceMappingURL=regulamin.css.map */
