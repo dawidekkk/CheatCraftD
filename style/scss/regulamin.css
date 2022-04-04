@@ -10,6 +10,11 @@ html {
   scroll-behavior: smooth;
 }
 
+@font-face {
+  font-family: "mc-font";
+  src: url(../fonts/minecraft-webfont.woff) format("woff"), url(../fonts/minecraft-webfont.woff2) format("woff");
+}
+
 @-webkit-keyframes logoAnim {
   0% {
     -webkit-transform: translateY(0);
@@ -114,6 +119,7 @@ html {
   color: #f2f2f2;
   font-size: 22px;
   margin-bottom: 2rem;
+  font-family: 'mc-font';
 }
 
 .server,
