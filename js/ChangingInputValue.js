@@ -106,5 +106,8 @@ function vipValue() {
 }
 
 sponsorInput.addEventListener("change", sponsorValue);
+sponsorInput.addEventListener("input", sponsorValue)
 superInput.addEventListener("change", superValue)
+superInput.addEventListener("input", superValue)
 vipInput.addEventListener("change", vipValue)
+vipInput.addEventListener("input", vipValue)

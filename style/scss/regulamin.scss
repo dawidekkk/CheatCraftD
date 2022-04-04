@@ -129,6 +129,26 @@ $bubble-border: 0 -1*$px $white,
   }
 }
 
+.discord-links {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.server-links {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  a {
+    text-decoration: none;
+  }
+}
+
 .server-img {
   width: 4rem; height: 4rem;
 }
