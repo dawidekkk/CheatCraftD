@@ -475,8 +475,8 @@ body {
 }
 
 .behind-bg {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#757b81), to(#a1a5aa));
-  background-image: linear-gradient(180deg, #757b81, #a1a5aa);
+  background-image: url(../img/nav.png);
+  background-position: center;
   border-radius: 14px;
   padding: .6rem;
   margin: 0 auto;
@@ -887,26 +887,14 @@ footer {
           flex-direction: column;
   color: #f2f2f2;
   text-align: center;
-}
-
-footer .payment-methods {
-  font-size: 22px;
-  color: #cccccc;
-}
-
-footer .psc {
-  width: 24rem;
-  height: 10rem;
-}
-
-footer .sms {
-  width: 8rem;
-  height: 8rem;
+  width: 80%;
+  margin: 0 auto;
 }
 
 footer .payment-server-info {
   margin: 1rem auto;
   color: #c7c7c7;
+  width: inherit;
 }
 
 footer .logo-footer {
@@ -972,12 +960,10 @@ footer a {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
     gap: 0px 0px;
-    margin: 1rem auto;
-    width: 28rem;
-        grid-template-areas: "footer-logo-wrapper footer-nav";
+        grid-template-areas: "footer-logo-wrapper footer-nav" "footer-text footer-text";
   }
   .footer-logo-wrapper {
     -ms-grid-row: 1;
@@ -988,19 +974,13 @@ footer a {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: footer-nav;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    font-size: 24px;
   }
-  .footer-nav a {
-    font-size: 24px;
+  .footer-text {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: footer-text;
+    margin: 1rem auto;
   }
 }
 
@@ -1096,9 +1076,6 @@ footer a {
     top: 85%;
     left: 92%;
   }
-}
-
-@media screen and (min-width: 992px) {
   .grid-social {
     display: -ms-grid;
     display: grid;
@@ -1106,37 +1083,22 @@ footer a {
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
+    gap: 0px 0px;
         grid-template-areas: "footer-navigation social";
-    margin: 1rem auto;
-  }
-  .footer-navigation {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: footer-navigation;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .footer-navigation a {
-    font-size: 30px;
   }
   .social {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: social;
   }
-  footer .payment-methods {
-    font-size: 28px;
+  .footer-navigation {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: footer-navigation;
   }
-  footer.items-wrapper {
-    padding: 2rem;
-  }
+}
+
+@media screen and (min-width: 992px) {
   .grid-header {
     display: -ms-grid;
     display: grid;
@@ -1270,7 +1232,8 @@ footer a {
 }
 
 @media screen and (min-width: 1400px) {
-  .items-wrapper {
+  .items-wrapper,
+  footer {
     width: 75rem;
   }
   #particles-js canvas {
@@ -1288,6 +1251,16 @@ footer a {
   button svg {
     width: 180px;
     height: 180px;
+  }
+  .logo-footer {
+    width: 15rem;
+    height: 15rem;
+  }
+  footer nav ul li {
+    font-size: 30px;
+  }
+  footer nav ul li a {
+    font-size: 30px;
   }
 }
 
@@ -1496,5 +1469,13 @@ button svg {
   transition: all 1s;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+.footer-text-czit {
+  text-align: center;
+  color: #f2f2f2;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-family: 'mc-font';
 }
 /*# sourceMappingURL=index.css.map */

@@ -340,14 +340,15 @@ $bubble-border: 0 -1*$px $white,
 }
 
 .behind-bg {
-  background-image: linear-gradient(180deg,#757b81,#a1a5aa);
+  // background-image: linear-gradient(180deg,#757b81,#a1a5aa);
+  background-image: url(../img/nav.png);
+  background-position: center;
   border-radius: 14px;
   padding: .6rem;
   margin: 0 auto;
   width: 22rem;
   max-width: 100%;
   
-
   .card {
     display: grid; 
     grid-auto-columns: 1fr; 
@@ -698,23 +699,13 @@ footer {
   flex-direction: column;
   color: hsl(0, 0%, 95%);
   text-align: center;
-
-  .payment-methods {
-    font-size: 22px;
-    color: hsl(0, 0%, 80%);
-  }
-
-  .psc {
-    width: 24rem; height: 10rem;
-  }
-
-  .sms {
-    width: 8rem; height: 8rem;
-  }
+  width: 80%;
+  margin: 0 auto;
 
   .payment-server-info {
     margin: 1rem auto;
-    color: hsl(0, 0%, 78%)
+    color: hsl(0, 0%, 78%);
+    width: inherit;
   }
 
   .logo-footer {
@@ -774,27 +765,15 @@ footer {
   .footer-navigation {
     display: grid; 
     grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 1fr; 
-    gap: 0px 0px;
-    margin: 1rem auto;
-    width: 28rem;
+    grid-template-rows: auto auto; 
+    gap: 0px 0px; 
     grid-template-areas: 
-    "footer-logo-wrapper footer-nav"; 
+    "footer-logo-wrapper footer-nav"
+    "footer-text footer-text";
   }
-
-  .footer-logo-wrapper {
-    grid-area: footer-logo-wrapper;
-  }
-
-  .footer-nav {
-    grid-area: footer-nav;
-    @include flex-center();
-    font-size: 24px;
-
-    a {
-      font-size: 24px;
-    }
-  }
+  .footer-logo-wrapper { grid-area: footer-logo-wrapper; }
+  .footer-nav { grid-area: footer-nav; }
+  .footer-text { grid-area: footer-text; margin: 1rem auto; }
 }
 
 @media screen and (min-width: 768px) {
@@ -835,38 +814,22 @@ footer {
   .show-btn {
     top: 85%; left: 92%;
   }
+
+  .grid-social {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "footer-navigation social"; 
+  }
+  .social { grid-area: social; }
+  .footer-navigation { 
+    grid-area: footer-navigation; 
+  }
 }
 
 @media screen and (min-width: 992px) {
-  .grid-social {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    "footer-navigation social";
-    margin: 1rem auto;
-  }
-
-  .footer-navigation {
-    grid-area: footer-navigation;
-    @include flex-center();
-
-    a {
-      font-size: 30px;
-    }
-  }
-
-  .social {
-    grid-area: social;
-  }
-
-  footer .payment-methods {
-    font-size: 28px;
-  }
-
-  footer.items-wrapper {
-    padding: 2rem;
-  }
 
   .grid-header {
     display: grid; 
@@ -887,6 +850,7 @@ footer {
   .serv-title {
     font-size: 20px;
   }
+
 }
 
 @media screen and (min-width: 1200px) {
@@ -941,7 +905,8 @@ footer {
 }
 
 @media screen and (min-width: 1400px) {
-  .items-wrapper {
+  .items-wrapper,
+  footer {
     width: 75rem;
   }
 
@@ -961,6 +926,18 @@ footer {
   button svg {
     width: 180px; 
     height: 180px;
+  }
+
+  .logo-footer {
+    width: 15rem; height: 15rem;
+  }
+
+  footer nav ul li {
+    font-size: 30px;
+    
+    a {
+      font-size: 30px;
+    }
   }
 }
 
@@ -1128,3 +1105,17 @@ button svg {
   transition: all 1s;
   transform: scale(1.2);
 }
+
+.footer-text-czit {
+  text-align: center;
+  color: hsl(0, 0%, 95%);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-family: 'mc-font';
+}
+
+// 1. wyjebac psc 
+// 2. footer-navigation na poziomie iframe
+// 3. pod footer-text payment-sever-info
+// 4. copyright pod payment-server-info
+// 5. wyjebac items-wrapper
