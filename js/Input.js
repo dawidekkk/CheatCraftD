@@ -1,16 +1,19 @@
 'use strict'
 
-// Inputs ID's and Inputs range ID"s
+// Sponsor, SuperVip and Vip buyout days:
+const buyoutDays = [10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 'zawsze']
 
-
-// let superInput = document.getElementById('super-input')
-// let superInputValue = document.getElementById('super-value')
-// let vipInput = document.getElementById('vip-input')
-// let vipInputValue = document.getElementById('vip-value')
-// let turboInput = document.getElementById('turbo-input')
-// let turboInputValue = document.getElementById('turbo-value')
-// let cheatInput = document.getElementById('cheat-input')
-// let cheatInputValue = document.getElementById('cheat-value')
+// Sponsor, SuperVip, Vip, TurboDrop and CheatCase selectors:
+const sponsorInput = document.getElementById('sponsor-input')
+const sponsorInputValue = document.getElementById('sponsor-value')
+const superInput = document.getElementById('super-input')
+const superInputValue = document.getElementById('super-value')
+const vipInput = document.getElementById('vip-input')
+const vipInputValue = document.getElementById('vip-value')
+const turboInput = document.getElementById('turbo-input')
+const turboInputValue = document.getElementById('turbo-value')
+const cheatInput = document.getElementById('cheat-input')
+const cheatInputValue = document.getElementById('cheat-value')
 
 // // Inputs buttons
 
@@ -21,36 +24,37 @@
 // premium case SMS 2 - 1.09, SMS 3 - 1.65, SMS 4 - 2.20, SMS 5 - 2.75, 
 // premium case PSC 2 - 1.00, PSC 3 - 1.50, PSC 4 - 2.00, PSC 5 - 2.50,
 
-
-
-
 // const superSms = [4.40, 5.50, 6.61, 7.70, 8.79, 9.90, 11.00, 12.10, 13.20, 14.30, 15.40, 16.49, 17.60, 18.70, 19.80, 20.90, 22.00, 23.10, 24.19, 33.00]
 // const superPsc = [4.00, 5.00, 6.00, 7.00, 8.00, 9.00, 10.00, 11.00, 12.00, 13.00, 14.00, 15.00, 16.00, 17.00, 18.00, 19.00, 20.00, 21.00, 22.00, 30.00]
 // const vipSms = [3.30, 4.12, 4.94, 5.78, 6.61, 7.43, 8.25, 9.08, 9.90, 10.73, 11.00, 12.37, 13.20, 14.02, 14.85, 15.67, 16.49, 17.33, 18.15, 22.00]
 // const vipPsc = [3.00, 3.75, 4.50, 5.25, 6.00, 6.75, 7.50, 8.25, 9.00, 9.75, 10.00, 11.25, 12.00, 12.75, 13.50, 14.25, 15.00, 15.75, 16.60, 20.00]
 
-// alert(vipSms.length)
-// alert(vipPsc.length)
 
-// sponsorInput.oninput = function() {
-//   sponsorInputValue.innerHTML = sms[this.value];
-// }
-// sponsorInput.oninput();
-const sponsorSms = [5.50, 6.88, 8.52, 10.17, 11.00, 12.93, 14.58, 16.22, 17.60, 19.25, 20.90, 22.00, 23.65, 25.30, 27.50, 28.60, 29.98, 31.35, 33.00, 55.01]
-const sponsorPsc = [5.00, 6.25, 7.75, 9.25, 10.00, 11.75, 13.25, 14.75, 16.00, 17.50, 19.00, 20.00, 21.50, 23.00, 25.00, 26.00, 27.25, 28.50, 30.00, 50.00]
-const sponsorDays = [10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 'zawsze']
-let sponsorInput = document.getElementById('sponsor-input')
-let sponsorInputValue = document.getElementById('sponsor-value')
-let btnSponsorSms = document.querySelector('.btn-price-sponsor_sms')
-let btnSponsorPsc = document.querySelector('.btn-price-sponsor_psc')
-let btnSponsorPrzelew = document.querySelector('.btn-price-sponsor_przelew')
+function sponsorValue(value) {
 
-function changeInputValue(value) {
+  const btnSponsorSms = document.querySelector('.btn-price-sponsor_sms')
+  const btnSponsorPsc = document.querySelector('.btn-price-sponsor_psc')
+  const btnSponsorPrzelew = document.querySelector('.btn-price-sponsor_przelew')
+  const sponsorP = document.querySelector('.sponsor-p')
+  const sponsorSms = [5.50, 6.88, 8.52, 10.17, 11.00, 12.93, 14.58, 16.22, 17.60, 19.25, 20.90, 22.00, 23.65, 25.30, 27.50, 28.60, 29.98, 31.35, 33.00, 55.01]
+  const sponsorPsc = [5.00, 6.25, 7.75, 9.25, 10.00, 11.75, 13.25, 14.75, 16.00, 17.50, 19.00, 20.00, 21.50, 23.00, 25.00, 26.00, 27.25, 28.50, 30.00, 50.00]
+  const test1 = document.querySelector('.test1');
 
-  sponsorInputValue.textContent = `${sponsorDays[this.value]} dni`
-  if(sponsorDays[this.value.length - 1]) {
-    sponsorInputValue.textContent = `${sponsorDays[this.value]}`
+
+  sponsorInputValue.textContent = `${buyoutDays[this.value]}`
+
+  if(sponsorInputValue.textContent == 'zawsze' && buyoutDays[this.value.length - 1]) {
+    sponsorP.textContent = `Potrzebuje sponsora na: ${buyoutDays[this.value]}`
+  } else {
+    sponsorP.textContent = `Potrzebuje sponsora na: ${buyoutDays[this.value]} dni`
+    sponsorInputValue.textContent = `${buyoutDays[this.value]}`
   }
+
+  // if(sponsorInputValue.textContent == '50' && buyoutDays[this.value.length - 1]) {
+  //   test1.classList.add('tran')
+  // } else {
+  //   test1.classList.remove('tran')
+  // }
 
   btnSponsorSms.textContent = `${sponsorSms[this.value]} PLN`;
   btnSponsorPsc.textContent = `${sponsorPsc[this.value]} PLN`;
@@ -61,10 +65,9 @@ function changeInputValue(value) {
     btnSponsorPsc.textContent = `PSC`
     btnSponsorPrzelew.textContent = `Przelew`
   }, 1000)
-
 }
 
-sponsorInput.addEventListener("change", changeInputValue);
+sponsorInput.addEventListener("change", sponsorValue);
 
 // sponsorInput.addEventListener("change", function() {
 //   let val = this.value;

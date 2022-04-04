@@ -1079,3 +1079,19 @@ footer {
   z-index: 100;
   transition: all 0.5s;
 }
+
+.test {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  
+  p {
+    text-align: center;
+  }
+}
+
+.tran {
+  transition: all 1s;
+  transform: scale(1.2);
+}

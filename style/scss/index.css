@@ -1428,4 +1428,28 @@ footer a {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
+
+.test {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.test p {
+  text-align: center;
+}
+
+.tran {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
 /*# sourceMappingURL=index.css.map */
