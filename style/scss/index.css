@@ -558,7 +558,7 @@ body {
   background-size: cover;
 }
 
-.behind-bg-slider .card-sponsor .sponsor-com {
+.behind-bg-slider .card-sponsor .sponsor-color {
   color: #70c7c4;
 }
 
@@ -567,7 +567,7 @@ body {
   background-size: cover;
 }
 
-.behind-bg-slider .card-super-vip .super-com {
+.behind-bg-slider .card-super-vip .super-color {
   color: #d7d53c;
 }
 
@@ -576,7 +576,7 @@ body {
   background-size: cover;
 }
 
-.behind-bg-slider .card-vip .vip-com {
+.behind-bg-slider .card-vip .vip-color {
   color: #d6d5d1;
 }
 
