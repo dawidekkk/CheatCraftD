@@ -1175,6 +1175,22 @@ footer a {
     -ms-grid-column: 1;
     grid-area: footer-navigation;
   }
+  article.modal {
+    width: 600px;
+  }
+  article.modal .modal-rule {
+    width: 65%;
+  }
+  article.modal .modal-p {
+    font-size: 14px;
+  }
+  article.modal .modal-accept {
+    width: 85%;
+    margin: 0 auto;
+  }
+  article.modal .modal-info {
+    margin: 1.5rem auto;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -1357,6 +1373,10 @@ footer a {
   }
 }
 
+.behind-bg-modal {
+  background-color: #8a7576;
+}
+
 .modal {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1377,9 +1397,7 @@ footer a {
   -moz-box-shadow: inset 0 0 1rem 0 #fff, 0 0 5px 0 #000;
   -webkit-box-shadow: inset 0 0 1rem 0 #fff, 0 0 5px 0 #000;
   -khtml-box-shadow: white inset 0 0 1rem;
-  background-color: #bcbfc2;
-  height: auto;
-  padding: .75rem;
+  background-color: #edeaea;
   -webkit-transition: all 1s;
   transition: all 1s;
   font-size: 12px;
@@ -1389,8 +1407,10 @@ footer a {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 350px;
-  color: black;
+  height: auto;
+  color: #1c1c1c;
   z-index: 1000;
+  padding: .5rem;
 }
 
 .modal .modal-close {
@@ -1405,14 +1425,19 @@ footer a {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  position: relative;
 }
 
 .modal .modal-close button {
-  padding: .5rem;
+  padding: .5rem .75rem;
   position: absolute;
-  right: 0px;
-  top: 20px;
+  top: -10px;
+  right: -10px;
+  background-color: #000;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .modal .modal-rule {
@@ -1436,12 +1461,12 @@ footer a {
 
 .modal .modal-rule a {
   font-size: 14px;
-  color: #8f8f8f;
+  color: #666666;
 }
 
 .modal .modal-rule .modal-link {
   padding: .5rem;
-  background-color: inherit;
+  background-color: #d9d9d9;
   border: 2px solid grey;
   border-radius: 4px;
 }
@@ -1466,22 +1491,27 @@ footer a {
 }
 
 .modal .modal-info .modal-p {
-  margin-bottom: 1rem;
+  width: 88%;
+  margin: 0 auto 1rem auto;
+  color: #666666;
+}
+
+.modal .modal-info .modal-p .orange-info {
+  color: blue;
+  font-style: oblique;
 }
 
 .modal .modal-info-mojang {
-  text-align: left;
+  text-align: center;
   margin-bottom: 1rem;
   border-top: 2px solid grey;
   border-bottom: 2px solid grey;
-}
-
-.modal .modal-info-mojang p {
-  padding: 1rem;
+  padding: 1rem 0;
+  width: 88%;
 }
 
 .modal .modal-nick {
-  min-width: 100%;
+  width: 88%;
 }
 
 .modal .modal-nick input {
@@ -1497,7 +1527,7 @@ footer a {
 }
 
 .modal .modal-btns {
-  width: 100%;
+  width: 88%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1510,7 +1540,7 @@ footer a {
 }
 
 .modal .modal-btns button {
-  padding: .5rem;
+  padding: 1rem;
   border: none;
   border-radius: 4px;
   margin-left: 8px;
@@ -1525,6 +1555,7 @@ footer a {
           box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   background: -webkit-gradient(linear, left bottom, left top, from(#F09819), to(#EDDE5D));
   background: linear-gradient(0deg, #F09819 0%, #EDDE5D 100%);
+  font-weight: 700;
 }
 
 .hidden {
