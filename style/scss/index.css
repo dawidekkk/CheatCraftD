@@ -69,6 +69,30 @@ body {
   }
 }
 
+@-webkit-keyframes testTest {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes testTest {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @-webkit-keyframes greenPulse {
   0% {
     background-color: #759c02;
@@ -101,45 +125,45 @@ body {
 
 @-webkit-keyframes cardShadow {
   from {
-    -webkit-box-shadow: inset 0 0 0.75rem 0 white, 0 0 5px 0 #000;
-            box-shadow: inset 0 0 0.75rem 0 white, 0 0 5px 0 #000;
+    -webkit-box-shadow: inset 0 0 0.75rem 0 #e21e26, 0 0 5px 0 #000;
+            box-shadow: inset 0 0 0.75rem 0 #e21e26, 0 0 5px 0 #000;
   }
   to {
-    -webkit-box-shadow: inset 0 0 0.75rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000;
-            box-shadow: inset 0 0 0.75rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000;
+    -webkit-box-shadow: inset 0 0 0.75rem 0 rgba(226, 30, 38, 0.01), 0 0 5px 0 #000;
+            box-shadow: inset 0 0 0.75rem 0 rgba(226, 30, 38, 0.01), 0 0 5px 0 #000;
   }
 }
 
 @keyframes cardShadow {
   from {
-    -webkit-box-shadow: inset 0 0 0.75rem 0 white, 0 0 5px 0 #000;
-            box-shadow: inset 0 0 0.75rem 0 white, 0 0 5px 0 #000;
+    -webkit-box-shadow: inset 0 0 0.75rem 0 #e21e26, 0 0 5px 0 #000;
+            box-shadow: inset 0 0 0.75rem 0 #e21e26, 0 0 5px 0 #000;
   }
   to {
-    -webkit-box-shadow: inset 0 0 0.75rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000;
-            box-shadow: inset 0 0 0.75rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000;
+    -webkit-box-shadow: inset 0 0 0.75rem 0 rgba(226, 30, 38, 0.01), 0 0 5px 0 #000;
+            box-shadow: inset 0 0 0.75rem 0 rgba(226, 30, 38, 0.01), 0 0 5px 0 #000;
   }
 }
 
 @-webkit-keyframes cardReverse {
   from {
-    -webkit-box-shadow: inset 0 0 0.75rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000;
-            box-shadow: inset 0 0 0.75rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000;
+    -webkit-box-shadow: inset 0 0 0.75rem 0 rgba(226, 30, 38, 0.01), 0 0 5px 0 #000;
+            box-shadow: inset 0 0 0.75rem 0 rgba(226, 30, 38, 0.01), 0 0 5px 0 #000;
   }
   to {
-    -webkit-box-shadow: inset 0 0 0.75rem 0 white, 0 0 5px 0 #000;
-            box-shadow: inset 0 0 0.75rem 0 white, 0 0 5px 0 #000;
+    -webkit-box-shadow: inset 0 0 0.75rem 0 #e21e26, 0 0 5px 0 #000;
+            box-shadow: inset 0 0 0.75rem 0 #e21e26, 0 0 5px 0 #000;
   }
 }
 
 @keyframes cardReverse {
   from {
-    -webkit-box-shadow: inset 0 0 0.75rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000;
-            box-shadow: inset 0 0 0.75rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000;
+    -webkit-box-shadow: inset 0 0 0.75rem 0 rgba(226, 30, 38, 0.01), 0 0 5px 0 #000;
+            box-shadow: inset 0 0 0.75rem 0 rgba(226, 30, 38, 0.01), 0 0 5px 0 #000;
   }
   to {
-    -webkit-box-shadow: inset 0 0 0.75rem 0 white, 0 0 5px 0 #000;
-            box-shadow: inset 0 0 0.75rem 0 white, 0 0 5px 0 #000;
+    -webkit-box-shadow: inset 0 0 0.75rem 0 #e21e26, 0 0 5px 0 #000;
+            box-shadow: inset 0 0 0.75rem 0 #e21e26, 0 0 5px 0 #000;
   }
 }
 
@@ -504,13 +528,18 @@ button svg {
 }
 
 .behind-bg {
-  background-image: url(../img/nav.png);
-  background-position: center;
+  background-color: #8a7576;
   border-radius: 14px;
   padding: .6rem;
   margin: 0 auto;
   width: 22rem;
   max-width: 100%;
+  -webkit-transition: all 5s;
+  transition: all 5s;
+}
+
+.behind-bg:hover {
+  background-color: #e21d24;
 }
 
 .behind-bg .card {
@@ -594,12 +623,17 @@ button svg {
 }
 
 .behind-bg-slider {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#757b81), to(#a1a5aa));
-  background-image: linear-gradient(180deg, #757b81, #a1a5aa);
+  background-color: #8a7576;
   border-radius: 14px;
   padding: .6rem;
   margin: 0 auto;
   width: 22rem;
+  -webkit-transition: all 5s;
+  transition: all 5s;
+}
+
+.behind-bg-slider:hover {
+  background-color: #e21d24;
 }
 
 .behind-bg-slider .card-sliders {

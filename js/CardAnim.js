@@ -13,6 +13,12 @@ const cardColorful = document.querySelector('.card-colorful')
 const cardGreen = document.querySelector('.card-green')
 const cardPink = document.querySelector('.card-pink')
 
+const test = document.querySelectorAll('.behind-bg')
+
+test.forEach(e => e.addEventListener("mouseenter", () => {
+  console.log('elo');
+}))
+
 const animIn = obj => {
   obj.addEventListener("mouseenter", () => {
     obj.classList.add("cardAnimIn")

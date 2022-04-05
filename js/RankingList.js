@@ -7,14 +7,12 @@ const toggleList = (btn, list, crown) => {
 
   btns.addEventListener('click', () => {
     showList.classList.toggle('block')
-    
+    crownHide.classList.toggle('hide')
     if(showList.classList.contains('block')) {
       btns.textContent = 'Załaduj mniej'
     } else {
       btns.textContent = 'Zaladuj wiecej'
     }
-
-    crownHide.classList.toggle('hide')
   })
 }
 

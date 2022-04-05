@@ -60,6 +60,18 @@ $bubble-border: 0 -1*$px $white,
   100% {transform: translateY(0);}
 }
 
+@keyframes testTest {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes greenPulse {
   0% {
     background-color: hsl(75, 97%, 31%);
@@ -77,21 +89,21 @@ $bubble-border: 0 -1*$px $white,
 
 @keyframes cardShadow {
   from {
-    box-shadow:inset 0 0 .75rem 0 rgba(255, 255, 255, 1), 0 0 5px 0 #000
+    box-shadow:inset 0 0 .75rem 0 rgb(226, 30, 38), 0 0 5px 0 #000
   }
   
   to {
-    box-shadow:inset 0 0 .75rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000
+    box-shadow:inset 0 0 .75rem 0 rgba(226, 30, 38, 0.01), 0 0 5px 0 #000
   }
 }
 
 @keyframes cardReverse {
   from {
-    box-shadow:inset 0 0 .75rem 0 rgba(255, 255, 255, 0.01), 0 0 5px 0 #000
+    box-shadow:inset 0 0 .75rem 0 rgba(226, 30, 38, 0.01), 0 0 5px 0 #000
   }
   
   to {
-    box-shadow:inset 0 0 .75rem 0 rgba(255, 255, 255, 1), 0 0 5px 0 #000
+    box-shadow:inset 0 0 .75rem 0 rgb(226, 30, 38), 0 0 5px 0 #000
   }
 }
 
@@ -355,14 +367,17 @@ button svg {
 }
 
 .behind-bg {
-  // background-image: linear-gradient(180deg,#757b81,#a1a5aa);
-  background-image: url(../img/nav.png);
-  background-position: center;
+  background-color: hsl(357, 8%, 50%);
   border-radius: 14px;
   padding: .6rem;
   margin: 0 auto;
   width: 22rem;
   max-width: 100%;
+  transition: all 5s;
+
+  &:hover {
+    background-color: hsl(358, 77%, 50%);
+  }
   
   .card {
     display: grid; 
@@ -442,11 +457,16 @@ button svg {
 }
 
 .behind-bg-slider {
-  background-image: linear-gradient(180deg,#757b81,#a1a5aa);
+  background-color: hsl(357, 8%, 50%);
   border-radius: 14px;
   padding: .6rem;
   margin: 0 auto;
   width: 22rem;
+  transition: all 5s;
+
+  &:hover {
+    background-color: hsl(358, 77%, 50%);
+  }
 
   .card-sliders {
     display: grid; 
