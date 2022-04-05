@@ -21,8 +21,8 @@ html {
             transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
   }
 }
 
@@ -32,8 +32,30 @@ html {
             transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+  }
+}
+
+@-webkit-keyframes backToTopAnim {
+  0% {
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes backToTopAnim {
+  0% {
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
@@ -363,6 +385,8 @@ html {
   z-index: 100;
   background: none;
   border: none;
+  -webkit-animation: 2s linear infinite alternate backToTopAnim;
+          animation: 2s linear infinite alternate backToTopAnim;
 }
 
 button svg {
@@ -385,9 +409,9 @@ button svg {
 
 .items-wrapper .wrapper-title {
   font-size: 48px;
-  color: white;
+  color: #ebebeb;
   text-align: center;
-  margin: 0.75rem auto;
+  margin: .75rem auto;
 }
 
 .items-wrapper .items-title {
@@ -399,6 +423,7 @@ button svg {
 
 .items-wrapper .item-container {
   margin: 1rem auto;
+  width: 100%;
 }
 
 .behind-bg {
@@ -647,6 +672,11 @@ footer a {
   .dis-title,
   .serv-title {
     font-size: 20px;
+  }
+  .server,
+  .discord {
+    -webkit-animation: 5s linear infinite alternate logoAnim;
+            animation: 5s linear infinite alternate logoAnim;
   }
 }
 

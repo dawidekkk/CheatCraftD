@@ -23,6 +23,8 @@ body {
   position: relative;
 }
 
+
+
 ///////////////////// SCSS //////////////////////////
 
 @mixin flex-center {
@@ -52,7 +54,13 @@ $bubble-border: 0 -1*$px $white,
 
 @keyframes logoAnim {
   0% {transform: translateY(0);}
-  100% {transform: translateY(50px);}
+  100% {transform: translateY(25px);}
+}
+
+
+@keyframes backToTopAnim {
+  0% {transform: translateY(25px);}
+  100% {transform: translateY(0);}
 }
 
 @keyframes greenPulse {
@@ -238,6 +246,12 @@ $bubble-border: 0 -1*$px $white,
   display: none;
 }
 
+.block {
+  display: block;
+  // @include flex-center();
+  // flex-direction: column;
+}
+
 .opacity-zero {
   opacity: 0;
 }
@@ -265,10 +279,6 @@ $bubble-border: 0 -1*$px $white,
 
 ///////////////////// Back to top Btn //////////////////////////
 
-// .block {
-//   display: block;
-// }
-
 .show-btn {
   display: block;
   position: fixed;
@@ -280,6 +290,7 @@ $bubble-border: 0 -1*$px $white,
   z-index: 100;
   background: none;
   border: none;
+  animation: 2s linear infinite alternate backToTopAnim;
 }
 
 button svg {
@@ -302,9 +313,9 @@ button svg {
 
   .wrapper-title {
     font-size: 48px;
-    color: white;
+    color: hsl(0, 0%, 92%);
     text-align: center;
-    margin: 0.75rem auto;
+    margin: .75rem auto;
   }
 
   .items-title {
@@ -342,9 +353,7 @@ button svg {
     height: auto;
     width: 100%; 
     max-width: auto;
-    padding: 20px;
-    transition: all 1s;
-    
+    padding: 1rem;    
 
     .rank-title {
       font-size: 2rem;
@@ -363,8 +372,12 @@ button svg {
       margin: 1rem auto;
 
       .crown-img {
-        width: 5rem; height: 3.5rem;
+        width: 3.5rem; height: 2.5rem;
       }
+    }
+
+    .crown-img {
+      width: 3.5rem; height: 2.5rem;
     }
   }
 
@@ -391,8 +404,6 @@ button svg {
 
 .player-list {
   width: 80%;
-  // height: 200px;
-  // overflow: scroll;
   padding: .25rem;
   transition: all 1s;
 
@@ -408,7 +419,7 @@ button svg {
       display: flex;
       align-items: center;
       justify-content: space-around;
-      border-bottom: 2px solid black;
+      border-bottom: 2px solid hsl(0, 0%, 66%);
       padding: .5rem;
     }
   }
@@ -602,6 +613,11 @@ footer {
     .grid-tenth { grid-area: grid-tenth; }
     .grid-eleventh { grid-area: grid-eleventh; }
     .grid-twelfth { grid-area: grid-twelfth; }
+
+    .server,
+    .discord {
+      animation: 5s linear infinite alternate logoAnim;
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -678,3 +694,6 @@ footer {
   }
 }
 
+.hide {
+  display: none;
+}

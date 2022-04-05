@@ -52,7 +52,12 @@ $bubble-border: 0 -1*$px $white,
 
 @keyframes logoAnim {
   0% {transform: translateY(0);}
-  100% {transform: translateY(50px);}
+  100% {transform: translateY(25px);}
+}
+
+@keyframes backToTopAnim {
+  0% {transform: translateY(25px);}
+  100% {transform: translateY(0);}
 }
 
 @keyframes greenPulse {
@@ -181,6 +186,7 @@ $bubble-border: 0 -1*$px $white,
   display: flex;
   align-items: flex-end;
   flex-direction: column;
+  
 
   a {
     text-decoration: none;
@@ -303,10 +309,6 @@ $bubble-border: 0 -1*$px $white,
 
 ///////////////////// Back to top Btn //////////////////////////
 
-// .block {
-//   display: block;
-// }
-
 .show-btn {
   display: block;
   position: fixed;
@@ -318,6 +320,7 @@ $bubble-border: 0 -1*$px $white,
   z-index: 100;
   background: none;
   border: none;
+  animation: 2s linear infinite alternate backToTopAnim;
 }
 
 button svg {
@@ -513,7 +516,6 @@ button svg {
   flex-direction: column;
   color:hsl(0, 0%, 90%);
   font-family: 'mc-font'; 
-  
 
   .card-title {
     font-size: 2rem;
@@ -536,7 +538,6 @@ button svg {
 .card-desc {
   grid-area: card-desc;
   color: hsl(0, 0%, 84%);
-  // @include flex-center();
   width: 15rem;
   text-align: left;
   margin: 0 auto;
@@ -875,6 +876,10 @@ footer {
     font-size: 20px;
   }
 
+  .server,
+  .discord {
+    animation: 5s linear infinite alternate logoAnim;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -978,7 +983,6 @@ footer {
     top: 80%; left: 82%;
   }
 }
-
 
 
 ///////////////////// MODAL //////////////////////////
@@ -1117,8 +1121,9 @@ footer {
 
 .hidden {
   display: none;
-
 }
+
+
 .overlay {
   position: fixed;
   top: 0;
@@ -1131,15 +1136,7 @@ footer {
   transition: all 0.5s;
 }
 
-.tran {
-  transition: all 1s;
-  transform: scale(1.2);
-}
-
-
-
-// 1. wyjebac psc 
-// 2. footer-navigation na poziomie iframe
-// 3. pod footer-text payment-sever-info
-// 4. copyright pod mojang-info
-// 5. wyjebac items-wrapper
+// .tran {
+//   transition: all 1s;
+//   transform: scale(1.2);
+// }

@@ -31,8 +31,8 @@ body {
             transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
   }
 }
 
@@ -42,8 +42,30 @@ body {
             transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+  }
+}
+
+@-webkit-keyframes backToTopAnim {
+  0% {
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes backToTopAnim {
+  0% {
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
@@ -322,6 +344,10 @@ body {
   display: none;
 }
 
+.block {
+  display: block;
+}
+
 .opacity-zero {
   opacity: 0;
 }
@@ -374,6 +400,8 @@ body {
   z-index: 100;
   background: none;
   border: none;
+  -webkit-animation: 2s linear infinite alternate backToTopAnim;
+          animation: 2s linear infinite alternate backToTopAnim;
 }
 
 button svg {
@@ -397,9 +425,9 @@ button svg {
 
 .items-wrapper .wrapper-title {
   font-size: 48px;
-  color: white;
+  color: #ebebeb;
   text-align: center;
-  margin: 0.75rem auto;
+  margin: .75rem auto;
 }
 
 .items-wrapper .items-title {
@@ -450,9 +478,7 @@ button svg {
   height: auto;
   width: 100%;
   max-width: auto;
-  padding: 20px;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  padding: 1rem;
 }
 
 .behind-bg .rank .rank-title {
@@ -486,8 +512,13 @@ button svg {
 .behind-bg .rank .gold-place .crown-img,
 .behind-bg .rank .silver-place .crown-img,
 .behind-bg .rank .bronze-place .crown-img {
-  width: 5rem;
-  height: 3.5rem;
+  width: 3.5rem;
+  height: 2.5rem;
+}
+
+.behind-bg .rank .crown-img {
+  width: 3.5rem;
+  height: 2.5rem;
 }
 
 .behind-bg .rank-button {
@@ -544,7 +575,7 @@ button svg {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #a8a8a8;
   padding: .5rem;
 }
 
@@ -854,6 +885,11 @@ footer a {
     -ms-grid-column: 2;
     grid-area: grid-twelfth;
   }
+  .server,
+  .discord {
+    -webkit-animation: 5s linear infinite alternate logoAnim;
+            animation: 5s linear infinite alternate logoAnim;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -916,5 +952,9 @@ footer a {
     top: 80%;
     left: 82%;
   }
+}
+
+.hide {
+  display: none;
 }
 /*# sourceMappingURL=ranking.css.map */

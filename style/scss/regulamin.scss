@@ -43,7 +43,12 @@ $bubble-border: 0 -1*$px $white,
 
 @keyframes logoAnim {
   0% {transform: translateY(0);}
-  100% {transform: translateY(50px);}
+  100% {transform: translateY(25px);}
+}
+
+@keyframes backToTopAnim {
+  0% {transform: translateY(25px);}
+  100% {transform: translateY(0);}
 }
 
 @keyframes greenPulse {
@@ -266,6 +271,7 @@ $bubble-border: 0 -1*$px $white,
   z-index: 100;
   background: none;
   border: none;
+  animation: 2s linear infinite alternate backToTopAnim;
 }
 
 button svg {
@@ -287,9 +293,9 @@ button svg {
 
   .wrapper-title {
     font-size: 48px;
-    color: white;
+    color: hsl(0, 0%, 92%);
     text-align: center;
-    margin: 0.75rem auto;
+    margin: .75rem auto;
   }
 
   .items-title {
@@ -301,6 +307,7 @@ button svg {
 
   .item-container {
     margin: 1rem auto;
+    width: 100%;
   }
 }
 
@@ -487,6 +494,11 @@ footer {
   .dis-title,
   .serv-title {
     font-size: 20px;
+  }
+
+  .server,
+  .discord {
+    animation: 5s linear infinite alternate logoAnim;
   }
 }
 
