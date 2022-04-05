@@ -222,7 +222,7 @@ $bubble-border: 0 -1*$px $white,
   }
 }
 
-
+///////////////////// IntersectionObserver //////////////////////////
 
 .none {
   display: none;
@@ -253,6 +253,8 @@ $bubble-border: 0 -1*$px $white,
   }
 }
 
+///////////////////// Back to top Btn //////////////////////////
+
 .show-btn {
   display: block;
   position: fixed;
@@ -264,12 +266,10 @@ $bubble-border: 0 -1*$px $white,
   z-index: 100;
   background: none;
   border: none;
+}
 
-  i {
-    color: white;
-    font-size: 36px;
-    // width: 36px; height: 36px;
-  }
+button svg {
+  transform: rotate(270deg);
 }
 
 ///////////////////// MAIN //////////////////////////
@@ -350,23 +350,21 @@ footer {
   flex-direction: column;
   color: hsl(0, 0%, 95%);
   text-align: center;
+  width: 80%;
+  margin: 0 auto;
 
-  .payment-methods {
-    font-size: 22px;
-    color: hsl(0, 0%, 80%);
-  }
-
-  .psc {
-    width: 24rem; height: 10rem;
-  }
-
-  .sms {
-    width: 8rem; height: 8rem;
-  }
-
-  .payment-server-info {
+  .mojang-info {
     margin: 1rem auto;
-    color: hsl(0, 0%, 78%)
+    color: hsl(0, 0%, 78%);
+    width: inherit;
+  }
+
+  .footer-text-czit {
+    text-align: center;
+    color: hsl(0, 0%, 88%);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'mc-font';
   }
 
   .logo-footer {
@@ -385,9 +383,13 @@ footer {
       padding: .5rem;
 
       a {
-        color: hsl(0, 0%, 92%);
+        color: hsl(0, 0%, 82%);
         text-decoration: none;
         font-size: 1.25rem;
+
+        &:hover {
+          color: hsl(0, 0%, 100%);
+        }
       }
     }
   }
@@ -426,7 +428,7 @@ footer {
     max-width: 80%;
   }
   
-  .payment-server-info {
+  .mojang-info {
     width: 30rem; 
     margin: 0 auto;
   }
@@ -434,65 +436,38 @@ footer {
   .footer-navigation {
     display: grid; 
     grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 1fr; 
-    gap: 0px 0px;
-    margin: 1rem auto;
-    width: 28rem;
+    grid-template-rows: auto auto; 
+    gap: 0px 0px; 
     grid-template-areas: 
-    "footer-logo-wrapper footer-nav"; 
+    "footer-logo-wrapper footer-nav"
+    "footer-text footer-text";
   }
-
-  .footer-logo-wrapper {
-    grid-area: footer-logo-wrapper;
-  }
-
-  .footer-nav {
-    grid-area: footer-nav;
-    @include flex-center();
-    font-size: 24px;
-
-    a {
-      font-size: 24px;
-    }
-  }
+  .footer-logo-wrapper { grid-area: footer-logo-wrapper; }
+  .footer-nav { grid-area: footer-nav; }
+  .footer-text { grid-area: footer-text; margin: 1rem auto; }
 }
 
 @media screen and (min-width: 768px) {
   .show-btn {
     top: 85%; left: 92%;
   }
+
+  .grid-social {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "footer-navigation social"; 
+  }
+  .social { grid-area: social; }
+  .footer-navigation { 
+    grid-area: footer-navigation; 
+  }
 }
 
 @media screen and (min-width: 992px) {
-  .grid-social {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    "footer-navigation social";
-    margin: 1rem auto;
-  }
-
-  .footer-navigation {
-    grid-area: footer-navigation;
-    @include flex-center();
-
-    a {
-      font-size: 30px;
-    }
-  }
-
-  .social {
-    grid-area: social;
-  }
-
-  footer .payment-methods {
-    font-size: 28px;
-  }
-
-  footer.items-wrapper {
-    padding: 2rem;
-  }
+  
 
   .grid-header {
     display: grid; 
@@ -526,10 +501,6 @@ footer {
     color: hsl(0, 0%, 92%);
   }
 
-  footer .psc {
-    width: auto;
-  }
-
   .status > h3 {
     font-size: 18px;
   }
@@ -557,6 +528,30 @@ footer {
     width: 180px; 
     height: 180px;
   }
+
+  footer {
+    width: 75rem;
+
+    .logo-footer {
+      width: 12.5rem; height: 12.5rem;
+    }
+
+    .footer-text-czit {
+      font-size: 3.5rem;
+    }
+
+    nav {
+      ul {
+        li {
+          font-size: 30px;
+
+          a {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1800px) {
@@ -565,6 +560,3 @@ footer {
   }
 }
 
-button svg {
-  transform: rotate(270deg);
-}

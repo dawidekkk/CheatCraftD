@@ -270,6 +270,8 @@ $bubble-border: 0 -1*$px $white,
   }
 }
 
+///////////////////// IntersectionObserver //////////////////////////
+
 .none {
   display: none;
 }
@@ -299,6 +301,12 @@ $bubble-border: 0 -1*$px $white,
   }
 }
 
+///////////////////// Back to top Btn //////////////////////////
+
+// .block {
+//   display: block;
+// }
+
 .show-btn {
   display: block;
   position: fixed;
@@ -310,6 +318,10 @@ $bubble-border: 0 -1*$px $white,
   z-index: 100;
   background: none;
   border: none;
+}
+
+button svg {
+  transform: rotate(270deg);
 }
 
 ///////////////////// CARDS //////////////////////////
@@ -702,10 +714,18 @@ footer {
   width: 80%;
   margin: 0 auto;
 
-  .payment-server-info {
+  .mojang-info {
     margin: 1rem auto;
     color: hsl(0, 0%, 78%);
     width: inherit;
+  }
+
+  .footer-text-czit {
+    text-align: center;
+    color: hsl(0, 0%, 88%);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'mc-font';
   }
 
   .logo-footer {
@@ -724,9 +744,13 @@ footer {
       padding: .5rem;
 
       a {
-        color: hsl(0, 0%, 92%);
+        color: hsl(0, 0%, 82%);
         text-decoration: none;
         font-size: 1.25rem;
+
+        &:hover {
+          color: hsl(0, 0%, 100%);
+        }
       }
     }
   }
@@ -757,7 +781,7 @@ footer {
     }
   }
   
-  .payment-server-info {
+  .mojang-info {
     width: 30rem; 
     margin: 0 auto;
   }
@@ -895,18 +919,13 @@ footer {
     color: hsl(0, 0%, 92%);
   }
 
-  footer .psc {
-    width: auto;
-  }
-
   .status > h3 {
     font-size: 18px;
   }
 }
 
 @media screen and (min-width: 1400px) {
-  .items-wrapper,
-  footer {
+  .items-wrapper {
     width: 75rem;
   }
 
@@ -928,17 +947,30 @@ footer {
     height: 180px;
   }
 
-  .logo-footer {
-    width: 15rem; height: 15rem;
-  }
+  footer {
+    width: 75rem;
 
-  footer nav ul li {
-    font-size: 30px;
-    
-    a {
-      font-size: 30px;
+    .logo-footer {
+      width: 12.5rem; height: 12.5rem;
+    }
+
+    .footer-text-czit {
+      font-size: 3.5rem;
+    }
+
+    nav {
+      ul {
+        li {
+          font-size: 30px;
+
+          a {
+            font-size: 30px;
+          }
+        }
+      }
     }
   }
+
 }
 
 @media screen and (min-width: 1800px) {
@@ -947,9 +979,7 @@ footer {
   }
 }
 
-button svg {
-  transform: rotate(270deg);
-}
+
 
 ///////////////////// MODAL //////////////////////////
 
@@ -1106,16 +1136,10 @@ button svg {
   transform: scale(1.2);
 }
 
-.footer-text-czit {
-  text-align: center;
-  color: hsl(0, 0%, 95%);
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  font-family: 'mc-font';
-}
+
 
 // 1. wyjebac psc 
 // 2. footer-navigation na poziomie iframe
 // 3. pod footer-text payment-sever-info
-// 4. copyright pod payment-server-info
+// 4. copyright pod mojang-info
 // 5. wyjebac items-wrapper

@@ -365,9 +365,9 @@ html {
   border: none;
 }
 
-.back-to-top i {
-  color: white;
-  font-size: 36px;
+button svg {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
 }
 
 .rules-wrapper {
@@ -467,26 +467,22 @@ footer {
           flex-direction: column;
   color: #f2f2f2;
   text-align: center;
+  width: 80%;
+  margin: 0 auto;
 }
 
-footer .payment-methods {
-  font-size: 22px;
-  color: #cccccc;
-}
-
-footer .psc {
-  width: 24rem;
-  height: 10rem;
-}
-
-footer .sms {
-  width: 8rem;
-  height: 8rem;
-}
-
-footer .payment-server-info {
+footer .mojang-info {
   margin: 1rem auto;
   color: #c7c7c7;
+  width: inherit;
+}
+
+footer .footer-text-czit {
+  text-align: center;
+  color: #e0e0e0;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-family: 'mc-font';
 }
 
 footer .logo-footer {
@@ -516,9 +512,13 @@ footer nav ul {
 }
 
 footer nav ul a {
-  color: #ebebeb;
+  color: #d1d1d1;
   text-decoration: none;
   font-size: 1.25rem;
+}
+
+footer nav ul a:hover {
+  color: white;
 }
 
 footer a {
@@ -551,7 +551,7 @@ footer a {
     width: auto;
     max-width: 80%;
   }
-  .payment-server-info {
+  .mojang-info {
     width: 30rem;
     margin: 0 auto;
   }
@@ -560,12 +560,10 @@ footer a {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
     gap: 0px 0px;
-    margin: 1rem auto;
-    width: 28rem;
-        grid-template-areas: "footer-logo-wrapper footer-nav";
+        grid-template-areas: "footer-logo-wrapper footer-nav" "footer-text footer-text";
   }
   .footer-logo-wrapper {
     -ms-grid-row: 1;
@@ -576,19 +574,13 @@ footer a {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: footer-nav;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    font-size: 24px;
   }
-  .footer-nav a {
-    font-size: 24px;
+  .footer-text {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: footer-text;
+    margin: 1rem auto;
   }
 }
 
@@ -597,9 +589,6 @@ footer a {
     top: 85%;
     left: 92%;
   }
-}
-
-@media screen and (min-width: 992px) {
   .grid-social {
     display: -ms-grid;
     display: grid;
@@ -607,37 +596,22 @@ footer a {
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
+    gap: 0px 0px;
         grid-template-areas: "footer-navigation social";
-    margin: 1rem auto;
-  }
-  .footer-navigation {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: footer-navigation;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .footer-navigation a {
-    font-size: 30px;
   }
   .social {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: social;
   }
-  footer .payment-methods {
-    font-size: 28px;
+  .footer-navigation {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: footer-navigation;
   }
-  footer.items-wrapper {
-    padding: 2rem;
-  }
+}
+
+@media screen and (min-width: 992px) {
   .grid-header {
     display: -ms-grid;
     display: grid;
@@ -685,9 +659,6 @@ footer a {
     font-size: 64px;
     color: #ebebeb;
   }
-  footer .psc {
-    width: auto;
-  }
   .status > h3 {
     font-size: 18px;
   }
@@ -713,6 +684,22 @@ footer a {
     width: 180px;
     height: 180px;
   }
+  footer {
+    width: 75rem;
+  }
+  footer .logo-footer {
+    width: 12.5rem;
+    height: 12.5rem;
+  }
+  footer .footer-text-czit {
+    font-size: 3.5rem;
+  }
+  footer nav ul li {
+    font-size: 30px;
+  }
+  footer nav ul li a {
+    font-size: 30px;
+  }
 }
 
 @media screen and (min-width: 1800px) {
@@ -720,10 +707,5 @@ footer a {
     top: 80%;
     left: 82%;
   }
-}
-
-button svg {
-  -webkit-transform: rotate(270deg);
-          transform: rotate(270deg);
 }
 /*# sourceMappingURL=regulamin.css.map */
