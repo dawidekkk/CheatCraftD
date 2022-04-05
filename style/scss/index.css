@@ -509,7 +509,7 @@ button svg {
 .items-wrapper {
   width: 100%;
   margin: 2rem auto;
-  background-color: rgba(0, 0, 0, 0.92);
+  background-color: rgba(0, 0, 0, 0.77);
   -webkit-box-shadow: 0 -4px rgba(255, 255, 255, 0.6), 0 -8px black, 4px 0 rgba(255, 255, 255, 0.6), 4px -4px black, 8px 0 black, 0 4px rgba(255, 255, 255, 0.6), 0 8px black, -4px 0 rgba(255, 255, 255, 0.6), -4px 4px black, -8px 0 black, -4px -4px black, 4px 4px black;
           box-shadow: 0 -4px rgba(255, 255, 255, 0.6), 0 -8px black, 4px 0 rgba(255, 255, 255, 0.6), 4px -4px black, 8px 0 black, 0 4px rgba(255, 255, 255, 0.6), 0 8px black, -4px 0 rgba(255, 255, 255, 0.6), -4px 4px black, -8px 0 black, -4px -4px black, 4px 4px black;
   padding: .5rem;
@@ -530,12 +530,14 @@ button svg {
 .behind-bg {
   background-color: #8a7576;
   border-radius: 14px;
-  padding: .6rem;
+  padding: .45rem;
   margin: 0 auto;
   width: 22rem;
   max-width: 100%;
   -webkit-transition: all 5s;
   transition: all 5s;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #161313 0px 0px 0px 3px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #161313 0px 0px 0px 3px;
 }
 
 .behind-bg:hover {
@@ -553,7 +555,7 @@ button svg {
   gap: 0px 0px;
       grid-template-areas: "card-header" "card-desc" "card-buttons";
   width: 100%;
-  border: 4px solid #1b1e22;
+  border: 4px solid #211c1c;
   border-radius: 14px;
   padding: 1rem;
 }
@@ -625,11 +627,13 @@ button svg {
 .behind-bg-slider {
   background-color: #8a7576;
   border-radius: 14px;
-  padding: .6rem;
+  padding: .45rem;
   margin: 0 auto;
   width: 22rem;
   -webkit-transition: all 5s;
   transition: all 5s;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #161313 0px 0px 0px 3px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #161313 0px 0px 0px 3px;
 }
 
 .behind-bg-slider:hover {
@@ -647,7 +651,7 @@ button svg {
   gap: 0px 0px;
       grid-template-areas: "card-header" "card-desc" "card-slider" "card-buttons";
   width: 100%;
-  border: 4px solid #1b1e22;
+  border: 4px solid #211c1c;
   border-radius: 14px;
   padding: 1rem;
 }

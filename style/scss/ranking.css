@@ -443,10 +443,9 @@ button svg {
 }
 
 .behind-bg {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#757b81), to(#a1a5aa));
-  background-image: linear-gradient(180deg, #757b81, #a1a5aa);
+  background-color: #8a7576;
   border-radius: 14px;
-  padding: .6rem;
+  padding: .45rem;
   margin: 0 auto;
   width: 22rem;
   max-width: 100%;
@@ -474,7 +473,7 @@ button svg {
   -moz-box-shadow: inset 0 0 1rem 0 #fff, 0 0 5px 0 #000;
   -webkit-box-shadow: inset 0 0 1rem 0 #fff, 0 0 5px 0 #000;
   -khtml-box-shadow: white inset 0 0 1rem;
-  background-color: #bcbfc2;
+  background-color: #edeaea;
   height: auto;
   width: 100%;
   max-width: auto;
@@ -535,7 +534,7 @@ button svg {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #e9e2d8;
+  background-color: #c9bfc0;
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
@@ -545,7 +544,8 @@ button svg {
 }
 
 .behind-bg .rank-button:hover {
-  background-color: #f6f3ef;
+  background-color: #282626;
+  color: #e9e9e9;
 }
 
 .player-list {
@@ -889,6 +889,9 @@ footer a {
   .discord {
     -webkit-animation: 5s linear infinite alternate logoAnim;
             animation: 5s linear infinite alternate logoAnim;
+  }
+  .behind-bg .rank .rank-title {
+    font-size: 2.25rem;
   }
 }
 
