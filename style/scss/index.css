@@ -534,8 +534,8 @@ button svg {
   margin: 0 auto;
   width: 22rem;
   max-width: 100%;
-  -webkit-transition: all 5s;
-  transition: all 5s;
+  -webkit-transition: all 2.5s;
+  transition: all 2.5s;
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #161313 0px 0px 0px 3px;
           box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #161313 0px 0px 0px 3px;
 }
@@ -630,8 +630,8 @@ button svg {
   padding: .45rem;
   margin: 0 auto;
   width: 22rem;
-  -webkit-transition: all 5s;
-  transition: all 5s;
+  -webkit-transition: all 2.5s;
+  transition: all 2.5s;
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #161313 0px 0px 0px 3px;
           box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #161313 0px 0px 0px 3px;
 }

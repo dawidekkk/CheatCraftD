@@ -655,6 +655,9 @@ footer a {
 }
 
 @media screen and (min-width: 600px) {
+  .rule {
+    padding: 2rem;
+  }
   .navigation-wrapper nav {
     width: 30rem;
   }
