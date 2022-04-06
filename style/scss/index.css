@@ -197,7 +197,7 @@ body {
 
 .page-wrapper {
   position: relative;
-  background-image: url("../img/bg-sklep.png");
+  background-image: url("../img/bg-sklep-2.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -490,8 +490,9 @@ body {
 .back-to-top {
   padding: .5rem;
   z-index: 100;
-  background: none;
+  background-color: #ebebeb;
   border: none;
+  border-radius: 2px;
   -webkit-animation: 2s linear infinite alternate backToTopAnim;
           animation: 2s linear infinite alternate backToTopAnim;
 }
@@ -528,7 +529,7 @@ button svg {
 }
 
 .behind-bg {
-  background-color: #f7f7f7;
+  background-color: #f2f2f2;
   border-radius: 14px;
   padding: .45rem;
   margin: 0 auto;
@@ -625,7 +626,7 @@ button svg {
 }
 
 .behind-bg-slider {
-  background-color: #f7f7f7;
+  background-color: #f2f2f2;
   border-radius: 14px;
   padding: .45rem;
   margin: 0 auto;
@@ -1345,8 +1346,8 @@ footer a {
     left: 88%;
   }
   button svg {
-    width: 180px;
-    height: 180px;
+    width: 100px;
+    height: 100px;
   }
   footer {
     width: 75rem;
@@ -1369,12 +1370,8 @@ footer a {
 @media screen and (min-width: 1800px) {
   .show-btn {
     top: 80%;
-    left: 82%;
+    left: 86%;
   }
-}
-
-.behind-bg-modal {
-  background-color: #8a7576;
 }
 
 .modal {
@@ -1397,7 +1394,7 @@ footer a {
   -moz-box-shadow: inset 0 0 1rem 0 #fff, 0 0 5px 0 #000;
   -webkit-box-shadow: inset 0 0 1rem 0 #fff, 0 0 5px 0 #000;
   -khtml-box-shadow: white inset 0 0 1rem;
-  background-color: #edeaea;
+  background-color: #dddddd;
   -webkit-transition: all 1s;
   transition: all 1s;
   font-size: 12px;

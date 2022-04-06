@@ -286,8 +286,9 @@ $bubble-border: 0 -1*$px $white,
 .back-to-top {
   padding: .5rem;
   z-index: 100;
-  background: none;
+  background-color: hsl(0, 0%, 92%);
   border: none;
+  border-radius: 2px;
   animation: 2s linear infinite alternate backToTopAnim;
 }
 
@@ -330,14 +331,14 @@ button svg {
 }
 
 .behind-bg {
-  // background-image: linear-gradient(180deg,#757b81,#a1a5aa);
-  background-color: hsl(357, 8%, 50%);
+  background-color: hsl(0, 0%, 95%);
   border-radius: 14px;
   padding: .45rem;
   margin: 0 auto;
   width: 22rem;
   max-width: 100%;
-  transition: all 1s;
+  transition: all 2.5s;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, hsl(0, 8%, 8%) 0px 0px 0px 3px;
 
   .rank {
     @include flex-center();
@@ -348,7 +349,7 @@ button svg {
     -moz-box-shadow: inset 0 0 1rem 0 #fff, 0 0 5px 0 #000;
     -webkit-box-shadow: inset 0 0 1rem 0 #fff, 0 0 5px 0 #000;
     -khtml-box-shadow: rgb(255, 255, 255) inset 0 0 1rem;
-    background-color: #edeaea;
+    background-color: #dddddd;
     height: auto;
     width: 100%; 
     max-width: auto;
@@ -360,7 +361,8 @@ button svg {
       letter-spacing: 1.5px;
       font-weight: lighter;
       font-family: 'mc-font';
-      text-align: center
+      text-align: center;
+      margin: 1rem auto;
     }
 
     .gold-place,
@@ -369,6 +371,7 @@ button svg {
       @include flex-center();
       flex-direction: column;
       margin: 1rem auto;
+      color: #373737;
 
       .crown-img {
         width: 3.5rem; height: 2.5rem;
@@ -389,16 +392,17 @@ button svg {
     align-items: center;
     justify-content: center;
     // background-color: hsl(37, 27%, 88%);
-    background-color: #c9bfc0;
+    background-color: #373737;
     font-size: 16px;
     font-weight: 700;
     cursor: pointer;
     border: none;
     transition: all .25s;
+    color: #e7e7e7;
 
     &:hover {
-      background-color: #282626;
-      color: #e9e9e9;
+      background-color: #101010;
+      color: #f1f1f1;
     }
   }
 }
@@ -416,12 +420,19 @@ button svg {
     }
 
     tr {
+      color: #373737;
       width: inherit;
       display: flex;
       align-items: center;
       justify-content: space-around;
       border-bottom: 2px solid hsl(0, 0%, 66%);
       padding: .5rem;
+      font-size: 1rem;
+
+      .crown-column {
+        @include flex-center();
+        flex-direction: column;
+      }
     }
   }
 }
@@ -619,14 +630,27 @@ footer {
     .grid-eleventh { grid-area: grid-eleventh; }
     .grid-twelfth { grid-area: grid-twelfth; }
 
-    .server,
-    .discord {
-      animation: 5s linear infinite alternate logoAnim;
-    }
+  .server,
+  .discord {
+    animation: 5s linear infinite alternate logoAnim;
+  }
 
-    .behind-bg .rank .rank-title {
-      font-size: 2.25rem;
+  .behind-bg .rank .rank-title {
+    font-size: 2.25rem;
+  }
+
+  .crown-wrapper {
+    font-size: 20px;
+  }
+
+  .player-list {
+    table {
+      
+      tr {
+        font-size: 20px;
+      }
     }
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -647,6 +671,8 @@ footer {
   .behind-bg {
     width: 34rem;
   }
+
+  
 }
 
 @media screen and (min-width: 1400px) {
@@ -668,8 +694,8 @@ footer {
   }
 
   button svg {
-    width: 180px; 
-    height: 180px;
+    width: 100px; 
+    height: 100px;
   }
 
   footer {
@@ -699,10 +725,11 @@ footer {
 
 @media screen and (min-width: 1800px) {
   .show-btn {
-    top: 80%; left: 82%;
+    top: 80%; left: 86%;
   }
 }
 
 .hide {
   display: none;
 }
+

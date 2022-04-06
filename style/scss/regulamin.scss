@@ -269,8 +269,9 @@ $bubble-border: 0 -1*$px $white,
 .back-to-top {
   padding: .5rem;
   z-index: 100;
-  background: none;
+  background-color: hsl(0, 0%, 92%);
   border: none;
+  border-radius: 2px;
   animation: 2s linear infinite alternate backToTopAnim;
 }
 
@@ -312,13 +313,14 @@ button svg {
 }
 
 .behind-bg {
-  background-image: linear-gradient(180deg,#757b81,#a1a5aa);
+  background-color: hsl(0, 0%, 95%);
   border-radius: 14px;
-  padding: .6rem;
+  padding: .45rem;
   margin: 0 auto;
   width: 22rem;
   max-width: 100%;
-  text-align: left;
+  transition: all 2.5s;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, hsl(0, 8%, 8%) 0px 0px 0px 3px;
 
   .rule {
     @include flex-center();
@@ -329,10 +331,11 @@ button svg {
     -moz-box-shadow: inset 0 0 1rem 0 #fff, 0 0 5px 0 #000;
     -webkit-box-shadow: inset 0 0 1rem 0 #fff, 0 0 5px 0 #000;
     -khtml-box-shadow: rgb(255, 255, 255) inset 0 0 1rem;
-    background-color: #bcbfc2;
+    background-color: #dddddd;
     height: auto;
     width: 100%; 
-    padding: 2.25rem;
+    max-width: auto;
+    padding: 2.5rem;    
 
     .rule-title {
       font-size: 1.5rem;
@@ -471,11 +474,14 @@ footer {
   .footer-navigation { 
     grid-area: footer-navigation; 
   }
+
+  .behind-bg article.rule {
+    padding: 4.5rem;
+  }
 }
 
 @media screen and (min-width: 992px) {
   
-
   .grid-header {
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr; 
@@ -537,8 +543,8 @@ footer {
   }
 
   button svg {
-    width: 180px; 
-    height: 180px;
+    width: 100px; 
+    height: 100px;
   }
 
   footer {
@@ -568,7 +574,7 @@ footer {
 
 @media screen and (min-width: 1800px) {
   .show-btn {
-    top: 80%; left: 82%;
+    top: 80%; left: 86%;
   }
 }
 

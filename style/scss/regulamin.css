@@ -383,8 +383,9 @@ html {
 .back-to-top {
   padding: .5rem;
   z-index: 100;
-  background: none;
+  background-color: #ebebeb;
   border: none;
+  border-radius: 2px;
   -webkit-animation: 2s linear infinite alternate backToTopAnim;
           animation: 2s linear infinite alternate backToTopAnim;
 }
@@ -427,14 +428,16 @@ button svg {
 }
 
 .behind-bg {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#757b81), to(#a1a5aa));
-  background-image: linear-gradient(180deg, #757b81, #a1a5aa);
+  background-color: #f2f2f2;
   border-radius: 14px;
-  padding: .6rem;
+  padding: .45rem;
   margin: 0 auto;
   width: 22rem;
   max-width: 100%;
-  text-align: left;
+  -webkit-transition: all 2.5s;
+  transition: all 2.5s;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #161313 0px 0px 0px 3px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #161313 0px 0px 0px 3px;
 }
 
 .behind-bg .rule {
@@ -457,10 +460,11 @@ button svg {
   -moz-box-shadow: inset 0 0 1rem 0 #fff, 0 0 5px 0 #000;
   -webkit-box-shadow: inset 0 0 1rem 0 #fff, 0 0 5px 0 #000;
   -khtml-box-shadow: white inset 0 0 1rem;
-  background-color: #bcbfc2;
+  background-color: #dddddd;
   height: auto;
   width: 100%;
-  padding: 2.25rem;
+  max-width: auto;
+  padding: 2.5rem;
 }
 
 .behind-bg .rule .rule-title {
@@ -634,6 +638,9 @@ footer a {
     -ms-grid-column: 1;
     grid-area: footer-navigation;
   }
+  .behind-bg article.rule {
+    padding: 4.5rem;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -711,8 +718,8 @@ footer a {
     left: 88%;
   }
   button svg {
-    width: 180px;
-    height: 180px;
+    width: 100px;
+    height: 100px;
   }
   footer {
     width: 75rem;
@@ -735,7 +742,7 @@ footer a {
 @media screen and (min-width: 1800px) {
   .show-btn {
     top: 80%;
-    left: 82%;
+    left: 86%;
   }
 }
 /*# sourceMappingURL=regulamin.css.map */
