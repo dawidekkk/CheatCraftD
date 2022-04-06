@@ -110,8 +110,10 @@ function turboValue() {
   const btnPsc = document.querySelector('.btn-price-cheat_psc');
   const btnPrzelew = document.querySelector('.btn-price-cheat_przelew');
   const parag = document.querySelector(".vip-p");
+  const info = document.querySelector('.info-slider-turbo')
 
   turboInputValue.textContent = `${this.value} minut.`
+  info.style.fontSize = `16px`
 }
 
 function cheatValue() {
