@@ -105,9 +105,31 @@ function vipValue() {
   }, 1000)
 }
 
+function turboValue() {
+  const btnSms = document.querySelector('.btn-price-cheat_sms');
+  const btnPsc = document.querySelector('.btn-price-cheat_psc');
+  const btnPrzelew = document.querySelector('.btn-price-cheat_przelew');
+  const parag = document.querySelector(".vip-p");
+
+  turboInputValue.textContent = `${this.value} minut.`
+}
+
+function cheatValue() {
+  const btnSms = document.querySelector('.btn-price-cheat_sms');
+  const btnPsc = document.querySelector('.btn-price-cheat_psc');
+  const btnPrzelew = document.querySelector('.btn-price-cheat_przelew');
+  const parag = document.querySelector(".vip-p");
+
+  cheatInputValue.textContent = `${this.value} CheatCasów.`
+}
+
 sponsorInput.addEventListener("change", sponsorValue);
 sponsorInput.addEventListener("input", sponsorValue)
 superInput.addEventListener("change", superValue)
 superInput.addEventListener("input", superValue)
 vipInput.addEventListener("change", vipValue)
 vipInput.addEventListener("input", vipValue)
+turboInput.addEventListener("input", turboValue)
+turboInput.addEventListener("change", turboValue)
+cheatInput.addEventListener("input", cheatValue)
+cheatInput.addEventListener("change", cheatValue)
