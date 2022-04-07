@@ -227,38 +227,11 @@ $bubble-border: 0 -1*$px $white,
   }
 }
 
-///////////////////// IntersectionObserver //////////////////////////
+///////////////////// Back to top Btn //////////////////////////
 
 .none {
   display: none;
 }
-
-.opacity-zero {
-  opacity: 0;
-}
-
-.opacity-one {
-  opacity: 1;
-  transition: all 1.5s;
-}
-
-.intersection-anim {
-  opacity: 0;
-}
-
-@keyframes anim1 {
-  from{
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-///////////////////// Back to top Btn //////////////////////////
 
 .show-btn {
   display: block;
@@ -273,6 +246,7 @@ $bubble-border: 0 -1*$px $white,
   border: none;
   border-radius: 2px;
   animation: 2s linear infinite alternate backToTopAnim;
+  cursor: pointer;
 }
 
 button svg {
@@ -539,12 +513,12 @@ footer {
   }
 
   .show-btn {
-    top: 75%; left: 88%;
+    top: 75%; left: 93%;
   }
 
   button svg {
-    width: 100px; 
-    height: 100px;
+    width: 75px; 
+    height: 75px;
   }
 
   footer {

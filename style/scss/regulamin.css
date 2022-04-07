@@ -333,46 +333,6 @@ html {
   display: none;
 }
 
-.opacity-zero {
-  opacity: 0;
-}
-
-.opacity-one {
-  opacity: 1;
-  -webkit-transition: all 1.5s;
-  transition: all 1.5s;
-}
-
-.intersection-anim {
-  opacity: 0;
-}
-
-@-webkit-keyframes anim1 {
-  from {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes anim1 {
-  from {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 .show-btn {
   display: block;
   position: fixed;
@@ -388,6 +348,7 @@ html {
   border-radius: 2px;
   -webkit-animation: 2s linear infinite alternate backToTopAnim;
           animation: 2s linear infinite alternate backToTopAnim;
+  cursor: pointer;
 }
 
 button svg {
@@ -715,11 +676,11 @@ footer a {
   }
   .show-btn {
     top: 75%;
-    left: 88%;
+    left: 93%;
   }
   button svg {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
   }
   footer {
     width: 75rem;

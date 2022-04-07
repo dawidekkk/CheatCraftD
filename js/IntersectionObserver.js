@@ -3,12 +3,12 @@
 const cards = document.querySelectorAll('.opacity-zero');
 const anim = document.querySelectorAll('.intersection-anim');
 
-function intersectionOne(classOne, classTwo, t) {
+const intersectionOne = (objOne, objTwo) => {
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if(!entry.isIntersecting) return;
-      entry.target.classList.remove(`${classOne}`)
-      entry.target.classList.add(`${classTwo}`)
+      entry.target.classList.remove(`${objOne}`)
+      entry.target.classList.add(`${objTwo}`)
       observer.unobserve(entry.target);
     })
   })
@@ -23,7 +23,7 @@ intersectionOne('opacity-zero', 'opacity-one')
 const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
     if(entry.isIntersecting) {
-      entry.target.style.animation = `anim1 1s ${entry.target.dataset.delay} forwards ease-out`
+      entry.target.style.animation = `interAnim 1s ${entry.target.dataset.delay} forwards ease-out`
       observer.unobserve(entry.target);
     }
   })
