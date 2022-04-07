@@ -85,11 +85,12 @@ $bubble-border: 0 -1*$px $white,
 
 .logo-wrapper {
   @include flex-center();
-  
+  flex-direction: column;
+  animation: 5s linear infinite alternate logoAnim;
+
   .logo-header {
     width: 12rem; height: 12rem;
     margin: 1rem auto 0 auto;
-    animation: 5s linear infinite alternate logoAnim;
   }
 }
 
@@ -97,8 +98,8 @@ $bubble-border: 0 -1*$px $white,
   text-align: center;
   color: hsl(0, 0%, 95%);
   font-size: 22px;
-  margin-bottom: 2rem;
   font-family: 'mc-font';
+  margin: 1rem auto;
 }
 
 .server,
@@ -489,7 +490,7 @@ footer {
   }
 
   .header-text h1 {
-    font-size: 64px;
+    font-size: 82px;
     color: hsl(0, 0%, 92%);
   }
 

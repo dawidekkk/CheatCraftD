@@ -126,22 +126,26 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-animation: 5s linear infinite alternate logoAnim;
+          animation: 5s linear infinite alternate logoAnim;
 }
 
 .logo-wrapper .logo-header {
   width: 12rem;
   height: 12rem;
   margin: 1rem auto 0 auto;
-  -webkit-animation: 5s linear infinite alternate logoAnim;
-          animation: 5s linear infinite alternate logoAnim;
 }
 
 .header-text {
   text-align: center;
   color: #f2f2f2;
   font-size: 22px;
-  margin-bottom: 2rem;
   font-family: 'mc-font';
+  margin: 1rem auto;
 }
 
 .server,
@@ -654,7 +658,7 @@ footer a {
     height: 16rem;
   }
   .header-text h1 {
-    font-size: 64px;
+    font-size: 82px;
     color: #ebebeb;
   }
   .status > h3 {

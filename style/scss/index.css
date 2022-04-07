@@ -69,30 +69,6 @@ body {
   }
 }
 
-@-webkit-keyframes testTest {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes testTest {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 @-webkit-keyframes greenPulse {
   0% {
     background-color: #759c02;
@@ -184,8 +160,8 @@ body {
 .cardAnimOut {
   -webkit-animation-name: cardReverse;
           animation-name: cardReverse;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: .6s;
+          animation-duration: .6s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   -webkit-animation-iteration-count: 1;
@@ -233,22 +209,26 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-animation: 5s linear infinite alternate logoAnim;
+          animation: 5s linear infinite alternate logoAnim;
 }
 
 .logo-wrapper .logo-header {
   width: 12rem;
   height: 12rem;
   margin: 1rem auto 0 auto;
-  -webkit-animation: 5s linear infinite alternate logoAnim;
-          animation: 5s linear infinite alternate logoAnim;
 }
 
 .header-text {
   text-align: center;
   color: #f2f2f2;
   font-size: 22px;
-  margin-bottom: 2rem;
   font-family: 'mc-font';
+  margin: 1rem auto;
 }
 
 .server,
@@ -261,7 +241,7 @@ body {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 16rem;
+  width: 15rem;
   margin: 0 auto;
 }
 
@@ -536,8 +516,8 @@ button svg {
   margin: 0 auto;
   width: 22rem;
   max-width: 100%;
-  -webkit-transition: all 2.5s;
-  transition: all 2.5s;
+  -webkit-transition: all 2s;
+  transition: all 2s;
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #161313 0px 0px 0px 3px;
           box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #161313 0px 0px 0px 3px;
 }
@@ -560,6 +540,13 @@ button svg {
   border: 4px solid #211c1c;
   border-radius: 14px;
   padding: 1rem;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+.behind-bg .card:hover {
+  -webkit-box-shadow: inset 0 0 0.75rem 0 #e21e26, 0 0 5px 0 #000;
+          box-shadow: inset 0 0 0.75rem 0 #e21e26, 0 0 5px 0 #000;
 }
 
 .behind-bg .card .card-img {
@@ -1335,7 +1322,7 @@ footer a {
     height: 16rem;
   }
   .header-text h1 {
-    font-size: 64px;
+    font-size: 82px;
     color: #ebebeb;
   }
   .status > h3 {
