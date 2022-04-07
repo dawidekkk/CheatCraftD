@@ -339,6 +339,8 @@ button svg {
 
 .items-wrapper {
   width: 100%;
+  @include flex-center();
+  flex-direction: column;
   margin: 2rem auto;
   background-color: hsla(0, 0%, 0%, 0.77);
   box-shadow: $bubble-border;
@@ -375,7 +377,7 @@ button svg {
     display: grid; 
     grid-auto-columns: 1fr; 
     grid-template-columns: 1fr; 
-    grid-template-rows: 1fr 140px auto; 
+    grid-template-rows: 1fr auto auto; 
     gap: 0px 0px; 
     grid-template-areas: 
       "card-header"
@@ -559,6 +561,13 @@ button svg {
   width: 15rem;
   text-align: left;
   margin: 0 auto;
+
+  .price {
+    margin-top: 8px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
 }
 
 .card-slider {
@@ -656,7 +665,7 @@ button svg {
     justify-content: center;
     border: none;
     box-shadow: none;
-    height: 40px;
+    height: 50px;
     line-height: 42px;
     -webkit-perspective: 230;
     perspective: 999999999px;
@@ -670,7 +679,8 @@ button svg {
     span {
       background: #f46b45;
       background: linear-gradient(0deg, #F09819 0%, #EDDE5D 100%);    
-      display: block;
+      @include flex-center();
+      height: 50px;
       position: absolute;
       width: 5.8rem;
       box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
@@ -821,8 +831,6 @@ footer {
   .footer-logo-wrapper { grid-area: footer-logo-wrapper; }
   .footer-nav { grid-area: footer-nav; }
   .footer-text { grid-area: footer-text; margin: 1rem auto; }
-
-  
 }
 
 @media screen and (min-width: 768px) {
@@ -972,6 +980,16 @@ footer {
   .status > h3 {
     font-size: 18px;
   }
+
+  .behind-bg {
+    .card {
+      grid-template-rows: 1fr 140px auto; 
+    }
+  }
+
+  .price {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1400px) {
@@ -1044,7 +1062,8 @@ footer {
   transition: all 1s;
   font-size: 12px;
   position: fixed;
-  top: 4%; left: 50%;
+  // height: 400px;
+  top: 1%; left: 50%;
   transform: translateX(-50%);
   width: 350px; height: auto;
   color: hsl(0, 0%, 11%);
@@ -1188,3 +1207,4 @@ footer {
   z-index: 100;
   transition: all 0.5s;
 }
+

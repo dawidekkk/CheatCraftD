@@ -490,6 +490,19 @@ button svg {
 
 .items-wrapper {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 2rem auto;
   background-color: rgba(0, 0, 0, 0.77);
   -webkit-box-shadow: 0 -4px rgba(255, 255, 255, 0.6), 0 -8px black, 4px 0 rgba(255, 255, 255, 0.6), 4px -4px black, 8px 0 black, 0 4px rgba(255, 255, 255, 0.6), 0 8px black, -4px 0 rgba(255, 255, 255, 0.6), -4px 4px black, -8px 0 black, -4px -4px black, 4px 4px black;
@@ -532,8 +545,8 @@ button svg {
   grid-auto-columns: 1fr;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 1fr 140px auto;
-      grid-template-rows: 1fr 140px auto;
+  -ms-grid-rows: 1fr auto auto;
+      grid-template-rows: 1fr auto auto;
   gap: 0px 0px;
       grid-template-areas: "card-header" "card-desc" "card-buttons";
   width: 100%;
@@ -744,6 +757,13 @@ button svg {
   margin: 0 auto;
 }
 
+.card-desc .price {
+  margin-top: 8px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
 .card-slider {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
@@ -881,7 +901,7 @@ button svg {
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  height: 40px;
+  height: 50px;
   line-height: 42px;
   -webkit-perspective: 230;
   perspective: 999999999px;
@@ -898,7 +918,16 @@ button svg {
   background: #f46b45;
   background: -webkit-gradient(linear, left bottom, left top, from(#F09819), to(#EDDE5D));
   background: linear-gradient(0deg, #F09819 0%, #EDDE5D 100%);
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50px;
   position: absolute;
   width: 5.8rem;
   -webkit-box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
@@ -1328,6 +1357,13 @@ footer a {
   .status > h3 {
     font-size: 18px;
   }
+  .behind-bg .card {
+    -ms-grid-rows: 1fr 140px auto;
+        grid-template-rows: 1fr 140px auto;
+  }
+  .price {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1400px) {
@@ -1400,7 +1436,7 @@ footer a {
   transition: all 1s;
   font-size: 12px;
   position: fixed;
-  top: 4%;
+  top: 1%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);

@@ -530,6 +530,11 @@ button svg {
   height: 2.5rem;
 }
 
+.behind-bg .rank .icon-img {
+  width: 3.5rem;
+  height: 3rem;
+}
+
 .behind-bg .rank-button {
   width: 80%;
   border-radius: 8px;
