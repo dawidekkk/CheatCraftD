@@ -848,10 +848,10 @@ button svg {
 
 .card-buttons .input-buttons {
   width: 5.8rem;
+  height: 50px;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#f09719), to(#eddf5e));
   background-image: linear-gradient(0deg, #f09719 0%, #eddf5e 100%);
   border-radius: 2px;
-  line-height: 42px;
   font-weight: 700;
   border: none;
   -webkit-box-shadow: none;
@@ -860,6 +860,19 @@ button svg {
           box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(255, 255, 255, 0.1), 4px 4px 5px 0px rgba(255, 255, 255, 0.1);
   -webkit-transition: all 1s;
   transition: all 1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .card-buttons .input-buttons:hover {
