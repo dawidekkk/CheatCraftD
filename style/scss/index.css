@@ -99,78 +99,6 @@ body {
   }
 }
 
-@-webkit-keyframes cardShadow {
-  from {
-    -webkit-box-shadow: inset 0 0 0.75rem 0 #e21e26, 0 0 5px 0 #000;
-            box-shadow: inset 0 0 0.75rem 0 #e21e26, 0 0 5px 0 #000;
-  }
-  to {
-    -webkit-box-shadow: inset 0 0 0.75rem 0 rgba(226, 30, 38, 0.01), 0 0 5px 0 #000;
-            box-shadow: inset 0 0 0.75rem 0 rgba(226, 30, 38, 0.01), 0 0 5px 0 #000;
-  }
-}
-
-@keyframes cardShadow {
-  from {
-    -webkit-box-shadow: inset 0 0 0.75rem 0 #e21e26, 0 0 5px 0 #000;
-            box-shadow: inset 0 0 0.75rem 0 #e21e26, 0 0 5px 0 #000;
-  }
-  to {
-    -webkit-box-shadow: inset 0 0 0.75rem 0 rgba(226, 30, 38, 0.01), 0 0 5px 0 #000;
-            box-shadow: inset 0 0 0.75rem 0 rgba(226, 30, 38, 0.01), 0 0 5px 0 #000;
-  }
-}
-
-@-webkit-keyframes cardReverse {
-  from {
-    -webkit-box-shadow: inset 0 0 0.75rem 0 rgba(226, 30, 38, 0.01), 0 0 5px 0 #000;
-            box-shadow: inset 0 0 0.75rem 0 rgba(226, 30, 38, 0.01), 0 0 5px 0 #000;
-  }
-  to {
-    -webkit-box-shadow: inset 0 0 0.75rem 0 #e21e26, 0 0 5px 0 #000;
-            box-shadow: inset 0 0 0.75rem 0 #e21e26, 0 0 5px 0 #000;
-  }
-}
-
-@keyframes cardReverse {
-  from {
-    -webkit-box-shadow: inset 0 0 0.75rem 0 rgba(226, 30, 38, 0.01), 0 0 5px 0 #000;
-            box-shadow: inset 0 0 0.75rem 0 rgba(226, 30, 38, 0.01), 0 0 5px 0 #000;
-  }
-  to {
-    -webkit-box-shadow: inset 0 0 0.75rem 0 #e21e26, 0 0 5px 0 #000;
-            box-shadow: inset 0 0 0.75rem 0 #e21e26, 0 0 5px 0 #000;
-  }
-}
-
-.cardAnimIn {
-  -webkit-animation-name: cardShadow;
-          animation-name: cardShadow;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
-}
-
-.cardAnimOut {
-  -webkit-animation-name: cardReverse;
-          animation-name: cardReverse;
-  -webkit-animation-duration: .6s;
-          animation-duration: .6s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  animation-direction: alternate-reverse;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
-}
-
 .page-wrapper {
   position: relative;
   background-image: url("../img/bg-sklep-2.jpg");
@@ -632,8 +560,8 @@ button svg {
   padding: .45rem;
   margin: 0 auto;
   width: 22rem;
-  -webkit-transition: all 2.5s;
-  transition: all 2.5s;
+  -webkit-transition: all 2s;
+  transition: all 2s;
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #161313 0px 0px 0px 3px;
           box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #161313 0px 0px 0px 3px;
 }
@@ -656,6 +584,13 @@ button svg {
   border: 4px solid #211c1c;
   border-radius: 14px;
   padding: 1rem;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+.behind-bg-slider .card-sliders:hover {
+  -webkit-box-shadow: inset 0 0 0.75rem 0 #e21e26, 0 0 5px 0 #000;
+          box-shadow: inset 0 0 0.75rem 0 #e21e26, 0 0 5px 0 #000;
 }
 
 .behind-bg-slider .card-sponsor {
@@ -1206,21 +1141,22 @@ footer a {
     -ms-grid-column: 1;
     grid-area: footer-navigation;
   }
-  article.modal {
-    width: 600px;
+  div.behind-bg-modal {
+    width: 620px;
   }
-  article.modal .modal-rule {
+  div.behind-bg-modal article.modal .modal-rule {
     width: 65%;
-  }
-  article.modal .modal-p {
-    font-size: 14px;
-  }
-  article.modal .modal-accept {
-    width: 85%;
     margin: 0 auto;
   }
-  article.modal .modal-info {
-    margin: 1.5rem auto;
+  div.behind-bg-modal article.modal .modal-rule h3 {
+    font-size: 18px;
+  }
+  div.behind-bg-modal article.modal .modal-p {
+    font-size: 14px;
+  }
+  div.behind-bg-modal article.modal .modal-accept {
+    width: 85%;
+    margin: 0 auto;
   }
 }
 
@@ -1411,7 +1347,34 @@ footer a {
   }
 }
 
-.modal {
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.behind-bg-modal {
+  position: fixed;
+  display: block;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1000;
+  padding: .5rem;
+  background-color: #f2f2f2;
+  border-radius: 14px;
+  margin: 0 auto;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #161313 0px 0px 0px 3px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #161313 0px 0px 0px 3px;
+  height: 700px;
+  width: 24rem;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.behind-bg-modal .modal {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1432,36 +1395,28 @@ footer a {
   -webkit-box-shadow: inset 0 0 1rem 0 #fff, 0 0 5px 0 #000;
   -khtml-box-shadow: white inset 0 0 1rem;
   background-color: #dddddd;
-  -webkit-transition: all 1s;
-  transition: all 1s;
   font-size: 12px;
-  position: fixed;
-  top: 1%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  width: 350px;
-  height: auto;
-  color: #1c1c1c;
-  z-index: 1000;
-  padding: .5rem;
-}
-
-.modal .modal-close {
+  padding: .45rem;
   width: 100%;
-  margin-bottom: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  height: 100%;
+  color: #1c1c1c;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto 1fr 1fr 1fr 1fr auto;
+      grid-template-rows: auto 1fr 1fr 1fr 1fr auto;
+  gap: 0px 0px;
+      grid-template-areas: "modal-close" "modal-rule" "modal-info" "modal-info-mojang" "modal-nick" "modal-btns";
 }
 
-.modal .modal-close button {
+.behind-bg-modal .modal .modal-close {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: modal-close;
+}
+
+.behind-bg-modal .modal .modal-close button {
   padding: .5rem .75rem;
   position: absolute;
   top: -10px;
@@ -1474,14 +1429,13 @@ footer a {
   cursor: pointer;
 }
 
-.modal .modal-rule {
+.behind-bg-modal .modal .modal-rule {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: modal-rule;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1489,66 +1443,91 @@ footer a {
       justify-content: space-around;
 }
 
-.modal .modal-rule h3 {
+.behind-bg-modal .modal .modal-rule h3 {
   font-size: 14px;
 }
 
-.modal .modal-rule a {
+.behind-bg-modal .modal .modal-rule a {
   font-size: 14px;
   color: #666666;
 }
 
-.modal .modal-rule .modal-link {
+.behind-bg-modal .modal .modal-rule .modal-link {
   padding: .5rem;
   background-color: #d9d9d9;
   border: 2px solid grey;
   border-radius: 4px;
 }
 
-.modal .modal-info {
+.behind-bg-modal .modal .modal-info {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: modal-info;
   text-align: left;
 }
 
-.modal .modal-info .modal-accept {
+.behind-bg-modal .modal .modal-info .modal-accept {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.modal .modal-info .modal-accept input {
+.behind-bg-modal .modal .modal-info .modal-accept input {
   width: 28px;
 }
 
-.modal .modal-info .modal-accept .modal-accept-p {
+.behind-bg-modal .modal .modal-info .modal-accept .modal-accept-p {
   width: 80%;
   margin: 1rem auto;
 }
 
-.modal .modal-info .modal-p {
+.behind-bg-modal .modal .modal-info .modal-p {
   width: 88%;
   margin: 0 auto 1rem auto;
   color: #666666;
 }
 
-.modal .modal-info .modal-p .orange-info {
+.behind-bg-modal .modal .modal-info .modal-p .orange-info {
   color: blue;
   font-style: oblique;
 }
 
-.modal .modal-info-mojang {
+.behind-bg-modal .modal .modal-info-mojang {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: modal-info-mojang;
   text-align: center;
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem auto;
   border-top: 2px solid #d9d9d9;
   border-bottom: 2px solid #d9d9d9;
   padding: 1rem 0;
   width: 88%;
 }
 
-.modal .modal-nick {
+.behind-bg-modal .modal .modal-nick {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: modal-nick;
   width: 88%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.modal .modal-nick input {
+.behind-bg-modal .modal .modal-nick input {
   width: 100%;
   height: 50px;
   padding: .5rem;
@@ -1556,11 +1535,13 @@ footer a {
   border: none;
   -webkit-box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.07);
           box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.07);
-  margin-bottom: 1rem;
   text-align: center;
 }
 
-.modal .modal-btns {
+.behind-bg-modal .modal .modal-btns {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: modal-btns;
   width: 88%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1571,29 +1552,26 @@ footer a {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  margin: 0 auto;
 }
 
-.modal .modal-btns button {
+.behind-bg-modal .modal .modal-btns button {
   padding: 1rem;
   border: none;
   border-radius: 4px;
   margin-left: 8px;
 }
 
-.modal .modal-btns .modal-cancel {
+.behind-bg-modal .modal .modal-btns .modal-cancel {
   background: none;
 }
 
-.modal .modal-btns .modal-buy {
+.behind-bg-modal .modal .modal-btns .modal-buy {
   -webkit-box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
           box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   background: -webkit-gradient(linear, left bottom, left top, from(#F09819), to(#EDDE5D));
   background: linear-gradient(0deg, #F09819 0%, #EDDE5D 100%);
   font-weight: 700;
-}
-
-.hidden {
-  display: none;
 }
 
 .overlay {
@@ -1603,10 +1581,8 @@ footer a {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  -webkit-backdrop-filter: blur(30px);
-          backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
   z-index: 100;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
 }
 /*# sourceMappingURL=index.css.map */

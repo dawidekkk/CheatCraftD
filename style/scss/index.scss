@@ -75,43 +75,43 @@ $bubble-border: 0 -1*$px $white,
   }
 }
 
-@keyframes cardShadow {
-  from {
-    box-shadow:inset 0 0 .75rem 0 rgb(226, 30, 38), 0 0 5px 0 #000;
-  }
+// @keyframes cardShadow {
+//   from {
+//     box-shadow:inset 0 0 .75rem 0 rgb(226, 30, 38), 0 0 5px 0 #000;
+//   }
   
-  to {
-    box-shadow:inset 0 0 .75rem 0 rgba(226, 30, 38, 0.01), 0 0 5px 0 #000;
-  }
-}
+//   to {
+//     box-shadow:inset 0 0 .75rem 0 rgba(226, 30, 38, 0.01), 0 0 5px 0 #000;
+//   }
+// }
 
-@keyframes cardReverse {
-  from {
-    box-shadow:inset 0 0 .75rem 0 rgba(226, 30, 38, 0.01), 0 0 5px 0 #000;
-  }
+// @keyframes cardReverse {
+//   from {
+//     box-shadow:inset 0 0 .75rem 0 rgba(226, 30, 38, 0.01), 0 0 5px 0 #000;
+//   }
   
-  to {
-    box-shadow:inset 0 0 .75rem 0 rgb(226, 30, 38), 0 0 5px 0 #000;
-  }
-}
+//   to {
+//     box-shadow:inset 0 0 .75rem 0 rgb(226, 30, 38), 0 0 5px 0 #000;
+//   }
+// }
 
-.cardAnimIn {
-  animation-name: cardShadow;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
-  animation-play-state: running;
-}
+// .cardAnimIn {
+//   animation-name: cardShadow;
+//   animation-duration: 1s;
+//   animation-timing-function: linear;
+//   animation-iteration-count: infinite;
+//   animation-direction: alternate-reverse;
+//   animation-play-state: running;
+// }
 
-.cardAnimOut {
-  animation-name: cardReverse;
-  animation-duration: .6s;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
-  animation-direction: alternate-reverse;
-  animation-play-state: running;
-}
+// .cardAnimOut {
+//   animation-name: cardReverse;
+//   animation-duration: .6s;
+//   animation-timing-function: linear;
+//   animation-iteration-count: 1;
+//   animation-direction: alternate-reverse;
+//   animation-play-state: running;
+// }
 
 ///////////////////// BODY //////////////////////////
 
@@ -461,7 +461,7 @@ button svg {
   padding: .45rem;
   margin: 0 auto;
   width: 22rem;
-  transition: all 2.5s;
+  transition: all 2s;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, hsl(0, 8%, 8%) 0px 0px 0px 3px;
 
   &:hover {
@@ -483,6 +483,11 @@ button svg {
     border: 4px solid hsl(0, 8%, 12%);
     border-radius: 14px;
     padding: 1rem;
+    transition: all 2s;
+
+    &:hover {
+      box-shadow: inset 0 0 .75rem 0 rgb(226, 30, 38), 0 0 5px 0 #000;
+    }
   }
 
   .card-sponsor {
@@ -885,24 +890,29 @@ footer {
     grid-area: footer-navigation; 
   }
 
-  article.modal {
-    width: 600px;
+  div.behind-bg-modal {
+    width: 620px;
 
-    .modal-rule {
-      width: 65%;
-    }
+    article.modal {
+      // width: 100%;
 
-    .modal-p {
-      font-size: 14px;
-    }
+      .modal-rule {
+        width: 65%;
+        margin: 0 auto;
+        
+        h3 {
+          font-size: 18px;
+        }
+      }
 
-    .modal-accept {
-      width: 85%;
-      margin: 0 auto;
-    }
+      .modal-p {
+        font-size: 14px;
+      }
 
-    .modal-info {
-      margin: 1.5rem auto;
+      .modal-accept {
+        width: 85%;
+        margin: 0 auto;
+      }
     }
   }
 }
@@ -1049,151 +1059,170 @@ footer {
 
 ///////////////////// MODAL //////////////////////////
 
-.modal {
-  @include flex-center();
-  flex-direction: column;
-  border-radius: 14px;  
-  border: 4px solid #1a1d21;
-  box-shadow: inset 0 0 1rem 0 #fff, 0 0 5px 0 #000;
-  -moz-box-shadow: inset 0 0 1rem 0 #fff, 0 0 5px 0 #000;
-  -webkit-box-shadow: inset 0 0 1rem 0 #fff, 0 0 5px 0 #000;
-  -khtml-box-shadow: rgb(255, 255, 255) inset 0 0 1rem;
-  background-color: #dddddd;
-  transition: all 1s;
-  font-size: 12px;
-  position: fixed;
-  // height: 400px;
-  top: 1%; left: 50%;
-  transform: translateX(-50%);
-  width: 350px; height: auto;
-  color: hsl(0, 0%, 11%);
-  z-index: 1000;
-  padding: .5rem;
-
-  .modal-close {
-    width: 100%;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-
-    button {
-      padding: .5rem .75rem;
-      position: absolute;
-      top: -10px;
-      right: -10px;
-      background-color: #000;
-      border: none; 
-      outline: none;
-      color: white;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-  }
-
-  .modal-rule {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-
-    h3 {
-      font-size: 14px;
-    }
-
-    a {
-      font-size: 14px;
-      color: hsl(0, 0%, 40%);
-    }
-
-    .modal-link {
-      padding: .5rem;
-      background-color: hsl(0, 0%, 85%);
-      border: 2px solid grey;
-      border-radius: 4px;
-    }
-  }
-
-  .modal-info {
-    text-align: left;
- 
-    .modal-accept {
-      display: flex;
-      
-
-      input {
-        width: 28px;
-      }
-      
-      .modal-accept-p {
-        width: 80%;
-        margin: 1rem auto;
-      }
-    }
-
-    .modal-p {
-      width: 88%;
-      margin: 0 auto 1rem auto;
-      color: hsl(0, 0%, 40%);
-
-      .orange-info {
-        color: blue;
-        font-style: oblique;
-      }
-    }
-  }
-
-  .modal-info-mojang {
-    text-align: center;
-    margin-bottom: 1rem;
-    border-top: 2px solid hsl(0, 0%, 85%);
-    border-bottom: 2px solid hsl(0, 0%, 85%);
-    padding: 1rem 0;
-    width: 88%;
-  }
-
-  .modal-nick {
-    width: 88%;
-
-    input {
-      width: 100%;
-      height: 50px;
-      padding: .5rem;
-      border-radius: 4px;
-      border: none;
-      box-shadow: 0 7px 25px 0 rgba(0,0,0,.07);
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-  }
-
-  .modal-btns {
-    width: 88%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-
-    button {
-      padding: 1rem;
-      border: none;
-      border-radius: 4px;
-      margin-left: 8px;
-    }
-
-    .modal-cancel {
-      background: none;
-    }
-
-    .modal-buy {
-      box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
-      background: linear-gradient(0deg, #F09819 0%, #EDDE5D 100%);
-      font-weight: 700;
-    }
-  }
+.hidden {
+  visibility: hidden;
+  opacity: 0;
 }
 
-.hidden {
-  display: none;
+.behind-bg-modal {
+  position: fixed;
+  display: block;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  padding: .5rem;
+  background-color: hsl(0, 0%, 95%);
+  border-radius: 14px;
+  margin: 0 auto;
+  transition: all 2s;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, hsl(0, 8%, 8%) 0px 0px 0px 3px;
+  height: 700px;
+  width: 24rem;
+  transition: all .5s;
+  
+
+  .modal {
+    @include flex-center();
+    flex-direction: column;
+    border-radius: 14px;  
+    border: 4px solid #1a1d21;
+    box-shadow: inset 0 0 1rem 0 #fff, 0 0 5px 0 #000;
+    -moz-box-shadow: inset 0 0 1rem 0 #fff, 0 0 5px 0 #000;
+    -webkit-box-shadow: inset 0 0 1rem 0 #fff, 0 0 5px 0 #000;
+    -khtml-box-shadow: rgb(255, 255, 255) inset 0 0 1rem;
+    background-color: #dddddd;
+    font-size: 12px;
+    padding: .45rem;
+    width: 100%; height: 100%;
+    color: hsl(0, 0%, 11%);
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto 1fr 1fr 1fr 1fr auto; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "modal-close"
+      "modal-rule"
+      "modal-info"
+      "modal-info-mojang"
+      "modal-nick"
+      "modal-btns"; 
+
+      .modal-close { 
+        grid-area: modal-close; 
+        button {
+          padding: .5rem .75rem;
+          position: absolute;
+          top: -10px;
+          right: -10px;
+          background-color: #000;
+          border: none; 
+          outline: none;
+          color: white;
+          border-radius: 8px;
+          cursor: pointer;
+        }
+      }
+      .modal-rule { 
+        grid-area: modal-rule;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        
+        h3 {
+          font-size: 14px;
+        }
+
+        a {
+          font-size: 14px;
+          color: hsl(0, 0%, 40%);
+        }
+
+        .modal-link {
+          padding: .5rem;
+          background-color: hsl(0, 0%, 85%);
+          border: 2px solid grey;
+          border-radius: 4px;
+        }
+      }
+      .modal-info { 
+        grid-area: modal-info; 
+        text-align: left;
+ 
+        .modal-accept {
+          @include flex-center();
+      
+          input {
+            width: 28px;
+          }
+    
+          .modal-accept-p {
+            width: 80%;
+            margin: 1rem auto;
+          }
+        }
+
+        .modal-p {
+          width: 88%;
+          margin: 0 auto 1rem auto;
+          color: hsl(0, 0%, 40%);
+
+          .orange-info {
+            color: blue;
+            font-style: oblique;
+          }
+        }
+      }
+      .modal-info-mojang { 
+        grid-area: modal-info-mojang; 
+        text-align: center;
+        margin: 0 auto 1rem auto;
+        border-top: 2px solid hsl(0, 0%, 85%);
+        border-bottom: 2px solid hsl(0, 0%, 85%);
+        padding: 1rem 0;
+        width: 88%;
+      }
+      .modal-nick { 
+        grid-area: modal-nick; 
+        width: 88%;
+        margin: 0 auto;
+        @include flex-center();
+
+        input {
+          width: 100%;
+          height: 50px;
+          padding: .5rem;
+          border-radius: 4px;
+          border: none;
+          box-shadow: 0 7px 25px 0 rgba(0,0,0,.07);
+          text-align: center;
+        }
+      }
+      .modal-btns { 
+        grid-area: modal-btns; 
+        width: 88%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin: 0 auto;
+
+        button {
+          padding: 1rem;
+          border: none;
+          border-radius: 4px;
+          margin-left: 8px;
+        }
+
+        .modal-cancel {
+          background: none;
+        }
+
+        .modal-buy {
+          box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+          background: linear-gradient(0deg, #F09819 0%, #EDDE5D 100%);
+          font-weight: 700;
+        }
+    }
+  }
 }
 
 .overlay {
@@ -1203,8 +1232,7 @@ footer {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(30px);
+  backdrop-filter: blur(4px);
   z-index: 100;
-  transition: all 0.5s;
 }
 

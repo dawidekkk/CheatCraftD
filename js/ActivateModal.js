@@ -1,7 +1,7 @@
 'use strict'
 
 const modalBtns = document.querySelectorAll('.modal-btn');
-const modal = document.querySelector('.modal-container')
+const modal = document.querySelector('.behind-bg-modal')
 const modalOverlay = document.querySelector('.overlay')
 const modalCancel = document.querySelector('.modal-cancel');
 const modalCloseBtn = document.querySelector('.modal-close-btn')
