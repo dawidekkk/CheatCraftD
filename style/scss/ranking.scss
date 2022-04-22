@@ -222,6 +222,7 @@ $bubble-border: 0 -1*$px $white,
       background-size: contain;
       padding: .75rem;
       filter: grayscale(25%);
+      height: 50px;
 
       li {
         list-style: none;
@@ -234,6 +235,7 @@ $bubble-border: 0 -1*$px $white,
 
           &:hover {
             color: #fff;
+            border-bottom: 2px solid #fff;
           } 
         }
       }
@@ -739,3 +741,6 @@ footer {
   display: none;
 }
 
+.active {
+  text-decoration: underline;
+}

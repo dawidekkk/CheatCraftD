@@ -3,7 +3,7 @@
 // Sponsor, SuperVip and Vip buyout days:
 const buyoutDays = [10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 'zawsze'];
 const buyoutDaysSliders = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130, 135, 140, 145, 150, 155, 160, 165, 170, 175, 180, 185, 190, 195, 200, 205, 210, 215, 220, 225, 230, 235, 240, 245, 250, 255, 260, 265, 270, 275, 280, 285, 290, 295, 300, 305, 310, 315, 320, 325, 330, 335, 340, 345, 350, 355, 360, 365, 370, 375, 380, 385, 390, 395, 400, 405, 410, 415, 420, 425, 430, 435, 440, 445, 450, 455, 460, 465, 470, 475, 480, 485, 490, 495, 500, 505, 510, 515, 520, 525, 530, 535, 540, 545, 550, 555, 560, 565, 570, 575, 580, 585, 590, 595, 600, 605, 610, 615, 620, 625, 630, 635, 640, 645, 650, 655, 660, 665, 670, 675, 680, 685, 690, 695, 700, 705, 710, 715, 720, 725, 730, 735, 740, 745, 750, 755, 760, 765, 770, 775, 780, 785, 790, 795, 800, 805, 810, 815, 820, 825, 830, 835, 840, 845, 850, 855, 860, 865, 870, 875, 880, 885, 890, 895, 900, 905, 910, 915, 920, 925, 930, 935, 940, 945, 950, 955, 960]
-console.log(buyoutDaysSliders.length);
+
 // Sponsor, SuperVip, Vip, TurboDrop and CheatCase selectors:
 const sponsorInput = document.getElementById('sponsor-input');
 const sponsorInputValue = document.getElementById('sponsor-value');
@@ -16,8 +16,7 @@ const turboInputValue = document.getElementById('turbo-value');
 const cheatInput = document.getElementById('cheat-input');
 const cheatInputValue = document.getElementById('cheat-value');
 
-// premium case SMS 2 - 1.09, SMS 3 - 1.65, SMS 4 - 2.20, SMS 5 - 2.75, 
-// premium case PSC 2 - 1.00, PSC 3 - 1.50, PSC 4 - 2.00, PSC 5 - 2.50,
+// sponsorInputValue.textContent = `elo`;
 
 function sponsorValue() {
   const sms = [5.50, 6.88, 8.52, 10.17, 11.00, 12.93, 14.58, 16.22, 17.60, 19.25, 20.90, 22.00, 23.65, 25.30, 27.50, 28.60, 29.98, 31.35, 33.00, 55.01];
@@ -26,9 +25,10 @@ function sponsorValue() {
   const btnPsc = document.querySelector('.btn-price-sponsor_psc');
   const btnPrzelew = document.querySelector('.btn-price-sponsor_przelew');
   const parag = document.querySelector('.sponsor-p')
-  const price = document.querySelector('.price')
-  
-  sponsorInputValue.textContent = `${buyoutDays[this.value]}`
+  // const price = document.querySelector('.price')
+  console.log(this);
+
+  sponsorInputValue.textContent = `${buyoutDays[this.value]}`;
 
   if(sponsorInputValue.textContent == 'zawsze' && buyoutDays[this.value.length - 1]) {
     parag.textContent = `Potrzebuje sponsora na: ${buyoutDays[this.value]}`
@@ -120,6 +120,14 @@ function cheatValue() {
 
   cheatInputValue.textContent = `${this.value} CheatCasów.`
 }
+
+// IIFE for immedietely showing [...]Input.value
+(() => {
+  sponsorInputValue.textContent = buyoutDays[sponsorInput.value];
+  superInputValue.textContent = buyoutDays[superInput.value];
+  vipInputValue.textContent = buyoutDays[vipInput.value];
+  turboInputValue.textContent = `${buyoutDaysSliders[turboInput.value]} minut`;
+})();
 
 sponsorInput.addEventListener("change", sponsorValue);
 sponsorInput.addEventListener("input", sponsorValue)

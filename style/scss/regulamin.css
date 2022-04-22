@@ -308,6 +308,7 @@ html {
   padding: .75rem;
   -webkit-filter: grayscale(25%);
           filter: grayscale(25%);
+  height: 50px;
 }
 
 .navigation-wrapper nav ul li {
@@ -331,6 +332,7 @@ html {
 
 .navigation-wrapper nav ul li a:hover {
   color: #fff;
+  border-bottom: 2px solid #fff;
 }
 
 .none {

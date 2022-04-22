@@ -300,6 +300,8 @@ body {
 .navigation-wrapper nav {
   width: 24rem;
   max-width: 100%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .navigation-wrapper nav ul {
@@ -319,6 +321,9 @@ body {
   padding: .75rem;
   -webkit-filter: grayscale(25%);
           filter: grayscale(25%);
+  height: 50px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .navigation-wrapper nav ul li {
@@ -342,6 +347,7 @@ body {
 
 .navigation-wrapper nav ul li a:hover {
   color: #fff;
+  border-bottom: 2px solid #fff;
 }
 
 .none {
@@ -724,6 +730,10 @@ button svg {
   font-size: 18px;
 }
 
+.card-slider .info-turbo {
+  font-size: 16px;
+}
+
 .card-slider .input-slider {
   width: 98.5%;
   height: .5rem;
@@ -972,6 +982,7 @@ footer nav ul a {
 
 footer nav ul a:hover {
   color: white;
+  border-bottom: 2px solid white;
 }
 
 footer a {
@@ -1584,5 +1595,17 @@ footer a {
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   z-index: 100;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+.op5 {
+  opacity: 0.5;
+}
+
+.op1 {
+  opacity: 1;
 }
 /*# sourceMappingURL=index.css.map */

@@ -319,6 +319,7 @@ body {
   padding: .75rem;
   -webkit-filter: grayscale(25%);
           filter: grayscale(25%);
+  height: 50px;
 }
 
 .navigation-wrapper nav ul li {
@@ -342,6 +343,7 @@ body {
 
 .navigation-wrapper nav ul li a:hover {
   color: #fff;
+  border-bottom: 2px solid #fff;
 }
 
 .none {
@@ -1002,5 +1004,9 @@ footer a {
 
 .hide {
   display: none;
+}
+
+.active {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=ranking.css.map */
