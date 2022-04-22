@@ -7,12 +7,12 @@ const modalCancel = document.querySelector('.modal-cancel');
 const modalCloseBtn = document.querySelector('.modal-close-btn')
 const modalBuy = document.querySelector('.modal-buy');
 
-const openModal = (e) => {
+const openModal = () => {
   modal.classList.remove('hidden')
   modalOverlay.classList.remove('hidden')
 }
 
-const closeModal = (e) => {
+const closeModal = () => {
   modal.classList.add('hidden');
   modalOverlay.classList.add('hidden');
 }

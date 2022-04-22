@@ -2,7 +2,6 @@
 
 const backBtn = document.querySelector('.back-to-top');
 
-
 const scroll = () => {
   if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     backBtn.classList.add('show-btn')

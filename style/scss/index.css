@@ -350,6 +350,10 @@ body {
   border-bottom: 2px solid #fff;
 }
 
+.cur {
+  color: beige;
+}
+
 .none {
   display: none;
 }
@@ -1595,17 +1599,11 @@ footer a {
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   z-index: 100;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 .active {
   text-decoration: underline;
-}
-
-.op5 {
-  opacity: 0.5;
-}
-
-.op1 {
-  opacity: 1;
 }
 /*# sourceMappingURL=index.css.map */
