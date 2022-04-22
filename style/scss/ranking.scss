@@ -208,10 +208,12 @@ $bubble-border: 0 -1*$px $white,
   margin: 1rem auto;
   width: 100%;
   max-width: 100%;
+  
 
   nav {
     width: 24rem;
     max-width: 100%;
+    transition: all 1s;
 
     ul {
       display: flex;
@@ -223,20 +225,31 @@ $bubble-border: 0 -1*$px $white,
       padding: .75rem;
       filter: grayscale(25%);
       height: 50px;
+      transition: all 1s;
 
       li {
         list-style: none;
+        transition: all 1s;
 
         a {
-          color: hsl(0, 0%, 92%);
+          color: hsl(0, 0%, 85%);
           @include flex-center();
           text-decoration: none;
           font-size: 1.25rem;
+          transition: all .2s;
 
           &:hover {
             color: #fff;
-            border-bottom: 2px solid #fff;
-          } 
+          }
+
+          svg {
+            fill: hsl(0, 0%, 85%);
+            transition: all .2s;
+
+            &:hover {
+              fill: #fff;
+            }
+          }
         }
       }
     }

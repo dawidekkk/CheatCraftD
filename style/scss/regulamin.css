@@ -289,6 +289,8 @@ html {
 .navigation-wrapper nav {
   width: 24rem;
   max-width: 100%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .navigation-wrapper nav ul {
@@ -309,14 +311,18 @@ html {
   -webkit-filter: grayscale(25%);
           filter: grayscale(25%);
   height: 50px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .navigation-wrapper nav ul li {
   list-style: none;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .navigation-wrapper nav ul li a {
-  color: #ebebeb;
+  color: #d9d9d9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -328,11 +334,22 @@ html {
           justify-content: center;
   text-decoration: none;
   font-size: 1.25rem;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 .navigation-wrapper nav ul li a:hover {
   color: #fff;
-  border-bottom: 2px solid #fff;
+}
+
+.navigation-wrapper nav ul li a svg {
+  fill: #d9d9d9;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.navigation-wrapper nav ul li a svg:hover {
+  fill: #fff;
 }
 
 .none {
