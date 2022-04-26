@@ -18,6 +18,11 @@ const toggleList = (btn, list, crown) => {
 
 toggleList('.toggle-btn_topka_rankingu', '.show-list_topka_rankingu', '.crown-hide-first');
 toggleList('.toggle-btn_topka_gildii', '.show-list_topka_gildii', '.crown-hide-second');
-// toggleList('.toggle-btn_topka_zabojcow', '.show-list_topka_zabojcow');
-// toggleList('.toggle-btn_topka_koxy', '.show-list_topka_koxy');
+toggleList('.toggle-btn_topka_zabojcow', '.show-list_topka_zabojcow');
+toggleList('.toggle-btn_topka_koxy', '.show-list_topka_koxy');
+
+toggleList('.toggle-btn_topka_rankingu', '.show-list_topka_rankingu', '.crown-hide-first');
+toggleList('.toggle-btn_topka_gildii', '.show-list_topka_gildii', '.crown-hide-second');
+toggleList('.toggle-btn_topka_zabojcow', '.show-list_topka_zabojcow');
+toggleList('.toggle-btn_topka_koxy', '.show-list_topka_koxy');
 

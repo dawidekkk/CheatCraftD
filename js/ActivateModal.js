@@ -31,22 +31,6 @@ document.addEventListener("keydown", (e) => {
   }
 })
 
-// const smsF = (sms) => {
-//   const smsBtn = document.querySelector(`${sms}`)
-//   smsBtn.addEventListener("click", openModal)
-// }
-
-// const pscF = (psc) => {
-//   const pscBtn = document.querySelector(`${psc}`)
-//   pscBtn.addEventListener("click", openModal)
-// }
-
-// const przelewF = (przelew) => {
-//   const przelewBtn = document.querySelector(`${przelew}`)
-//   przelewBtn.addEventListener("click", openModal)
-// }
-
-
 // 
 const activateModalMiecz = () => {
 
@@ -329,8 +313,3 @@ activateModalTurbo();
 activateModalColorful();
 activateModalGreen();
 activateModalPink();
-// activateModal('.modal-btn-sponsor_sms', '.modal-btn-sponsor_psc', '.modal-btn-sponsor_przelew')
-// activateModal('.modal-btn-super_sms', '.modal-btn-super_psc', '.modal-btn-super_przelew')
-// activateModal('.modal-btn-vip_sms', '.modal-btn-vip_psc', '.modal-btn-vip_przelew')
-// activateModal('.modal-btn-turbo_sms', '.modal-btn-turbo_psc', '.modal-btn-turbo_przelew')
-// activateModal('.modal-btn-cheat_sms', '.modal-btn-cheat_psc', '.modal-btn-cheat_przelew')
