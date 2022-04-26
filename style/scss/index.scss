@@ -273,6 +273,7 @@ $bubble-border: 0 -1*$px $white,
           text-decoration: none;
           font-size: 1.25rem;
           transition: all .2s;
+          z-index: 500;
 
           &:hover {
             color: #fff;
@@ -570,7 +571,8 @@ button svg {
   }
   
   img {
-    width: 8rem; height: 8rem;
+    // width: 240px; height: 240px;
+    width: 300px; height: 128px;
     margin: 1rem auto;
   }
 }
@@ -1068,7 +1070,6 @@ footer {
       }
     }
   }
-
 }
 
 @media screen and (min-width: 1800px) {
@@ -1243,6 +1244,12 @@ footer {
         }
     }
   }
+
+  .modal-title {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 1rem;
+  }
 }
 
 .overlay {
@@ -1261,9 +1268,23 @@ footer {
   text-decoration: underline;
 }
 
-// .op5 {
-//   opacity: 0.5;
+// SVG ANIMATION
+
+// @keyframes line {
+//   100% {
+//     stroke-dashoffset: 0;
+//   }
 // }
-// .op1 {
-//   opacity: 1;
+
+// .btn-border {
+//   stroke-dasharray:2 6 20 6 50 20;
+//   stroke-dashoffset:104;
+//   animation: line 4s cubic-bezier(.88,.44,.54,.77) forwards infinite;
+//   -webkit-animation:line 4s cubic-bezier(.88,.44,.54,.77) forwards infinite;
+//   z-index: 5;
 // }
+
+// // .btn-text {
+// //   transition: transform .3s;
+// //   transform-origin: center;
+// // }

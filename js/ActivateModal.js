@@ -6,6 +6,7 @@ const modalOverlay = document.querySelector('.overlay')
 const modalCancel = document.querySelector('.modal-cancel');
 const modalCloseBtn = document.querySelector('.modal-close-btn')
 const modalBuy = document.querySelector('.modal-buy');
+const modalTitle = document.querySelector('.modal-title');
 
 const openModal = () => {
   modal.classList.remove('hidden')
@@ -30,28 +31,306 @@ document.addEventListener("keydown", (e) => {
   }
 })
 
-// 
-const activateModal = (sms, psc, przelew) => {
-  const smsBtn = document.querySelector(`${sms}`)
-  const pscBtn = document.querySelector(`${psc}`)
-  const przelewBtn = document.querySelector(`${przelew}`)
+// const smsF = (sms) => {
+//   const smsBtn = document.querySelector(`${sms}`)
+//   smsBtn.addEventListener("click", openModal)
+// }
 
-  smsBtn.addEventListener("click", openModal)
-  pscBtn.addEventListener("click", openModal)
-  przelewBtn.addEventListener("click", openModal)
+// const pscF = (psc) => {
+//   const pscBtn = document.querySelector(`${psc}`)
+//   pscBtn.addEventListener("click", openModal)
+// }
+
+// const przelewF = (przelew) => {
+//   const przelewBtn = document.querySelector(`${przelew}`)
+//   przelewBtn.addEventListener("click", openModal)
+// }
+
+
+// 
+const activateModalMiecz = () => {
+
+  const smsBtn = document.querySelector(`.modal-btn-miecz_sms`)
+  const pscBtn = document.querySelector('.modal-btn-miecz_psc')
+  const przelewBtn = document.querySelector('.modal-btn-miecz_przelew')
+
+  smsBtn.addEventListener("click", () => {
+    openModal();
+    modalTitle.textContent = `Wybrana usługa: Miecz Śmierci. Płatność: SMS.`;
+  })
+
+  pscBtn.addEventListener("click", () => {
+    openModal();
+    modalTitle.textContent = `Wybrana usługa: Miecz Śmierci. Płatność: PaysafeCard.`;
+  })
+  przelewBtn.addEventListener("click", () => {
+    openModal();
+    modalTitle.textContent = `Wybrana usługa: Miecz Śmierci. Płatność: przelew.`;
+  })
+
+  
 }
 
-activateModal('.modal-btn-miecz_sms', '.modal-btn-miecz_psc', '.modal-btn-miecz_przelew')
-activateModal('.modal-btn-luk_sms', '.modal-btn-luk_psc', '.modal-btn-luk_przelew')
-activateModal('.modal-btn-kilof_sms', '.modal-btn-kilof_psc', '.modal-btn-kilof_przelew')
-activateModal('.modal-btn-sponsor_sms', '.modal-btn-sponsor_psc', '.modal-btn-sponsor_przelew')
-activateModal('.modal-btn-super_sms', '.modal-btn-super_psc', '.modal-btn-super_przelew')
-activateModal('.modal-btn-vip_sms', '.modal-btn-vip_psc', '.modal-btn-vip_przelew')
-activateModal('.modal-btn-unban_sms', '.modal-btn-unban_psc', '.modal-btn-unban_przelew')
-activateModal('.modal-btn-turbo_sms', '.modal-btn-turbo_psc', '.modal-btn-turbo_przelew')
-activateModal('.modal-btn-cheat_sms', '.modal-btn-cheat_psc', '.modal-btn-cheat_przelew')
-activateModal('.modal-btn-colorful_sms', '.modal-btn-colorful_psc', '.modal-btn-colorful_przelew')
-activateModal('.modal-btn-green_sms', '.modal-btn-green_psc', '.modal-btn-green_przelew')
-activateModal('.modal-btn-pink_sms', '.modal-btn-pink_psc', '.modal-btn-pink_przelew')
+const activateModalLuk = () => {
+  
+  const smsBtn = document.querySelector(`.modal-btn-luk_sms`)
+  const pscBtn = document.querySelector('.modal-btn-luk_psc')
+  const przelewBtn = document.querySelector('.modal-btn-luk_przelew')
 
+  smsBtn.addEventListener("click", () => {
+    openModal();
+    modalTitle.textContent = `Wybrana usługa: Łuk Anihilacji. Płatność: SMS.`;
+  })
 
+  pscBtn.addEventListener("click", () => {
+    openModal();
+    modalTitle.textContent = `Wybrana usługa: Łuk Anihilacji. Płatność: PaysafeCard.`;
+  })
+  przelewBtn.addEventListener("click", () => {
+    openModal();
+    modalTitle.textContent = `Wybrana usługa: Łuk Anihilacji. Płatność: przelew.`;
+  })
+}
+
+const activateModalKilof = () => {
+  
+  const smsBtn = document.querySelector(`.modal-btn-kilof_sms`)
+  const pscBtn = document.querySelector('.modal-btn-kilof_psc')
+  const przelewBtn = document.querySelector('.modal-btn-kilof_przelew')
+
+  smsBtn.addEventListener("click", () => {
+    openModal();
+    modalTitle.textContent = `Wybrana usługa: Kilof Zniszczenia. Płatność: SMS.`;
+  })
+
+  pscBtn.addEventListener("click", () => {
+    openModal();
+    modalTitle.textContent = `Wybrana usługa: Kilof Zniszczenia. Płatność: PaysafeCard.`;
+  })
+  przelewBtn.addEventListener("click", () => {
+    openModal();
+    modalTitle.textContent = `Wybrana usługa: Kilof Zniszczenia. Płatność: przelew.`;
+  })
+}
+
+const activateModalSponsor = () => {
+  
+  const smsBtn = document.querySelector(`.modal-btn-sponsor_sms`)
+  const pscBtn = document.querySelector('.modal-btn-sponsor_psc')
+  const przelewBtn = document.querySelector('.modal-btn-sponsor_przelew')
+  
+  smsBtn.addEventListener("click", () => {
+    openModal();
+    if(sponsorInputValue.textContent === 'zawsze') {
+      modalTitle.textContent = `Wybrana usługa: Sponsor na ${sponsorInputValue.textContent}. Płatność: SMS.`
+    } else {
+      modalTitle.textContent = `Wybrana usługa: Sponsor na ${sponsorInputValue.textContent} dni. Płatność: SMS.`
+    }
+  })
+
+  pscBtn.addEventListener("click", () => {
+    openModal();
+    if(sponsorInputValue.textContent === 'zawsze') {
+      modalTitle.textContent = `Wybrana usługa: Sponsor na ${sponsorInputValue.textContent}. Płatność: PaysafeCard.`
+    } else {
+      modalTitle.textContent = `Wybrana usługa: Sponsor na ${sponsorInputValue.textContent} dni. Płatność: PaysafeCard.`
+    }
+  })
+  przelewBtn.addEventListener("click", () => {
+    openModal();
+    // modalTitle.textContent = `Wybrana usługa: Sponsor na ${sponsorInputValue.textContent} dni. Płatność: przelew.`;
+    if(sponsorInputValue.textContent === 'zawsze') {
+      modalTitle.textContent = `Wybrana usługa: Sponsor na ${sponsorInputValue.textContent}. Płatność: przelew.`
+    } else {
+      modalTitle.textContent = `Wybrana usługa: Sponsor na ${sponsorInputValue.textContent} dni. Płatność: przelew.`
+    }
+  })
+}
+
+const activateModalSuper = () => {
+  
+  const smsBtn = document.querySelector(`.modal-btn-super_sms`)
+  const pscBtn = document.querySelector('.modal-btn-super_psc')
+  const przelewBtn = document.querySelector('.modal-btn-super_przelew')
+  
+  smsBtn.addEventListener("click", () => {
+    openModal();
+    if(superInputValue.textContent === 'zawsze') {
+      modalTitle.textContent = `Wybrana usługa: Super Sponsor na ${superInputValue.textContent}. Płatność: SMS.`
+    } else {
+      modalTitle.textContent = `Wybrana usługa: Super Sponsor na ${superInputValue.textContent} dni. Płatność: SMS.`
+    }
+  })
+
+  pscBtn.addEventListener("click", () => {
+    openModal();
+    if(superInputValue.textContent === 'zawsze') {
+      modalTitle.textContent = `Wybrana usługa: Super Sponsor na ${superInputValue.textContent}. Płatność: PaysafeCard.`
+    } else {
+      modalTitle.textContent = `Wybrana usługa: Super Sponsor na ${superInputValue.textContent} dni. Płatność: PaysafeCard.`
+    }
+  })
+  przelewBtn.addEventListener("click", () => {
+    openModal();
+    if(superInputValue.textContent === 'zawsze') {
+      modalTitle.textContent = `Wybrana usługa: Super Sponsor na ${superInputValue.textContent}. Płatność: przelew.`
+    } else {
+      modalTitle.textContent = `Wybrana usługa: Super Sponsor na ${superInputValue.textContent} dni. Płatność: przelew.`
+    }
+  })
+}
+
+const activateModalVip = () => {
+  
+  const smsBtn = document.querySelector(`.modal-btn-vip_sms`)
+  const pscBtn = document.querySelector('.modal-btn-vip_psc')
+  const przelewBtn = document.querySelector('.modal-btn-vip_przelew')
+  
+  smsBtn.addEventListener("click", () => {
+    openModal();
+    if(vipInputValue.textContent === 'zawsze') {
+      modalTitle.textContent = `Wybrana usługa: Vip na ${vipInputValue.textContent}. Płatność: SMS.`
+    } else {
+      modalTitle.textContent = `Wybrana usługa: Vip na ${vipInputValue.textContent} dni. Płatność: SMS.`
+    }
+  })
+
+  pscBtn.addEventListener("click", () => {
+    openModal();
+    if(vipInputValue.textContent === 'zawsze') {
+      modalTitle.textContent = `Wybrana usługa: Vip na ${vipInputValue.textContent}. Płatność: PaysafeCard.`
+    } else {
+      modalTitle.textContent = `Wybrana usługa: Vip na ${vipInputValue.textContent} dni. Płatność: PaysafeCard.`
+    }
+  })
+  przelewBtn.addEventListener("click", () => {
+    openModal();
+    if(vipInputValue.textContent === 'zawsze') {
+      modalTitle.textContent = `Wybrana usługa: Vip na ${vipInputValue.textContent}. Płatność: przelew.`
+    } else {
+      modalTitle.textContent = `Wybrana usługa: Vip na ${vipInputValue.textContent} dni. Płatność: przelew.`
+    }
+  })
+}
+
+const activateModalUnban = () => {
+  
+  const smsBtn = document.querySelector(`.modal-btn-unban_sms`)
+  const pscBtn = document.querySelector('.modal-btn-unban_psc')
+  const przelewBtn = document.querySelector('.modal-btn-unban_przelew')
+
+  smsBtn.addEventListener("click", () => {
+    openModal();
+    modalTitle.textContent = `Wybrana usługa: Unban. Płatność: SMS.`;
+  })
+
+  pscBtn.addEventListener("click", () => {
+    openModal();
+    modalTitle.textContent = `Wybrana usługa: Unban. Płatność: PaysafeCard.`;
+  })
+  przelewBtn.addEventListener("click", () => {
+    openModal();
+    modalTitle.textContent = `Wybrana usługa: Unban. Płatność: przelew.`;
+  })
+}
+
+const activateModalTurbo = () => {
+  
+  const smsBtn = document.querySelector(`.modal-btn-turbo_sms`)
+  const pscBtn = document.querySelector('.modal-btn-turbo_psc')
+  const przelewBtn = document.querySelector('.modal-btn-turbo_przelew')
+  
+  smsBtn.addEventListener("click", () => {
+    openModal();
+    modalTitle.textContent = `Wybrana usługa: Vip na ${turboInputValue.textContent}. Płatność: SMS.`
+  })
+
+  pscBtn.addEventListener("click", () => {
+    openModal();
+    modalTitle.textContent = `Wybrana usługa: Vip na ${turboInputValue.textContent}. Płatność: PaysafeCard.`
+  })
+  przelewBtn.addEventListener("click", () => {
+    openModal();
+    modalTitle.textContent = `Wybrana usługa: Vip na ${turboInputValue.textContent}. Płatność: przelew.`
+  })
+}
+
+const activateModalColorful = () => {
+  
+  const smsBtn = document.querySelector(`.modal-btn-colorful_sms`)
+  const pscBtn = document.querySelector('.modal-btn-colorful_psc')
+  const przelewBtn = document.querySelector('.modal-btn-colorful_przelew')
+
+  smsBtn.addEventListener("click", () => {
+    openModal();
+    modalTitle.textContent = `Wybrana usługa: Kolorowy nick. Płatność: SMS.`;
+  })
+
+  pscBtn.addEventListener("click", () => {
+    openModal();
+    modalTitle.textContent = `Wybrana usługa: Kolorowy nick. Płatność: PaysafeCard.`;
+  })
+  przelewBtn.addEventListener("click", () => {
+    openModal();
+    modalTitle.textContent = `Wybrana usługa: Kolorowy nick. Płatność: przelew.`;
+  })
+}
+
+const activateModalGreen = () => {
+  
+  const smsBtn = document.querySelector(`.modal-btn-green_sms`)
+  const pscBtn = document.querySelector('.modal-btn-green_psc')
+  const przelewBtn = document.querySelector('.modal-btn-green_przelew')
+
+  smsBtn.addEventListener("click", () => {
+    openModal();
+    modalTitle.textContent = `Wybrana usługa: Zielony nick. Płatność: SMS.`;
+  })
+
+  pscBtn.addEventListener("click", () => {
+    openModal();
+    modalTitle.textContent = `Wybrana usługa: Zielony nick. Płatność: PaysafeCard.`;
+  })
+  przelewBtn.addEventListener("click", () => {
+    openModal();
+    modalTitle.textContent = `Wybrana usługa: Zielony nick. Płatność: przelew.`;
+  })
+}
+
+const activateModalPink = () => {
+  
+  const smsBtn = document.querySelector(`.modal-btn-pink_sms`)
+  const pscBtn = document.querySelector('.modal-btn-pink_psc')
+  const przelewBtn = document.querySelector('.modal-btn-pink_przelew')
+
+  smsBtn.addEventListener("click", () => {
+    openModal();
+    modalTitle.textContent = `Wybrana usługa: Różowy nick. Płatność: SMS.`;
+  })
+
+  pscBtn.addEventListener("click", () => {
+    openModal();
+    modalTitle.textContent = `Wybrana usługa: Różowy nick. Płatność: PaysafeCard.`;
+  })
+  przelewBtn.addEventListener("click", () => {
+    openModal();
+    modalTitle.textContent = `Wybrana usługa: Różowy nick. Płatność: przelew.`;
+  })
+}
+
+activateModalMiecz();
+activateModalLuk();
+activateModalKilof();
+activateModalSponsor();
+activateModalSuper();
+activateModalVip();
+activateModalUnban();
+activateModalTurbo();
+activateModalColorful();
+activateModalGreen();
+activateModalPink();
+// activateModal('.modal-btn-sponsor_sms', '.modal-btn-sponsor_psc', '.modal-btn-sponsor_przelew')
+// activateModal('.modal-btn-super_sms', '.modal-btn-super_psc', '.modal-btn-super_przelew')
+// activateModal('.modal-btn-vip_sms', '.modal-btn-vip_psc', '.modal-btn-vip_przelew')
+// activateModal('.modal-btn-turbo_sms', '.modal-btn-turbo_psc', '.modal-btn-turbo_przelew')
+// activateModal('.modal-btn-cheat_sms', '.modal-btn-cheat_psc', '.modal-btn-cheat_przelew')
