@@ -102,6 +102,8 @@ const activateModalSponsor = () => {
   const smsBtn = document.querySelector(`.modal-btn-sponsor_sms`)
   const pscBtn = document.querySelector('.modal-btn-sponsor_psc')
   const przelewBtn = document.querySelector('.modal-btn-sponsor_przelew')
+
+  console.log(sponsorInputValue);
   
   smsBtn.addEventListener("click", () => {
     openModal();
