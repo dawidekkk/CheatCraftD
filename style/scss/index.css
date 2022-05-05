@@ -216,6 +216,7 @@ body {
 
 .discord-links a {
   text-decoration: none;
+  text-align: right;
 }
 
 .server-links {

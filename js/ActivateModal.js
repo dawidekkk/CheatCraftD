@@ -21,17 +21,15 @@ const closeModal = () => {
 modalCancel.addEventListener("click", closeModal);
 modalCloseBtn.addEventListener("click", closeModal);
 
-// Closing via click in overlay obj.
 modalOverlay.addEventListener("click", closeModal);
 
-// Closing via keydown ESC.
 document.addEventListener("keydown", (e) => {
   if(e.key === 'Escape' && !modal.classList.contains("hidden")) {
     closeModal();
   }
 })
 
-// 
+
 const activateModalMiecz = () => {
 
   const smsBtn = document.querySelector(`.modal-btn-miecz_sms`)
@@ -51,8 +49,6 @@ const activateModalMiecz = () => {
     openModal();
     modalTitle.textContent = `Wybrana usługa: Miecz Śmierci. Płatność: przelew.`;
   })
-
-  
 }
 
 const activateModalLuk = () => {
