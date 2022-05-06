@@ -1,6 +1,6 @@
 'use strict';
 
-const test = document.querySelector('.card-title-miecz');
+const cardTitleMiecz = document.querySelector('.card-title-miecz');
 const cardMiecz = document.querySelector('.card-miecz')
 const cardLuk = document.querySelector('.card-luk')
 // const cardKilof = document.querySelector('.card-kilof')
@@ -24,13 +24,13 @@ const cardLuk = document.querySelector('.card-luk')
 
 const animIn = () => {
   cardMiecz.addEventListener("mouseenter", () => {
-    test.classList.add("test")
+    cardTitleMiecz.classList.add("red-mouseenter")
   })
 }
 
 const animOut = () => {
   cardMiecz.addEventListener("mouseleave", () => {
-    test.classList.remove("test")
+    cardTitleMiecz.classList.remove("white-mouseleave")
   })
 }
 

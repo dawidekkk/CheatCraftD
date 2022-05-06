@@ -709,16 +709,12 @@ button svg {
   margin: 1rem auto;
 }
 
-.test {
+.red-mouseenter {
   color: #e21d24;
-  -webkit-transition: all 1s;
-  transition: all 1s;
 }
 
-.test2 {
+.white-mouseleave {
   color: #e6e6e6;
-  -webkit-transition: all 1s;
-  transition: all 1s;
 }
 
 .card-desc {
