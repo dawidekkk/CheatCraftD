@@ -1,7 +1,8 @@
 'use strict';
 
-// const cardMiecz = document.querySelector('.card-miecz')
-// const cardLuk = document.querySelector('.card-luk')
+const test = document.querySelector('.card-title-miecz');
+const cardMiecz = document.querySelector('.card-miecz')
+const cardLuk = document.querySelector('.card-luk')
 // const cardKilof = document.querySelector('.card-kilof')
 // const cardSponsor = document.querySelector('.card-sponsor')
 // const cardSuper = document.querySelector('.card-super-vip')
@@ -13,21 +14,28 @@
 // const cardGreen = document.querySelector('.card-green')
 // const cardPink = document.querySelector('.card-pink')
 
-// const animIn = obj => {
-//   obj.addEventListener("mouseenter", () => {
-//     obj.classList.add("cardAnimIn")
-//     obj.classList.remove("cardAnimOut")
+// const animIn = () => {
+//   cardMiecz.addEventListener("mouseenter", () => {
+//     test.classList.toggle('test')
 //   })
 // }
 
-// const animOut = obj => {
-//   obj.addEventListener("mouseleave", () => {
-//     obj.classList.add("cardAnimOut")
-//     obj.classList.remove("cardAnimIn")
-//   })
-// }
+// animIn();
 
-// // animIn(cardMiecz);
+const animIn = () => {
+  cardMiecz.addEventListener("mouseenter", () => {
+    test.classList.add("test")
+  })
+}
+
+const animOut = () => {
+  cardMiecz.addEventListener("mouseleave", () => {
+    test.classList.remove("test")
+  })
+}
+
+animIn();
+animOut();
 // // animIn(cardLuk);
 // // animIn(cardKilof);
 // animIn(cardSponsor);

@@ -690,6 +690,12 @@ button svg {
   line-height: 1.25;
   letter-spacing: 1.5px;
   font-weight: lighter;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+.card-header .card-title:hover {
+  color: #e21d24;
 }
 
 .card-header span {
@@ -701,6 +707,18 @@ button svg {
   width: 8rem;
   height: 8rem;
   margin: 1rem auto;
+}
+
+.test {
+  color: #e21d24;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.test2 {
+  color: #e6e6e6;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .card-desc {

@@ -558,12 +558,18 @@ button svg {
   flex-direction: column;
   color:hsl(0, 0%, 90%);
   font-family: 'mc-font'; 
+  
 
   .card-title {
     font-size: 2rem;
     line-height: 1.25;
     letter-spacing: 1.5px;
     font-weight: lighter;
+    transition: all 2s;
+
+    &:hover {
+      color: hsl(358, 77%, 50%);
+    }
   }
 
   span {
@@ -576,6 +582,16 @@ button svg {
     width: 8rem; height: 8rem;
     margin: 1rem auto;
   }
+}
+
+.test {
+  color: hsl(358, 77%, 50%);
+  transition: all 1s;
+}
+
+.test2 {
+  color:hsl(0, 0%, 90%);
+  transition: all 1s;
 }
 
 .card-desc {
