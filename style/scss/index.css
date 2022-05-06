@@ -694,10 +694,6 @@ button svg {
   transition: all 2s;
 }
 
-.card-header .card-title:hover {
-  color: #e21d24;
-}
-
 .card-header span {
   font-size: 1.25rem;
   color: #e0e0e0;
