@@ -1,18 +1,23 @@
 'use strict';
 
 const cardTitleMiecz = document.querySelector('.card-title-miecz');
-const behindMiecz = document.querySelector('.behind-bg-miecz')
-const cardLuk = document.querySelector('.card-luk')
-// const cardKilof = document.querySelector('.card-kilof')
-// const cardSponsor = document.querySelector('.card-sponsor')
-// const cardSuper = document.querySelector('.card-super-vip')
-// const cardVip = document.querySelector('.card-vip')
-// const cardUnban = document.querySelector('.card-unban')
-// const cardTurbo = document.querySelector('.card-turbo-drop')
-// const cardCheat = document.querySelector('.card-cheat-case')
-// const cardColorful = document.querySelector('.card-colorful')
-// const cardGreen = document.querySelector('.card-green')
-// const cardPink = document.querySelector('.card-pink')
+const cardTitleLuk = document.querySelector('.card-title-luk');
+const cardTitleKilof = document.querySelector('.card-title-kilof');
+const cardTitleSponsor = document.querySelector('.card-title-sponsor');
+const cardTitleSuper = document.querySelector('.card-title-super');
+const cardTitleVip = document.querySelector('.card-title-vip');
+const cardTitleUnban = document.querySelector('.card-title-unban');
+const cardTitleDrop = document.querySelector('.card-title-drop');
+const cardTitleCheat = document.querySelector('.card-title-cheat');
+const behindMiecz = document.querySelector('.behind-bg-miecz');
+const behindLuk = document.querySelector('.behind-bg-luk');
+const behindKilof = document.querySelector('.behind-bg-kilof');
+const behindSponsor = document.querySelector('.behind-bg-sponsor');
+const behindSuper = document.querySelector('.behind-bg-super');
+const behindVip = document.querySelector('.behind-bg-vip');
+const behindUnban = document.querySelector('.behind-bg-unban');
+const behindDrop = document.querySelector('.behind-bg-drop');
+const behindCheat = document.querySelector('.behind-bg-cheat');
 
 const animIn = (item, title) => {
   item.addEventListener("mouseenter", () => {
@@ -30,29 +35,20 @@ const animOut = (item, title) => {
 
 animIn(behindMiecz, cardTitleMiecz);
 animOut(behindMiecz, cardTitleMiecz);
-// // animIn(cardLuk);
-// // animIn(cardKilof);
-// animIn(cardSponsor);
-// animIn(cardSuper);
-// animIn(cardVip);
-// animIn(cardUnban);
-// animIn(cardTurbo);
-// animIn(cardCheat);
-// animIn(cardColorful);
-// animIn(cardGreen);
-// animIn(cardPink);
-
-// // animOut(cardMiecz);
-// // animOut(cardLuk);
-// // animOut(cardKilof);
-// animOut(cardSponsor);
-// animOut(cardSuper);
-// animOut(cardVip);
-// animOut(cardUnban);
-// animOut(cardTurbo);
-// animOut(cardCheat);
-// animOut(cardColorful);
-// animOut(cardGreen);
-// animOut(cardPink);
-
+animIn(behindLuk, cardTitleLuk);
+animOut(behindLuk, cardTitleLuk);
+animIn(behindKilof, cardTitleKilof);
+animOut(behindKilof, cardTitleKilof);
+animIn(behindSponsor, cardTitleSponsor);
+animOut(behindSponsor, cardTitleSponsor);
+animIn(behindSuper, cardTitleSuper);
+animOut(behindSuper, cardTitleSuper);
+animIn(behindVip, cardTitleVip);
+animOut(behindVip, cardTitleVip);
+animIn(behindUnban, cardTitleUnban);
+animOut(behindUnban, cardTitleUnban);
+animIn(behindDrop, cardTitleDrop);
+animOut(behindDrop, cardTitleDrop);
+animIn(behindCheat, cardTitleCheat);
+animOut(behindCheat, cardTitleCheat);
 
