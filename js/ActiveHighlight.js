@@ -12,7 +12,7 @@ function activeHighlight () {
     document.URL.includes('/index') || 
     document.URL.includes('/ranking') || 
     document.URL.includes('/regulamin') ? 
-    activePage.style.borderBottom = '6px solid hsl(0, 0%, 85%)' : 
+    activePage.style.borderBottom = '4px solid hsl(0, 0%, 85%)' : 
     ''
   )
 };

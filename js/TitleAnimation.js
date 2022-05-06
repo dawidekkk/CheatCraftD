@@ -14,31 +14,22 @@ const cardLuk = document.querySelector('.card-luk')
 // const cardGreen = document.querySelector('.card-green')
 // const cardPink = document.querySelector('.card-pink')
 
-// const animIn = () => {
-//   cardMiecz.addEventListener("mouseenter", () => {
-//     test.classList.toggle('test')
-//   })
-// }
-
-// animIn();
-
-const animIn = () => {
-  behindMiecz.addEventListener("mouseenter", () => {
-    cardTitleMiecz.classList.add("red-mouseenter")
-    cardTitleMiecz.classList.remove("white-mouseleave")
-    
+const animIn = (item, title) => {
+  item.addEventListener("mouseenter", () => {
+    title.classList.add("red-mouseenter")
+    title.classList.remove("white-mouseleave")
   })
 }
 
-const animOut = () => {
-  behindMiecz.addEventListener("mouseleave", () => {
-    cardTitleMiecz.classList.remove("red-mouseenter")
-    cardTitleMiecz.classList.add("white-mouseleave")
+const animOut = (item, title) => {
+  item.addEventListener("mouseleave", () => {
+    title.classList.remove("red-mouseenter")
+    title.classList.add("white-mouseleave")
   })
 }
 
-animIn();
-animOut();
+animIn(behindMiecz, cardTitleMiecz);
+animOut(behindMiecz, cardTitleMiecz);
 // // animIn(cardLuk);
 // // animIn(cardKilof);
 // animIn(cardSponsor);
