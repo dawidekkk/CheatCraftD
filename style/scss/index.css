@@ -534,6 +534,7 @@ button svg {
 .behind-bg .card-unban {
   background: no-repeat center url(../img/unban-tex.png);
   background-size: cover;
+  height: 30.65rem;
 }
 
 .behind-bg .card-colorful {
