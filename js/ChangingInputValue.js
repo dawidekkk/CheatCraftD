@@ -16,6 +16,11 @@ const turboInputValue = document.getElementById('turbo-value');
 const cheatInput = document.getElementById('cheat-input');
 const cheatInputValue = document.getElementById('cheat-value');
 
+const btnSms = document.querySelector('.btn-price-sponsor_sms');
+const btnPsc = document.querySelector('.btn-price-sponsor_psc');  
+const btnPrzelew = document.querySelector('.btn-price-sponsor_przelew');
+const sms = [5.50, 6.88, 8.52, 10.17, 11.00, 12.93, 14.58, 16.22, 17.60, 19.25, 20.90, 22.00, 23.65, 25.30, 27.50, 28.60, 29.98, 31.35, 33.00, 55.01];
+
 function sponsorValue() {
   const sms = [5.50, 6.88, 8.52, 10.17, 11.00, 12.93, 14.58, 16.22, 17.60, 19.25, 20.90, 22.00, 23.65, 25.30, 27.50, 28.60, 29.98, 31.35, 33.00, 55.01];
   const psc = [5.00, 6.25, 7.75, 9.25, 10.00, 11.75, 13.25, 14.75, 16.00, 17.50, 19.00, 20.00, 21.50, 23.00, 25.00, 26.00, 27.25, 28.50, 30.00, 50.00];
@@ -23,6 +28,8 @@ function sponsorValue() {
   const btnPsc = document.querySelector('.btn-price-sponsor_psc');
   const btnPrzelew = document.querySelector('.btn-price-sponsor_przelew');
   const parag = document.querySelector('.sponsor-p')
+
+  console.log(this);
 
   sponsorInputValue.textContent = `${buyoutDays[this.value]}`;
 
@@ -117,9 +124,16 @@ function cheatValue() {
   cheatInputValue.textContent = `${this.value} CheatCasów.`
 }
 
+function getRandom(max) {
+  return Math.floor(Math.random() * max)
+}
+
 // IIFE for immedietely showing [...]Input.value
 (() => {
   sponsorInputValue.textContent = buyoutDays[sponsorInput.value];
+  // btnSms.textContent = getRandom(sms)
+  // [sms] = getRandom();
+  // btnSms.textContent = sms;
   superInputValue.textContent = buyoutDays[superInput.value];
   vipInputValue.textContent = buyoutDays[vipInput.value];
   turboInputValue.textContent = `${buyoutDaysSliders[turboInput.value]} minut`;
