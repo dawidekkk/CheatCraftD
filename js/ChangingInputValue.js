@@ -16,7 +16,8 @@ const turboInputValue = document.getElementById('turbo-value');
 const cheatInput = document.getElementById('cheat-input');
 const cheatInputValue = document.getElementById('cheat-value');
 
-function sponsorValue() {
+
+(function sponsorValue() {
   const sms = [5.50, 6.88, 8.52, 10.17, 11.00, 12.93, 14.58, 16.22, 17.60, 19.25, 20.90, 22.00, 23.65, 25.30, 27.50, 28.60, 29.98, 31.35, 33.00, 55.01];
   const psc = [5.00, 6.25, 7.75, 9.25, 10.00, 11.75, 13.25, 14.75, 16.00, 17.50, 19.00, 20.00, 21.50, 23.00, 25.00, 26.00, 27.25, 28.50, 30.00, 50.00];
   const btnSms = document.querySelector('.btn-price-sponsor_sms');
@@ -39,7 +40,7 @@ function sponsorValue() {
   btnPsc.style.fontSize = `14px`
   btnPrzelew.textContent = `${psc[this.value]}zł`;
   btnPrzelew.style.fontSize = `14px`
-}
+})();
 
 function superValue() {
   const sms = [4.40, 5.50, 6.61, 7.70, 8.79, 9.90, 11.00, 12.10, 13.20, 14.30, 15.40, 16.49, 17.60, 18.70, 19.80, 20.90, 22.00, 23.10, 24.19, 33.00];
