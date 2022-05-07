@@ -735,13 +735,6 @@ button svg {
   margin: 0 auto;
 }
 
-.card-desc .price {
-  margin-top: 8px;
-  text-align: center;
-  font-weight: 700;
-  font-size: 1.25rem;
-}
-
 .card-slider {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
@@ -1350,9 +1343,6 @@ footer a {
   .behind-bg .card {
     -ms-grid-rows: 1fr 140px auto;
         grid-template-rows: 1fr 140px auto;
-  }
-  .price {
-    display: none;
   }
 }
 
