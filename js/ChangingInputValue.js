@@ -27,24 +27,26 @@ function sponsorValue() {
   const [firstElSms] = sms;
   const [firstElPsc] = psc;
 
-  const that = this;
+  // if(this !== undefined) {
+  let that = this;
+  // } else if ()
 
   if(this === undefined) {
     btnSms.textContent = `${firstElSms}zł`;
     btnPsc.textContent = `${firstElPsc}zł`;
     btnPrzelew.textContent = `${firstElPsc}zł`;
   } else {
-    btnSms.textContent = `${sms[that?.value]}zł`;
-    btnPsc.textContent = `${psc[that?.value]}zł`;
-    btnPrzelew.textContent = `${psc[that?.value]}zł`;
-    sponsorInputValue.textContent = `${DAYS[that?.value]}`;
+    btnSms.textContent = `${sms[this.value]}zł`;
+    btnPsc.textContent = `${psc[this.value]}zł`;
+    btnPrzelew.textContent = `${psc[this.value]}zł`;
+    sponsorInputValue.textContent = `${DAYS[this.value]}`;
   }
 
-  if(sponsorInputValue.textContent == 'zawsze' && DAYS[that?.value.length - 1]) {
-    parag.textContent = `Potrzebuje sponsora na: ${DAYS[that?.value]}`
+  if(sponsorInputValue.textContent == 'zawsze' && DAYS[that.value.length - 1]) {
+    parag.textContent = `Potrzebuje sponsora na: ${DAYS[that.value]}`
   } else {
-    parag.textContent = `Potrzebuje sponsora na: ${DAYS[that?.value]} dni`
-    sponsorInputValue.textContent = `${DAYS[that?.value]}`
+    parag.textContent = `Potrzebuje sponsora na: ${DAYS[that.value]} dni`
+    sponsorInputValue.textContent = `${DAYS[that.value]}`
   }
 }
 
