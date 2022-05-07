@@ -671,6 +671,7 @@ button svg {
   .card-button {
     border-radius: 2px;
     font-size: 1rem;
+    font-size: 14px;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
@@ -680,6 +681,28 @@ button svg {
     transition: transform 0.5s;
     letter-spacing: 0.5px;
     margin: 1rem auto .25rem auto;
+
+    // .test {
+    //   display:flex;
+    //   align-content: center;
+    //   flex-direction: column;
+    //   justify-content: center;
+    //   align-items: center;
+    //   margin: 0;
+    //   padding: 0;
+    // }
+
+    // .test1 {
+    //   margin: 0;
+    //   padding: 0;
+    // }
+
+    // .test2 {
+    //   display:flex;
+    //   margin: 0;
+    //   padding: 0;
+    //   flex-direction: row;
+    // }
   }
 
   .input-buttons {

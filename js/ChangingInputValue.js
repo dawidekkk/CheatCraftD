@@ -29,9 +29,23 @@ function sponsorValue() {
   const btnPrzelew = document.querySelector('.btn-price-sponsor_przelew');
   const parag = document.querySelector('.sponsor-p')
 
-  console.log(this);
+  const [initialSms] = sms;
+  const [initialPsc] = psc;
 
-  sponsorInputValue.textContent = `${buyoutDays[this.value]}`;
+  if(this === undefined) {
+    // sponsorInputValue.textContent
+    btnSms.textContent = `${initialSms}zł`;
+    btnPsc.textContent = `${initialPsc}zł`;
+    btnPrzelew.textContent = `${initialPsc}zł`;
+  } else {
+    btnSms.textContent = `${sms[this.value]}zł`;
+    btnSms.style.fontSize = `14px`
+    btnPsc.textContent = `${psc[this.value]}zł`;
+    btnPsc.style.fontSize = `14px`
+    btnPrzelew.textContent = `${psc[this.value]}zł`;
+    btnPrzelew.style.fontSize = `14px`
+    sponsorInputValue.textContent = `${buyoutDays[this.value]}`;
+  }
 
   if(sponsorInputValue.textContent == 'zawsze' && buyoutDays[this.value.length - 1]) {
     parag.textContent = `Potrzebuje sponsora na: ${buyoutDays[this.value]}`
@@ -39,14 +53,9 @@ function sponsorValue() {
     parag.textContent = `Potrzebuje sponsora na: ${buyoutDays[this.value]} dni`
     sponsorInputValue.textContent = `${buyoutDays[this.value]}`
   }
-
-  btnSms.textContent = `${sms[this.value]}zł`;
-  btnSms.style.fontSize = `14px`
-  btnPsc.textContent = `${psc[this.value]}zł`;
-  btnPsc.style.fontSize = `14px`
-  btnPrzelew.textContent = `${psc[this.value]}zł`;
-  btnPrzelew.style.fontSize = `14px`
 }
+
+
 
 function superValue() {
   const sms = [4.40, 5.50, 6.61, 7.70, 8.79, 9.90, 11.00, 12.10, 13.20, 14.30, 15.40, 16.49, 17.60, 18.70, 19.80, 20.90, 22.00, 23.10, 24.19, 33.00];
@@ -130,10 +139,8 @@ function getRandom(max) {
 
 // IIFE for immedietely showing [...]Input.value
 (() => {
+  sponsorInput.value = 0;
   sponsorInputValue.textContent = buyoutDays[sponsorInput.value];
-  // btnSms.textContent = getRandom(sms)
-  // [sms] = getRandom();
-  // btnSms.textContent = sms;
   superInputValue.textContent = buyoutDays[superInput.value];
   vipInputValue.textContent = buyoutDays[vipInput.value];
   turboInputValue.textContent = `${buyoutDaysSliders[turboInput.value]} minut`;
@@ -149,3 +156,12 @@ turboInput.addEventListener("input", turboValue)
 turboInput.addEventListener("change", turboValue)
 cheatInput.addEventListener("input", cheatValue)
 cheatInput.addEventListener("change", cheatValue)
+
+window.onload = function(e) {
+  e.preventDefault();
+  sponsorValue();
+  console.log(sponsorInput);
+  console.log('femsjfseik');
+}
+
+// location.reload(true);
