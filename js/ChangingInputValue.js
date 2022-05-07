@@ -29,21 +29,17 @@ function sponsorValue() {
   const btnPrzelew = document.querySelector('.btn-price-sponsor_przelew');
   const parag = document.querySelector('.sponsor-p')
 
-  const [initialSms] = sms;
-  const [initialPsc] = psc;
+  const [firstElSms] = sms;
+  const [firstElPsc] = psc;
 
   if(this === undefined) {
-    // sponsorInputValue.textContent
-    btnSms.textContent = `${initialSms}zł`;
-    btnPsc.textContent = `${initialPsc}zł`;
-    btnPrzelew.textContent = `${initialPsc}zł`;
+    btnSms.textContent = `${firstElSms}zł`;
+    btnPsc.textContent = `${firstElPsc}zł`;
+    btnPrzelew.textContent = `${firstElPsc}zł`;
   } else {
     btnSms.textContent = `${sms[this.value]}zł`;
-    btnSms.style.fontSize = `14px`
     btnPsc.textContent = `${psc[this.value]}zł`;
-    btnPsc.style.fontSize = `14px`
     btnPrzelew.textContent = `${psc[this.value]}zł`;
-    btnPrzelew.style.fontSize = `14px`
     sponsorInputValue.textContent = `${buyoutDays[this.value]}`;
   }
 
@@ -75,11 +71,8 @@ function superValue() {
   }
 
   btnSms.textContent = `${sms[this.value]}zł`;
-  btnSms.style.fontSize = `14px`
   btnPsc.textContent = `${psc[this.value]}zł`;
-  btnPsc.style.fontSize = `14px`
   btnPrzelew.textContent = `${psc[this.value]}zł`;
-  btnPrzelew.style.fontSize = `14px`
 }
 
 function vipValue() {
@@ -100,11 +93,8 @@ function vipValue() {
   }
 
   btnSms.textContent = `${sms[this.value]}zł`;
-  btnSms.style.fontSize = `14px`
   btnPsc.textContent = `${psc[this.value]}zł`;
-  btnPsc.style.fontSize = `14px`
   btnPrzelew.textContent = `${psc[this.value]}zł`;
-  btnPrzelew.style.fontSize = `14px`
 }
 
 function turboValue() {
@@ -124,6 +114,7 @@ function turboValue() {
   btnPrzelew.textContent = `${psc[this.value]}zł`
 }
 
+// TUTAJ INTERPOLACJA LINIOWA
 function cheatValue() {
   const btnSms = document.querySelector('.btn-price-cheat_sms');
   const btnPsc = document.querySelector('.btn-price-cheat_psc');
@@ -133,19 +124,21 @@ function cheatValue() {
   cheatInputValue.textContent = `${this.value} CheatCasów.`
 }
 
-function getRandom(max) {
-  return Math.floor(Math.random() * max)
-}
 
-// IIFE for immedietely showing [...]Input.value
+// IIFE working because we need to immediately set ...Input.value to 0
 (() => {
   sponsorInput.value = 0;
+  superInput.value = 0;
+  vipInput.value = 0;
+  turboInput.value = 0;
+  cheatInput.value = 0;
   sponsorInputValue.textContent = buyoutDays[sponsorInput.value];
   superInputValue.textContent = buyoutDays[superInput.value];
   vipInputValue.textContent = buyoutDays[vipInput.value];
   turboInputValue.textContent = `${buyoutDaysSliders[turboInput.value]} minut`;
 })();
 
+// We need to make sure that ...Input works as change and input - both.
 sponsorInput.addEventListener("change", sponsorValue);
 sponsorInput.addEventListener("input", sponsorValue)
 superInput.addEventListener("change", superValue)
@@ -157,11 +150,9 @@ turboInput.addEventListener("change", turboValue)
 cheatInput.addEventListener("input", cheatValue)
 cheatInput.addEventListener("change", cheatValue)
 
+// window.onload working because we need call all input whenever page loads.
 window.onload = function(e) {
   e.preventDefault();
   sponsorValue();
-  console.log(sponsorInput);
-  console.log('femsjfseik');
 }
 
-// location.reload(true);
