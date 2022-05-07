@@ -27,22 +27,24 @@ function sponsorValue() {
   const [firstElSms] = sms;
   const [firstElPsc] = psc;
 
+  const that = this;
+
   if(this === undefined) {
     btnSms.textContent = `${firstElSms}zł`;
     btnPsc.textContent = `${firstElPsc}zł`;
     btnPrzelew.textContent = `${firstElPsc}zł`;
   } else {
-    btnSms.textContent = `${sms[this.value]}zł`;
-    btnPsc.textContent = `${psc[this.value]}zł`;
-    btnPrzelew.textContent = `${psc[this.value]}zł`;
-    sponsorInputValue.textContent = `${DAYS[this.value]}`;
+    btnSms.textContent = `${sms[that?.value]}zł`;
+    btnPsc.textContent = `${psc[that?.value]}zł`;
+    btnPrzelew.textContent = `${psc[that?.value]}zł`;
+    sponsorInputValue.textContent = `${DAYS[that?.value]}`;
   }
 
-  if(sponsorInputValue.textContent == 'zawsze' && DAYS[this.value.length - 1]) {
-    parag.textContent = `Potrzebuje sponsora na: ${DAYS[this.value]}`
+  if(sponsorInputValue.textContent == 'zawsze' && DAYS[that?.value.length - 1]) {
+    parag.textContent = `Potrzebuje sponsora na: ${DAYS[that?.value]}`
   } else {
-    parag.textContent = `Potrzebuje sponsora na: ${DAYS[this.value]} dni`
-    sponsorInputValue.textContent = `${DAYS[this.value]}`
+    parag.textContent = `Potrzebuje sponsora na: ${DAYS[that?.value]} dni`
+    sponsorInputValue.textContent = `${DAYS[that?.value]}`
   }
 }
 
@@ -173,7 +175,7 @@ turboInput.addEventListener("change", turboValue)
 cheatInput.addEventListener("input", cheatValue)
 cheatInput.addEventListener("change", cheatValue)
 
-// As page loads, calling function, becase we need to get initial price in buttons.
+// As page loads, calling function, becase we need to get initial price in buttons
 window.addEventListener("load", () => {
   sponsorValue();
 })
