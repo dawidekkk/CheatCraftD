@@ -216,7 +216,6 @@ body {
 
 .discord-links a {
   text-decoration: none;
-  text-align: right;
 }
 
 .server-links {
@@ -663,6 +662,14 @@ button svg {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
+}
+
+.behind-bg-slider .input-info .input-info-cheat {
+  margin-left: 1.5rem;
+}
+
+.behind-bg-slider .input-info .input-info-turbo {
+  margin-left: 1.1rem;
 }
 
 .card-header {

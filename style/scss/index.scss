@@ -187,11 +187,9 @@ $bubble-border: 0 -1*$px $white,
   display: flex;
   align-items: flex-end;
   flex-direction: column;
-  
 
   a {
     text-decoration: none;
-    text-align: right;
   }
 }
 
@@ -550,6 +548,14 @@ button svg {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+
+    .input-info-cheat {
+      margin-left: 1.5rem;
+    }
+
+    .input-info-turbo {
+      margin-left: 1.1rem;
+    }
   }
 }
 
