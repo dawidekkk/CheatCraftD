@@ -84,7 +84,19 @@ function vipValue() {
   const btnPrzelew = document.querySelector('.btn-price-vip_przelew');
   const parag = document.querySelector(".vip-p");
 
-  vipInputValue.textContent = `${DAYS[this.value]}`
+  const [firstElSms] = sms;
+  const [firstElPsc] = psc;
+
+  if(this === undefined) {
+    btnSms.textContent = `${firstElSms}zł`;
+    btnPsc.textContent = `${firstElPsc}zł`;
+    btnPrzelew.textContent = `${firstElPsc}zł`;
+  } else {
+    btnSms.textContent = `${sms[this.value]}zł`;
+    btnPsc.textContent = `${psc[this.value]}zł`;
+    btnPrzelew.textContent = `${psc[this.value]}zł`;
+    vipInputValue.textContent = `${DAYS[this.value]}`
+  }
 
   if(vipInputValue.textContent == 'zawsze' && DAYS[this.value.length - 1]) {
     parag.textContent = `Potrzebuje Vip'a na: ${DAYS[this.value]}`
@@ -92,10 +104,6 @@ function vipValue() {
     parag.textContent = `Potrzebuje Vip'a na: ${DAYS[this.value]} dni`
     vipInputValue.textContent = `${DAYS[this.value]}`
   }
-
-  btnSms.textContent = `${sms[this.value]}zł`;
-  btnPsc.textContent = `${psc[this.value]}zł`;
-  btnPrzelew.textContent = `${psc[this.value]}zł`;
 }
 
 function turboValue() {
@@ -104,16 +112,27 @@ function turboValue() {
   const btnSms = document.querySelector('.btn-price-turbo_sms');
   const btnPsc = document.querySelector('.btn-price-turbo_psc');
   const btnPrzelew = document.querySelector('.btn-price-turbo_przelew');
-  const parag = document.querySelector(".vip-p");
   const info = document.querySelector('.info-turbo')
 
-  turboInputValue.textContent = `${DAYSSLIDER[this.value]} minut.`
-  info.style.fontSize = `16px`
+  const [firstElSms] = sms;
+  const [firstElPsc] = psc;
 
-  btnSms.textContent = `${sms[this.value]}zł`
-  btnPsc.textContent = `${psc[this.value]}zł`
-  btnPrzelew.textContent = `${psc[this.value]}zł`
+  if(this === undefined) {
+    btnSms.textContent = `${firstElSms}zł`;
+    btnPsc.textContent = `${firstElPsc}zł`;
+    btnPrzelew.textContent = `${firstElPsc}zł`;
+  } else {
+    btnSms.textContent = `${sms[this.value]}zł`;
+    btnPsc.textContent = `${psc[this.value]}zł`;
+    btnPrzelew.textContent = `${psc[this.value]}zł`;
+    turboInputValue.textContent = `${DAYSSLIDER[this.value]} minut.`
+    info.style.fontSize = `16px`
+  }
 }
+
+
+
+
 
 // TUTAJ INTERPOLACJA LINIOWA
 function cheatValue() {
@@ -124,6 +143,10 @@ function cheatValue() {
 
   cheatInputValue.textContent = `${this.value} CheatCasów.`
 }
+
+
+
+
 
 // IIFE working because we need to immediately set ...Input.value to 0
 (() => {
@@ -150,32 +173,23 @@ turboInput.addEventListener("change", turboValue)
 cheatInput.addEventListener("input", cheatValue)
 cheatInput.addEventListener("change", cheatValue)
 
-// window.addEventListener("load", () => {
-//   sponsorValue();
-  
-// })
-
-// window.addEventListener("load", () => {
-//   superValue();
-// })
-
-function test() {
-  superValue();
+// As page loads, calling function, becase we need to get initial price in buttons.
+window.addEventListener("load", () => {
   sponsorValue();
-}
+})
 
-window.onload = () => {
-  test();
-}
+window.addEventListener("load", () => {
+  superValue();
+})
 
-// sponsorValue()
-// superValue()
+window.addEventListener("load", () => {
+  vipValue();
+})
 
-// window.onload working because we need call all input whenever page loads.
-// window.onload = function(e) {
-//   e.preventDefault();
-//   sponsorValue();
-//   superValue();
-// }
+window.addEventListener("load", () => {
+  turboValue();
+})
+
+
 
 
