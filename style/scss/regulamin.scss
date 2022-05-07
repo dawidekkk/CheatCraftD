@@ -107,7 +107,7 @@ $bubble-border: 0 -1*$px $white,
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 16rem;
+  width: 13rem;
   margin: 0 auto;
 
   .dis-title,
@@ -495,6 +495,14 @@ footer {
   .server,
   .discord {
     animation: 5s linear infinite alternate logoAnim;
+  }
+
+  .server {
+    width: 15rem;
+  }
+
+  .discord {
+    width: 16rem;
   }
 }
 

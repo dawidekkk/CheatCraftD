@@ -155,8 +155,12 @@ $bubble-border: 0 -1*$px $white,
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 15rem;
+  width: 13rem;
   margin: 0 auto;
+  
+  // .test {
+  //   margin-right: -2rem;
+  // }
 
   .dis-title,
   .serv-title {
@@ -169,17 +173,21 @@ $bubble-border: 0 -1*$px $white,
   .join-server-dis {
     font-size: 10px;
     text-align: right;
+    letter-spacing: 1px;
     font-weight: 700;
     text-transform: uppercase;
     color: hsl(0, 0%, 90%);
+    margin-right: 2px;
   }
 
   .join-server-serv {
     font-size: 10px;
     text-align: left;
+    letter-spacing: 1px;
     font-weight: 700;
     text-transform: uppercase;
     color: hsl(0, 0%, 90%);
+    margin-left: 2px;
   }
 }
 
@@ -554,7 +562,7 @@ button svg {
     }
 
     .input-info-turbo {
-      margin-left: 1.1rem;
+      margin-left: 1rem;
     }
   }
 }
@@ -982,6 +990,14 @@ footer {
   .server,
   .discord {
     animation: 5s linear infinite alternate logoAnim;
+  }
+
+  .server {
+    width: 15rem;
+  }
+
+  .discord {
+    width: 16rem;
   }
 }
 
