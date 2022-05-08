@@ -445,39 +445,48 @@ button svg {
   .card-colorful {
     background: no-repeat center url(../img/colorful-tex.png);
     background-size: cover;
-
-    .colorful {
-      background-image: linear-gradient(to right, violet, indigo, rgba(0, 68, 255, 0.979), green, yellow, orange, red);
-      -webkit-background-clip: text;
-      color: transparent;
-      font-weight: bold;
-    }
   }
 
   .card-green {
     background: no-repeat center url(../img/green-tex.png);
     background-size: cover;
-    
-    .green {
-      background-image: linear-gradient(to left, rgb(0, 255, 0), rgb(61, 230, 61), rgba(0, 224, 30, 0.5), rgb(0, 255, 106));
-      -webkit-background-clip: text;
-      color: transparent;
-      font-weight: bold;
-    }
   }
 
   .card-pink {
     background: no-repeat center url(../img/pink-tex.png);
     background-size: cover;
-
-    .pink {
-      background-image: linear-gradient(to bottom, #f011b8, #f50f40);
-      -webkit-background-clip: text;
-      color: transparent;
-      font-weight: bold;
-    }
   }
 }
+
+// .white-colorful {
+//   background-image: linear-gradient(to right, white, white);
+//   -webkit-background-clip: text;
+//   color: white;
+//   font-weight: bold;
+//   transition: all 2s;
+// }
+
+// .colorful {
+//   background-image: linear-gradient(to right, violet, indigo, rgba(0, 68, 255, 0.979), green, yellow, orange, red);
+//   -webkit-background-clip: text;
+//   color: transparent;
+//   font-weight: bold;
+//   transition: all 2s;
+// }
+
+// .green {
+//   background-image: linear-gradient(to left, rgb(0, 255, 0), rgb(61, 230, 61), rgba(0, 224, 30, 0.5), rgb(0, 255, 106));
+//   -webkit-background-clip: text;
+//   color: transparent;
+//   font-weight: bold;
+// }
+
+// .pink {
+//   background-image: linear-gradient(to bottom, #f011b8, #f50f40);
+//   -webkit-background-clip: text;
+//   color: transparent;
+//   font-weight: bold;
+// }
 
 .behind-bg-slider {
   background-color: hsl(0, 0%, 95%);
@@ -661,8 +670,6 @@ button svg {
   }
 }
 
-
-
 .card-buttons {
   grid-area: card-buttons;
   display: flex;
@@ -682,27 +689,16 @@ button svg {
     letter-spacing: 0.5px;
     margin: 1rem auto .25rem auto;
 
-    // .test {
-    //   display:flex;
-    //   align-content: center;
-    //   flex-direction: column;
-    //   justify-content: center;
-    //   align-items: center;
-    //   margin: 0;
-    //   padding: 0;
-    // }
+    .card-button-wrapper {
+      display: flex;
+      flex-direction: column;
 
-    // .test1 {
-    //   margin: 0;
-    //   padding: 0;
-    // }
-
-    // .test2 {
-    //   display:flex;
-    //   margin: 0;
-    //   padding: 0;
-    //   flex-direction: row;
-    // }
+      strong {
+        height: 20px;
+        bottom: 10px;
+        position: relative;
+      }
+    }
   }
 
   .input-buttons {

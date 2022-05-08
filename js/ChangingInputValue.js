@@ -27,10 +27,6 @@ function sponsorValue() {
   const [firstElSms] = sms;
   const [firstElPsc] = psc;
 
-  // if(this !== undefined) {
-  let that = this;
-  // } else if ()
-
   if(this === undefined) {
     btnSms.textContent = `${firstElSms}zł`;
     btnPsc.textContent = `${firstElPsc}zł`;
@@ -42,11 +38,11 @@ function sponsorValue() {
     sponsorInputValue.textContent = `${DAYS[this.value]}`;
   }
 
-  if(sponsorInputValue.textContent == 'zawsze' && DAYS[that.value.length - 1]) {
-    parag.textContent = `Potrzebuje sponsora na: ${DAYS[that.value]}`
+  if(sponsorInputValue.textContent == 'zawsze' && DAYS[this.value.length - 1]) {
+    parag.textContent = `Potrzebuje sponsora na: ${DAYS[this.value]}`
   } else {
-    parag.textContent = `Potrzebuje sponsora na: ${DAYS[that.value]} dni`
-    sponsorInputValue.textContent = `${DAYS[that.value]}`
+    parag.textContent = `Potrzebuje sponsora na: ${DAYS[this.value]} dni`
+    sponsorInputValue.textContent = `${DAYS[this.value]}`
   }
 }
 
@@ -139,13 +135,15 @@ function turboValue() {
 
 
 // TUTAJ INTERPOLACJA LINIOWA
-function cheatValue() {
+function cheatValue(start, end, t) {
   const btnSms = document.querySelector('.btn-price-cheat_sms');
   const btnPsc = document.querySelector('.btn-price-cheat_psc');
   const btnPrzelew = document.querySelector('.btn-price-cheat_przelew');
   const parag = document.querySelector(".vip-p");
 
   cheatInputValue.textContent = `${this.value} CheatCasów.`
+
+  // return start * (1 - t) + end * t;
 }
 
 
@@ -174,8 +172,8 @@ vipInput.addEventListener("change", vipValue)
 vipInput.addEventListener("input", vipValue)
 turboInput.addEventListener("input", turboValue)
 turboInput.addEventListener("change", turboValue)
-cheatInput.addEventListener("input", cheatValue)
-cheatInput.addEventListener("change", cheatValue)
+// cheatInput.addEventListener("input", cheatValue(2, 2000, 1))
+// cheatInput.addEventListener("change", cheatValue(2, 2000, 1))
 
 // As page loads, calling function, becase we need to get initial price in buttons
 window.addEventListener("load", () => {
@@ -196,4 +194,10 @@ window.addEventListener("load", () => {
 
 
 
+const check = (start, end, t) => {
+  return start * (1 - t) + end * t;
+}
+const a = check(2, 2000, 1);
 
+console.log(a);
+console.log('dawmidwja');
