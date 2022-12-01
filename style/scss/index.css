@@ -1401,8 +1401,6 @@ footer a {
   background-color: #f2f2f2;
   border-radius: 14px;
   margin: 0 auto;
-  -webkit-transition: all 2s;
-  transition: all 2s;
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #161313 0px 0px 0px 3px;
           box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #161313 0px 0px 0px 3px;
   height: 700px;

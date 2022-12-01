@@ -194,10 +194,22 @@ window.addEventListener("load", () => {
 
 
 
-const check = (start, end, t) => {
-  return start * (1 - t) + end * t;
-}
-const a = check(2, 2000, 1);
+// const check = (start, end, t) => {
+//   return start * (1 - t) + end * t;
+// }
+// const a = check(2, 2000, 1);
 
-console.log(a);
-console.log('dawmidwja');
+// console.log(a);
+// console.log('dawmidwja');
+
+
+// const aaa = 1;
+// aaa = 2;
+let bbb = 1;
+bbb = 2;
+
+var ccc = 1;
+ccc = 2;
+// console.log(aaa);
+console.log(bbb);
+console.log(ccc);
